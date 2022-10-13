@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<plugin
+  interface="IResolverServicePlugin"
+  name="IResolverServicePlugin">
+  <plugin-gosu
+    disabled="false"
+    gosuclass="gw.plugin.resolver.v1.ResolverServicePlugin">
+    <param
+      name="ApiKey"
+      value="${ResolverApiKey}"/>
+    <param
+      name="HostUrl"
+      value="${ResolverUrl}"/>
+  </plugin-gosu>
+</plugin>

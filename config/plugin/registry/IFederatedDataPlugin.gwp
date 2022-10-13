@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<plugin
+  interface="IFederatedDataPlugin"
+  name="IFederatedDataPlugin">
+  <plugin-gosu
+    disabled="false"
+    gosuclass="gw.plugin.federateddata.v1.FederatedDataPlugin">
+    <param
+      name="HostUrl"
+      value="${FederatedDataHostUrl}"/>
+  </plugin-gosu>
+</plugin>

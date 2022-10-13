@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="NPGImport_accDV">
+    <Variable
+      initialValue="new gw.acc.npg.LineOfBusinessProcessor()"
+      name="lineOfBusinessProcessor"
+      type="gw.acc.npg.LineOfBusinessProcessor"/>
+    <InputColumn>
+      <Label
+        label="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.SelectionTitle&quot;)"/>
+      <FileInput
+        editable="lineOfBusinessProcessor.Status != PROGRESS"
+        id="XmlFilePath"
+        label="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.XMLFilePath&quot;)"
+        value="lineOfBusinessProcessor.WebXMLFile"/>
+      <TextInput
+        editable="lineOfBusinessProcessor.Status != PROGRESS"
+        id="ConfigRoot"
+        label="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.ApplicationRootDirectory&quot;)"
+        value="lineOfBusinessProcessor.ConfigDirectoryPath"
+        valueSectionWidth="55em"/>
+      <TextInput
+        editable="lineOfBusinessProcessor.Status != PROGRESS"
+        id="LobSourcePackage"
+        label="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.GosuSourcePackage&quot;)"
+        value="lineOfBusinessProcessor.PackageName"/>
+      <Label
+        label="lineOfBusinessProcessor.Status.Message"/>
+      <ButtonInput
+        action="lineOfBusinessProcessor.process()"
+        available="lineOfBusinessProcessor.Status != PROGRESS"
+        id="Generate"
+        value="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.GenerateProduct&quot;)"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

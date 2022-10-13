@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<product
+  xmlns="http://guidewire.com/productgenerator">
+  <abbreviation>PS</abbreviation>
+  <code>PersonalStuff</code>
+  <display-name>Personal Stuff</display-name>
+  <suffix-for-entity>_Ext</suffix-for-entity>
+  <line>
+    <code>PSLine</code>
+    <entity-name>PersonalStuffLine_Ext</entity-name>
+    <include-exclusions>true</include-exclusions>
+    <include-conditions>true</include-conditions>
+    <include-modifiers>true</include-modifiers>
+    <additional-fields>
+      <field
+        name="LineExFkField"
+        desc="Line level example fk field"
+        nullok="true"
+        type="foreignkey"
+        fkentity="IndustryCode"/>
+      <field
+        name="LineExTkField"
+        desc="Line level example type key field"
+        nullok="true"
+        type="typekey"
+        typelist="LocaleType"/>
+      <field
+        name="LineExIntField"
+        desc="Line level example integer field"
+        nullok="true"
+        type="integer"/>
+      <field
+        name="LineExVarField"
+        desc="Line level example varchar field"
+        nullok="true"
+        type="varchar"
+        size="240"/>
+      <field
+        name="LineExDecimalField"
+        desc="Line level example decimal field"
+        nullok="true"
+        type="decimal"
+        precision="9"
+        scale="3"/>
+      <field
+        name="LineExBitField"
+        desc="Line level example boolean field"
+        type="bit"
+        nullok="true"/>
+      <field
+        name="PSOtherItems"
+        desc="Line level example array field"
+        type="array"
+        arrayentity="PSOtherItem_Ext"
+        owner="false"
+        cascadeDelete="true"/>
+    </additional-fields>
+  </line>
+  <coverables>
+    <coverable>
+      <entity-name>PSLocationThing_Ext</entity-name>
+      <description>Covered things on the personal stuff line</description>
+      <referred-from>PersonalStuffLine_Ext</referred-from>
+      <reference-name>PSLocationThings</reference-name>
+      <attached-to-location>true</attached-to-location>
+      <attached-to-building>false</attached-to-building>
+      <include-exclusions>true</include-exclusions>
+      <include-conditions>true</include-conditions>
+      <include-modifiers>true</include-modifiers>
+      <additional-fields>
+        <field
+          name="CovExAutoNumberField"
+          desc="Coverage level example auto number field"
+          nullok="true"
+          type="integer"/>
+        <field
+          name="CovExFkField"
+          desc="Coverage level example fk field"
+          nullok="true"
+          type="foreignkey"
+          fkentity="IndustryCode"/>
+        <field
+          name="CovExTkField"
+          desc="Coverage level example type key field"
+          nullok="true"
+          type="typekey"
+          typelist="LocaleType"/>
+        <field
+          name="CovExIntField"
+          desc="Coverage level example integer field"
+          nullok="true"
+          type="integer"/>
+        <field
+          name="CovExVarField"
+          desc="Coverage level example varchar field"
+          nullok="true"
+          type="varchar"
+          size="240"/>
+        <field
+          name="CovExDecimalField"
+          desc="Coverage level example decimal field"
+          nullok="true"
+          type="decimal"
+          precision="9"
+          scale="3"/>
+        <field
+          name="CovExBitField"
+          desc="Coverage level example boolean field"
+          type="bit"
+          nullok="true"/>
+        <field
+          name="ScheduledItems"
+          desc="Coverage level example array field"
+          type="array"
+          arrayentity="PSLocSchedItem_Ext"
+          owner="true"
+          cascadeDelete="false"/>
+      </additional-fields>
+    </coverable>
+  </coverables>
+  <costs>
+    <cost>
+      <entity-name>PSLineCovCost_Ext</entity-name>
+      <description>Desciption</description>
+      <supertype-entity>PSCost_Ext</supertype-entity>
+      <coverable-entity-name>PersonalStuffLine_Ext</coverable-entity-name>
+      <coverable-entity-for-coverage>PersonalStuffLine_Ext</coverable-entity-for-coverage>
+      <reference-name>PSLineCovCosts</reference-name>
+      <additional-fields>
+        <field
+          name="CostExFkField"
+          desc="Cost level example fk field"
+          nullok="true"
+          type="foreignkey"
+          fkentity="PolicyLocation"
+          costkeyfield="true"/>
+        <field
+          name="CostExTkField"
+          desc="Cost level example type key field"
+          nullok="true"
+          type="typekey"
+          typelist="ExampleCostTL"
+          costkeyfield="true"/>
+        <field
+          name="CostExIntField"
+          desc="Cost level example integer field"
+          nullok="true"
+          type="integer"
+          costkeyfield="true"/>
+        <field
+          name="CostExVarField"
+          desc="Cost level example varchar field"
+          nullok="true"
+          type="varchar"
+          size="51"
+          costkeyfield="false"/>
+        <field
+          name="CostExDecimalField"
+          desc="Cost level example decimal field"
+          nullok="true"
+          type="decimal"
+          precision="9"
+          scale="3"
+          costkeyfield="true"/>
+      </additional-fields>
+    </cost>
+  </costs>
+  <other-entities>
+    <entity>
+      <name>PSOtherItem_Ext</name>
+      <description>Description</description>
+      <fields>
+        <field
+          name="PSPersonalStuffLine"
+          desc="Other entity example fk field"
+          nullok="false"
+          type="foreignkey"
+          fkentity="PersonalStuffLine_Ext"/>
+        <field
+          name="OtherExFkField"
+          desc="Other entity example fk field"
+          nullok="true"
+          type="foreignkey"
+          fkentity="User"/>
+        <field
+          name="OtherExTkField"
+          desc="Other entity example type key field"
+          nullok="true"
+          type="typekey"
+          typelist="ExampleCostTL"/>
+        <field
+          name="OtherExIntField"
+          desc="Other entity example integer field"
+          nullok="true"
+          type="integer"/>
+        <field
+          name="OtherExVarField"
+          desc="Other entity example varchar field"
+          nullok="true"
+          type="varchar"
+          size="51"/>
+        <field
+          name="OtherExDecimalField"
+          desc="Other entity example decimal field"
+          nullok="true"
+          type="decimal"
+          precision="9"
+          scale="3"/>
+      </fields>
+    </entity>
+    <entity>
+      <name>PSLocSchedItem_Ext</name>
+      <description>Description</description>
+      <fields>
+        <field
+          name="PSLocationThing"
+          desc="PS location thing"
+          nullok="false"
+          type="foreignkey"
+          fkentity="PSLocationThingExt"/>
+        <field
+          name="OtherExTkField"
+          desc="Other entity example type key field"
+          nullok="true"
+          type="typekey"
+          typelist="ExampleCostTL"/>
+        <field
+          name="OtherExIntField"
+          desc="Other entity example integer field"
+          nullok="true"
+          type="integer"/>
+        <field
+          name="OtherExVarField"
+          desc="Other entity example varchar field"
+          nullok="true"
+          type="varchar"
+          size="51"/>
+        <field
+          name="OtherExDecimalField"
+          desc="Other entity example decimal field"
+          nullok="true"
+          type="decimal"
+          precision="9"
+          scale="3"/>
+      </fields>
+    </entity>
+  </other-entities>
+</product>

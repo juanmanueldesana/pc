@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Screen
+    id="NPGWizardOtherEntities_accScreen">
+    <Variable
+      initialValue="entities.toTypedArray()"
+      name="entitiesArray"
+      type="gw.acc.npg.wizard.OtherEntityStepDTO[]"/>
+    <Require
+      name="entities"
+      type="java.util.Set&lt; gw.acc.npg.wizard.OtherEntityStepDTO&gt;"/>
+    <Toolbar>
+      <WizardButtons/>
+    </Toolbar>
+    <PanelRef
+      id="Panel">
+      <Toolbar
+        visible="true">
+        <AddButton
+          id="AddBtn"
+          iterator="EntityIterator"
+          label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.AddButton&quot;)"
+          toCreateAndAdd="var x = new gw.acc.npg.wizard.OtherEntityStepDTO(); entities.add(x); return x"/>
+        <RemoveButton
+          id="RemoveBtn"
+          iterator="EntityIterator"
+          label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.RemoveButton&quot;)"/>
+      </Toolbar>
+      <ListViewPanel
+        id="FieldsLV">
+        <RowIterator
+          canPick="false"
+          editable="true"
+          elementName="entity"
+          id="EntityIterator"
+          toRemove="entities.remove(entity)"
+          value="entitiesArray"
+          valueType="gw.acc.npg.wizard.OtherEntityStepDTO[]">
+          <Row>
+            <TextCell
+              editable="true"
+              id="EntityName"
+              label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.OtherEntity.EntityName&quot;)"
+              regex="gw.acc.npg.validators.NameConstraintValidator.RegexExpression.ENTITY_NAME.Pattern.pattern()"
+              required="true"
+              tooltip="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.OtherEntity.EntityName.Help&quot;)"
+              value="entity.EntityName"/>
+            <TextCell
+              editable="true"
+              id="Description"
+              label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.OtherEntity.Description&quot;)"
+              required="true"
+              tooltip="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.OtherEntity.Description.Help&quot;)"
+              value="entity.Description"/>
+            <FormatCell
+              id="Fields"
+              label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.FieldsInLV&quot;)"
+              tooltip="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.OtherEntity.Help&quot;)">
+              <ContentInput>
+                <PickerLink
+                  action="NPGWizardFields_accPopup.push(entity.Fields)"
+                  id="FieldsManager"
+                  label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.FieldsButtonInLV&quot;, entity.Fields.Count)"
+                  onPick="entity.Fields = PickedValue"
+                  visible="true"/>
+              </ContentInput>
+            </FormatCell>
+          </Row>
+        </RowIterator>
+      </ListViewPanel>
+    </PanelRef>
+  </Screen>
+</PCF>

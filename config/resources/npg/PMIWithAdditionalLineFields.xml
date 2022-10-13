@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<product
+  xmlns="http://guidewire.com/productgenerator">
+  <abbreviation>PMI</abbreviation>
+  <code>PrivateMedicalInsurance</code>
+  <display-name>Private Medical Insurance</display-name>
+  <suffix-for-entity>_DT</suffix-for-entity>
+  <line>
+    <code>PMILine</code>
+    <entity-name>PMILine_DT</entity-name>
+    <include-exclusions>true</include-exclusions>
+    <include-conditions>true</include-conditions>
+    <include-modifiers>true</include-modifiers>
+    <additional-fields>
+      <field
+        name="WaitingTimeInDays"
+        desc="Waiting time for existing desease"
+        nullok="true"
+        type="integer"/>
+      <field
+        name="PMIGroupEmployees"
+        desc="PMI Group Employees"
+        type="array"
+        arrayentity="PMIGroupEmployee_DT"
+        owner="false"
+        cascadeDelete="true"/>
+    </additional-fields>
+  </line>
+  <coverables>
+    <coverable>
+      <entity-name>PMILevelOfCover_DT</entity-name>
+      <description>Level of Cover on a Group Policy</description>
+      <referred-from>PMILine_DT</referred-from>
+      <reference-name>PMILevelOfCovers</reference-name>
+      <attached-to-location>false</attached-to-location>
+      <attached-to-building>false</attached-to-building>
+      <include-exclusions>true</include-exclusions>
+      <include-conditions>true</include-conditions>
+      <include-modifiers>true</include-modifiers>
+      <additional-fields>
+        <field
+          name="Name"
+          desc="Example string column"
+          nullok="true"
+          type="varchar"
+          size="51"/>
+        <field
+          name="Description"
+          desc="Example string column"
+          nullok="true"
+          type="mediumtext"/>
+        <field
+          name="PMIGroupEmployees"
+          desc="PMI Group Employees"
+          type="array"
+          arrayentity="PMIGroupEmployee_DT"
+          owner="false"
+          cascadeDelete="true"/>
+      </additional-fields>
+    </coverable>
+  </coverables>
+  <costs>
+    <cost>
+      <entity-name>PMILevelOfCoverCost_DT</entity-name>
+      <description>Cost associated with a PMI Level of Cover</description>
+      <supertype-entity>PMICost_DT</supertype-entity>
+      <coverable-entity-name>PMILevelOfCover_DT</coverable-entity-name>
+      <reference-name>PMILevelOfCoverCosts</reference-name>
+    </cost>
+  </costs>
+  <other-entities>
+    <entity>
+      <name>PMIGroupEmployee_DT</name>
+      <description>Named Individual belonging to Level of Cover</description>
+      <fields>
+        <field
+          name="FirstName"
+          desc="First Name"
+          nullok="true"
+          type="varchar"
+          size="51"/>
+        <field
+          name="LastName"
+          desc="Last Name"
+          nullok="true"
+          type="varchar"
+          size="51"/>
+        <field
+          name="DateOfBirth"
+          desc="Date of Birth"
+          nullok="true"
+          type="datetime"/>
+        <field
+          name="PMILine"
+          desc="PMI Line"
+          nullok="false"
+          type="foreignkey"
+          fkentity="PMILine_DT"/>
+        <field
+          name="PMILevelOfCover"
+          desc="PMI Level Of Cover"
+          nullok="false"
+          type="foreignkey"
+          fkentity="PMILevelOfCover_DT"/>
+      </fields>
+    </entity>
+  </other-entities>
+</product>

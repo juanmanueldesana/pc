@@ -1,0 +1,189 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../pcf.xsd">
+  <Popup
+    alwaysInEditMode="true"
+    canEdit="true"
+    id="NPGWizardFields_accPopup"
+    parent="NPG_accWizard()"
+    returnType="java.util.Set&lt;gw.acc.npg.wizard.WizardFieldDTO&gt;"
+    startInEditMode="true"
+    title="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Popup.Title&quot;)"
+    validateOnBundleCommit="false">
+    <LocationEntryPoint
+      signature="NPGWizardFields_accPopup(wizardFieldDTOs: java.util.Set&lt;gw.acc.npg.wizard.WizardFieldDTO&gt;)"/>
+    <LocationEntryPoint
+      signature="NPGWizardFields_accPopup(wizardFieldDTOs: java.util.Set&lt;gw.acc.npg.wizard.WizardFieldDTO&gt;, typeIsCost: boolean)"/>
+    <Variable
+      name="wizardFieldDTOs"
+      type="java.util.Set&lt;gw.acc.npg.wizard.WizardFieldDTO&gt;"/>
+    <Variable
+      name="wizardFieldDTO"
+      type="gw.acc.npg.wizard.WizardFieldDTO"/>
+    <Variable
+      initialValue="wizardFieldDTOs.toTypedArray()"
+      name="wizardFieldData"
+      type="gw.acc.npg.wizard.WizardFieldDTO[]"/>
+    <Variable
+      name="typeIsCost"
+      type="boolean"/>
+    <Screen
+      editable="true"
+      id="NPGWizard_FieldsPopupScreen">
+      <Toolbar>
+        <EditButtons
+          cancelVisible="false"
+          pickValue="wizardFieldDTOs"/>
+      </Toolbar>
+      <DetailViewPanel
+        editable="true">
+        <InputColumn>
+          <ListViewInput
+            labelAbove="true">
+            <Toolbar
+              visible="true">
+              <AddButton
+                id="AddFieldBtn"
+                iterator="FieldRowIterator"
+                label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.AddButton&quot;)"
+                toCreateAndAdd="var x = new gw.acc.npg.wizard.WizardFieldDTO(); wizardFieldDTOs.add(x); return x"/>
+              <RemoveButton
+                id="RemoveFieldBtn"
+                iterator="FieldRowIterator"
+                label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.RemoveButton&quot;)"/>
+            </Toolbar>
+            <ListViewPanel
+              id="FieldsLV">
+              <RowIterator
+                canPick="false"
+                editable="true"
+                elementName="fieldRow"
+                id="FieldRowIterator"
+                toRemove="wizardFieldDTOs.remove(fieldRow); wizardFieldData = wizardFieldDTOs.toTypedArray(); wizardFieldDTO = null;"
+                value="wizardFieldData"
+                valueType="gw.acc.npg.wizard.WizardFieldDTO[]">
+                <Row>
+                  <ButtonCell
+                    action="wizardFieldDTO = fieldRow"
+                    id="EditCell"
+                    label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Edit&quot;)"
+                    value="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Edit&quot;)"/>
+                  <TextCell
+                    id="FieldName"
+                    label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Name&quot;)"
+                    value="fieldRow.Name"/>
+                  <TextCell
+                    id="Field"
+                    label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Type&quot;)"
+                    value="fieldRow.ColumnType.toString()"/>
+                </Row>
+              </RowIterator>
+            </ListViewPanel>
+          </ListViewInput>
+        </InputColumn>
+        <InputColumn>
+          <Label
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.FormTitle&quot;)"/>
+          <TextInput
+            editable="true"
+            id="Name"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Name&quot;)"
+            regex="gw.acc.npg.validators.NameConstraintValidator.RegexExpression.FIELD_NAME.Pattern.pattern()"
+            required="true"
+            value="wizardFieldDTO.Name"
+            visible="wizardFieldDTO != null"/>
+          <TextInput
+            editable="true"
+            id="Desc"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Desc&quot;)"
+            required="true"
+            value="wizardFieldDTO.Desc"
+            visible="wizardFieldDTO != null"/>
+          <RangeInput
+            editable="true"
+            id="Type"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Type&quot;)"
+            required="true"
+            value="wizardFieldDTO.ColumnType"
+            valueRange="gw.acc.npg.wizard.WizardFieldDTO.COLUMN_TYPES"
+            valueType="gw.acc.npg.model.ColumnType"
+            visible="wizardFieldDTO != null">
+            <PostOnChange/>
+          </RangeInput>
+          <CheckBoxInput
+            editable="true"
+            id="Nullok"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Nullok&quot;)"
+            value="wizardFieldDTO.Nullok"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType != gw.acc.npg.model.ColumnType.Array "/>
+          <TextInput
+            editable="true"
+            id="Arrayentity"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Arrayentity&quot;)"
+            regex="gw.acc.npg.validators.NameConstraintValidator.RegexExpression.ENTITY_NAME.Pattern.pattern()"
+            required="true"
+            value="wizardFieldDTO.Arrayentity"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Array "/>
+          <CheckBoxInput
+            editable="true"
+            id="Owner"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Owner&quot;)"
+            value="wizardFieldDTO.Owner"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Array "/>
+          <CheckBoxInput
+            editable="true"
+            id="CascadeDelete"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.CascadeDelete&quot;)"
+            value="wizardFieldDTO.CascadeDelete"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Array "/>
+          <TextInput
+            editable="true"
+            id="Fkentity"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Fkentity&quot;)"
+            regex="gw.acc.npg.validators.NameConstraintValidator.RegexExpression.ENTITY_NAME.Pattern.pattern()"
+            required="true"
+            value="wizardFieldDTO.Fkentity"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Foreignkey "/>
+          <TextInput
+            editable="true"
+            id="Typelist"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Typelist&quot;)"
+            required="true"
+            value="wizardFieldDTO.Typelist"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Typekey "/>
+          <TextInput
+            editable="true"
+            id="Size"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Size&quot;)"
+            required="true"
+            value="wizardFieldDTO.Size"
+            valueType="java.lang.Integer"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Varchar "/>
+          <TextInput
+            editable="true"
+            id="Scale"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Scale&quot;)"
+            required="true"
+            value="wizardFieldDTO.Scale"
+            valueType="java.lang.Integer"
+            visible="wizardFieldDTO != null and (wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Decimal or wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Money)"/>
+          <TextInput
+            editable="true"
+            id="Precision"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.Precision&quot;)"
+            required="true"
+            value="wizardFieldDTO.Precision"
+            valueType="java.lang.Integer"
+            visible="wizardFieldDTO != null and wizardFieldDTO.ColumnType == gw.acc.npg.model.ColumnType.Decimal"/>
+          <CheckBoxInput
+            editable="true"
+            id="CostKeyField"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Fields.Form.CostKeyField&quot;)"
+            value="wizardFieldDTO.CostKeyField"
+            visible="wizardFieldDTO != null and typeIsCost"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+  </Popup>
+</PCF>

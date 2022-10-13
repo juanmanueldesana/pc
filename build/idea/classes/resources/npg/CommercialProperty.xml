@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<product
+  xmlns="http://guidewire.com/productgenerator">
+  <abbreviation>CP</abbreviation>
+  <code>CommercialProperty</code>
+  <display-name>Commercial Property Policy line of business</display-name>
+  <suffix-for-entity></suffix-for-entity>
+  <line>
+    <code>CommercialPropertyLine</code>
+    <entity-name>CommercialPropertyLine</entity-name>
+    <include-exclusions>true</include-exclusions>
+    <include-conditions>true</include-conditions>
+    <include-modifiers>true</include-modifiers>
+  </line>
+  <coverables>
+    <coverable>
+      <entity-name>CPBlanket</entity-name>
+      <description>CP Blanket</description>
+      <referred-from>CommercialPropertyLine</referred-from>
+      <reference-name>CPBlankets</reference-name>
+      <attached-to-location>true</attached-to-location>
+      <attached-to-building>false</attached-to-building>
+      <include-exclusions>false</include-exclusions>
+      <include-conditions>false</include-conditions>
+      <include-modifiers>false</include-modifiers>
+      <additional-fields>
+        <field
+          name="CPBlanketNum"
+          desc="The blanket number"
+          nullok="false"
+          type="auto-numbering"/>
+        <field
+          name="BlanketType"
+          desc="Identifies the combinations used in the blanket"
+          nullok="false"
+          typelist="BlanketType"
+          type="typekey"/>
+        <field
+          name="CPBlanketDescription"
+          desc="Description of the blanket"
+          nullok="true"
+          type="shorttext"/>
+      </additional-fields>
+    </coverable>
+    <coverable>
+      <entity-name>CPLocation</entity-name>
+      <description>CP Location</description>
+      <referred-from>CommercialPropertyLine</referred-from>
+      <reference-name>CPLocations</reference-name>
+      <attached-to-location>true</attached-to-location>
+      <attached-to-building>false</attached-to-building>
+      <include-exclusions>false</include-exclusions>
+      <include-conditions>false</include-conditions>
+      <include-modifiers>false</include-modifiers>
+      <additional-fields>
+        <field
+          name="PrincipalOpsDesc"
+          desc="Principle operations and occupancy."
+          nullok="true"
+          type="varchar"
+          size="240"/>
+      </additional-fields>
+    </coverable>
+    <coverable>
+      <entity-name>CPBuilding</entity-name>
+      <description>CP Building</description>
+      <referred-from>CommercialPropertyLine</referred-from>
+      <reference-name>CPBuildings</reference-name>
+      <attached-to-location>false</attached-to-location>
+      <attached-to-building>true</attached-to-building>
+      <include-exclusions>false</include-exclusions>
+      <include-conditions>false</include-conditions>
+      <include-modifiers>false</include-modifiers>
+      <additional-fields>
+        <field
+          name="CoverageForm"
+          desc="Defines the set of coverages that are available; also known as coverage parts."
+          nullok="false"
+          type="typekey"
+          typelist="CoverageForm"/>
+      </additional-fields>
+    </coverable>
+  </coverables>
+  <costs>
+    <cost>
+      <entity-name>CPStateTaxCost</entity-name>
+      <description>State tax costs for Commercial Property</description>
+      <supertype-entity>CPCost</supertype-entity>
+      <reference-name>StateTaxCosts</reference-name>
+      <additional-fields>
+        <field
+          name="TaxState"
+          desc="Jurisdiction tax that applies"
+          type="typekey"
+          typelist="Jurisdiction"
+          costkeyfield="false"/>
+      </additional-fields>
+    </cost>
+    <cost>
+      <entity-name>CPBuildingCovCost</entity-name>
+      <description>A unit of price for a period of time, not to be broken up any further, for a Commercial Property building coverage</description>
+      <supertype-entity>CPCost</supertype-entity>
+      <coverable-entity-for-coverage>CPBuilding</coverable-entity-for-coverage>
+      <reference-name>BuildingCosts</reference-name>
+    </cost>
+  </costs>
+</product>

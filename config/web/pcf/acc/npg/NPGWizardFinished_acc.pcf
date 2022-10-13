@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="NPGWizardFinished_acc"
+    parent="NPGNewProductGenerator_acc"
+    startInEditMode="true"
+    title="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.Title&quot;)">
+    <Screen
+      id="NPGWizard_FinishedScreen">
+      <DetailViewPanel>
+        <InputColumn>
+          <Label
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.Success&quot;)"/>
+          <BulletPointTextInput
+            action="NPGNewProductGenerator_acc.go()"
+            id="ReturnLink"
+            value="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.ReturnToNewProductGenerator&quot;)"/>
+          <BulletPointTextInput
+            action="NPG_accWizard.go()"
+            id="StartWizardLink"
+            value="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.StartAnotherOne&quot;)"/>
+        </InputColumn>
+      </DetailViewPanel>
+    </Screen>
+  </Page>
+</PCF>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <ExitPoint
+    id="MulticlusterShard"
+    target="PolicyCenter"
+    url="{shardUrl}/pc/">
+    <LocationEntryPoint
+      signature="MulticlusterShard(shardUrl : String)"/>
+    <ExitPointParameter
+      locationParam="shardUrl"
+      type="String"
+      urlParam="shardUrl"/>
+  </ExitPoint>
+</PCF>

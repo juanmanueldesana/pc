@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<product
+  xmlns="http://guidewire.com/productgenerator">
+  <abbreviation>PA</abbreviation>
+  <code>PersonalAuto</code>
+  <display-name>Personal Auto</display-name>
+  <suffix-for-entity></suffix-for-entity>
+  <line>
+    <code>PersonalAutoLine</code>
+    <entity-name>PersonalAutoLine</entity-name>
+    <include-exclusions>true</include-exclusions>
+    <include-conditions>true</include-conditions>
+    <include-modifiers>false</include-modifiers>
+  </line>
+  <coverables>
+    <coverable>
+      <entity-name>PersonalVehicle</entity-name>
+      <description>Personal Vehicle</description>
+      <referred-from>PersonalAutoLine</referred-from>
+      <reference-name>Vehicles</reference-name>
+      <attached-to-location>true</attached-to-location>
+      <attached-to-building>false</attached-to-building>
+      <include-exclusions>false</include-exclusions>
+      <include-conditions>false</include-conditions>
+      <include-modifiers>true</include-modifiers>
+      <additional-fields>
+        <field
+          name="VehicleNumber"
+          desc="Vehicle number"
+          nullok="false"
+          type="auto-numbering"/>
+        <field
+          name="VehicleType"
+          desc="Type of the vehicle."
+          nullok="true"
+          typelist="VehicleType"
+          type="typekey"/>
+        <field
+          name="Model"
+          desc="Model of the vehicle."
+          nullok="true"
+          type="varchar"
+          size="40"/>
+        <field
+          name="Drivers"
+          arrayentity="VehicleDriver"
+          cascadeDelete="true"
+          desc="All drivers associated with this vehicle"
+          owner="true"
+          type="array"/>
+      </additional-fields>
+    </coverable>
+  </coverables>
+  <costs>
+    <cost>
+      <entity-name>PATaxable</entity-name>
+      <description>A taxable unit of price for a period of time, not to be broken up any further, for Personal Auto</description>
+      <supertype-entity>PACost</supertype-entity>
+      <reference-name>TaxableCosts</reference-name>
+    </cost>
+    <cost>
+      <entity-name>PAGeneralPremium</entity-name>
+      <description>A taxable unit of price for a period of time, not to be broken up any further, for Personal Auto</description>
+      <supertype-entity>PATaxable</supertype-entity>
+      <reference-name>GeneralPremiumCosts</reference-name>
+    </cost>
+    <cost>
+      <entity-name>PACoveragePremium</entity-name>
+      <description>A taxable unit of price for a period of time, not to be broken up any further, for a Personal Auto coverage</description>
+      <supertype-entity>PAGeneralPremium</supertype-entity>
+      <reference-name>CoveragePremiumCosts</reference-name>
+    </cost>
+    <cost>
+      <entity-name>PersonalAutoCovCost</entity-name>
+      <description>A taxable unit of price for a period of time, not to be broken up any further, for a line-level Personal Auto coverage</description>
+      <supertype-entity>PACoveragePremium</supertype-entity>
+      <coverable-entity-name>PersonalVehicle</coverable-entity-name>
+      <coverable-entity-for-coverage>PersonalAutoLine</coverable-entity-for-coverage>
+      <reference-name>PACosts</reference-name>
+    </cost>
+    <cost>
+      <entity-name>PersonalVehicleCovCost</entity-name>
+      <description>A taxable unit of price for a period of time, not to be broken up any further, for a Personal Auto vehicle coverage</description>
+      <supertype-entity>PACoveragePremium</supertype-entity>
+      <coverable-entity-for-coverage>PersonalVehicle</coverable-entity-for-coverage>
+      <reference-name>VehicleCosts</reference-name>
+    </cost>
+  </costs>
+  <other-entities>
+    <entity>
+      <name>VehicleDriver</name>
+      <description>Associates a vehicle and a driver in Personal Auto</description>
+      <fields>
+        <field
+          name="PercentageDriven"
+          desc="The percentage this driver drives the vehicle"
+          nullok="false"
+          type="integer"/>
+        <field
+          name="Vehicle"
+          desc="Vehicle"
+          fkentity="PersonalVehicle"
+          nullok="false"
+          type="foreignkey"/>
+       </fields>
+    </entity>
+  </other-entities>
+</product>

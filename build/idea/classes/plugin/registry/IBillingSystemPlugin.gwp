@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<plugin
+  name="IBillingSystemPlugin">
+  <plugin-gosu
+    gosuclass="gw.plugin.billing.bc1000.BCBillingSystemPlugin">
+  </plugin-gosu>
+</plugin>

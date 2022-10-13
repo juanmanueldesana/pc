@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <Page
+    canEdit="true"
+    id="NPGNewProductGenerator_acc"
+    startInEditMode="true"
+    title="DisplayKey.get(&quot;Accelerator.NPG.Web.Import.Title&quot;)">
+    <Screen
+      editable="true">
+      <Variable
+        initialValue="true"
+        name="xmlImport"
+        type="boolean"/>
+      <DetailViewPanel>
+        <InputColumn>
+          <BooleanRadioInput
+            editable="true"
+            falseLabel="DisplayKey.get(&quot;Accelerator.NPG.Web.Method.Wizard&quot;)"
+            id="GenerationApproach"
+            label="DisplayKey.get(&quot;Accelerator.NPG.Web.SelectMethod&quot;)"
+            trueLabel="DisplayKey.get(&quot;Accelerator.NPG.Web.Method.XmlImport&quot;)"
+            value="xmlImport">
+            <PostOnChange/>
+          </BooleanRadioInput>
+        </InputColumn>
+      </DetailViewPanel>
+      <PanelRef
+        def="NPGImport_accDV()"
+        visible="xmlImport"/>
+      <PanelRef
+        def="NPGWizard_accDV()"
+        visible="not xmlImport"/>
+    </Screen>
+  </Page>
+</PCF>

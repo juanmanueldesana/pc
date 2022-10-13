@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <ListViewPanel
+    id="DesktopAccountsLV"
+    stretch="true"
+    mode="federated">
+    <Variable
+      initialValue="new gw.api.web.desktop.data.account.AccountFederatedData()"
+      name="federatedDataAccounts"
+      type="gw.api.web.desktop.data.FederatedDataIteratorBackingData"/>
+    <RowIterator
+      appendPageInfo="true"
+      editable="false"
+      elementName="account"
+      type="gw.api.web.desktop.data.account.AccountDTO"
+      value="federatedDataAccounts"
+      valueType="gw.api.web.desktop.data.FederatedDataIteratorBackingData">
+      <ToolbarFilter
+        name="accountFilter">
+        <ToolbarFilterOptionGroup
+          filters="gw.api.web.desktop.data.account.AccountDataFilters.allFilters()"/>
+      </ToolbarFilter>
+      <IteratorSort
+        sortBy="account.AccountHolderName"
+        sortOrder="1"/>
+      <Row>
+        <TextCell
+          action="FederatedAccountForward.go(account.PublicId, account.AccountNumber)"
+          id="AccountNumber"
+          label="DisplayKey.get(&quot;Web.DesktopAccounts.AccountNumber&quot;)"
+          value="account.AccountNumber"
+          wrap="false"/>
+        <TypeKeyCell
+          id="Status"
+          label="DisplayKey.get(&quot;Web.DesktopAccounts.AccountStatus&quot;)"
+          value="typekey.AccountStatus.get(account.AccountStatus)"
+          valueType="typekey.AccountStatus"
+          wrap="false"/>
+        <TextCell
+          id="Name"
+          label="DisplayKey.get(&quot;Web.DesktopAccounts.Name&quot;)"
+          value="account.AccountHolderName"
+          wrap="false"/>
+        <TextCell
+          enableSort="false"
+          grow="true"
+          id="Address"
+          label="DisplayKey.get(&quot;Web.DesktopAccounts.Address&quot;)"
+          value="account.AccountHolderAddress"
+          wrap="true"/>
+      </Row>
+    </RowIterator>
+  </ListViewPanel>
+</PCF>

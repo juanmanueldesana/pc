@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <DetailViewPanel
+    id="NPGWizard_accDV">
+    <InputColumn>
+      <ButtonInput
+        action="NPG_accWizard.go()"
+        id="NPGWizardStarter"
+        value="DisplayKey.get(&quot;Accelerator.NPG.Web.Wizard.StartButton&quot;)"/>
+    </InputColumn>
+  </DetailViewPanel>
+</PCF>

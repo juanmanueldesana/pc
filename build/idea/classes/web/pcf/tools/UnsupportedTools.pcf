@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../pcf.xsd">
+  <LocationGroup
+    canVisit="gw.api.tools.InternalTools.isEnabled()"
+    id="UnsupportedTools"
+    menuActions="InternalToolsMenuActions()"
+    tabBar="InternalToolsTabBar()"
+    title="&quot;&quot;">
+    <LocationRef
+      location="Reload()"/>
+    <LocationRef
+      location="ServerPerformance()"/>
+    <LocationRef
+      location="SystemClock()"/>
+    <LocationRef
+      location="PCSampleData()"/>
+    <LocationRef
+      location="PCArchive()"/>
+    <LocationRef
+      location="PCPurge()"/>
+    <LocationRef
+      location="PersonalDataDestruction()"/>
+    <LocationRef
+      location="SolrSearch()"/>
+    <LocationRef
+      location="NPGNewProductGenerator_acc()"/>
+  </LocationGroup>
+</PCF>

@@ -1,0 +1,22 @@
+package rules.EventMessage.EventFired_dir.FederatedData_dir
+
+uses gw.plugin.federateddata.FederatedDataEntitySerializerUtil
+
+@gw.rules.RuleName("Submission")
+internal class Submission {
+  static function doCondition(messageContext : entity.MessageContext) : boolean {
+/*start00rule*/
+    return messageContext.Root typeis PolicyPeriod &&
+        (messageContext.EventName == PolicyPeriod.POLICYPERIODADDED_EVENT
+            || messageContext.EventName == PolicyPeriod.ISSUEPERIOD_EVENT
+            || messageContext.EventName == PolicyPeriod.BINDSUBMISSION_EVENT
+            || messageContext.EventName == PolicyPeriod.CANCELPERIOD_EVENT)
+/*end00rule*/
+  }
+
+  static function doAction(messageContext : entity.MessageContext, actions : gw.rules.Action) {
+/*start00rule*/
+    FederatedDataEntitySerializerUtil.createJobMessage(messageContext)
+/*end00rule*/
+  }
+}
