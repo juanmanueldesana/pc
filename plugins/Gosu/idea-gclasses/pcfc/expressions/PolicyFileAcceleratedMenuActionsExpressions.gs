@@ -37,7 +37,12 @@ class PolicyFileAcceleratedMenuActionsExpressions {
     }
     
     // 'def' attribute on MenuItemSetRef at PolicyFileAcceleratedMenuActions.pcf: line 18, column 52
-    function def_onEnter_16 (def :  pcf.PolicyMenuItemSet_WorkersComp) : void {
+    function def_onEnter_16 (def :  pcf.PolicyMenuItemSet_TravelInsurance) : void {
+      def.onEnter(policyPeriod, asOfDate)
+    }
+    
+    // 'def' attribute on MenuItemSetRef at PolicyFileAcceleratedMenuActions.pcf: line 18, column 52
+    function def_onEnter_18 (def :  pcf.PolicyMenuItemSet_WorkersComp) : void {
       def.onEnter(policyPeriod, asOfDate)
     }
     
@@ -82,7 +87,12 @@ class PolicyFileAcceleratedMenuActionsExpressions {
     }
     
     // 'def' attribute on MenuItemSetRef at PolicyFileAcceleratedMenuActions.pcf: line 18, column 52
-    function def_refreshVariables_17 (def :  pcf.PolicyMenuItemSet_WorkersComp) : void {
+    function def_refreshVariables_17 (def :  pcf.PolicyMenuItemSet_TravelInsurance) : void {
+      def.refreshVariables(policyPeriod, asOfDate)
+    }
+    
+    // 'def' attribute on MenuItemSetRef at PolicyFileAcceleratedMenuActions.pcf: line 18, column 52
+    function def_refreshVariables_19 (def :  pcf.PolicyMenuItemSet_WorkersComp) : void {
       def.refreshVariables(policyPeriod, asOfDate)
     }
     
@@ -107,7 +117,7 @@ class PolicyFileAcceleratedMenuActionsExpressions {
     }
     
     // 'mode' attribute on MenuItemSetRef at PolicyFileAcceleratedMenuActions.pcf: line 18, column 52
-    function mode_18 () : java.lang.Object {
+    function mode_20 () : java.lang.Object {
       return policyPeriod.Policy.Product.PublicID
     }
     
@@ -141,27 +151,27 @@ class PolicyFileAcceleratedMenuActionsExpressions {
     }
     
     // 'action' attribute on Link (id=PolicyPeriodEffDateID) at PolicyFileAcceleratedMenuActions.pcf: line 28, column 31
-    function action_22 () : void {
+    function action_24 () : void {
       gw.web.policy.PolicyPeriodDatePickerHelper.findPolicyPeriodAsOfDate(ArgValue, policyPeriod, \ p, d -> PolicyFileForward.go(p, d))
     }
     
     // 'value' attribute on Link (id=PolicyPeriodEffDateID) at PolicyFileAcceleratedMenuActions.pcf: line 28, column 31
-    function defaultSetter_21 (__VALUE_TO_SET :  java.lang.Object) : void {
+    function defaultSetter_23 (__VALUE_TO_SET :  java.lang.Object) : void {
       ArgValue = (__VALUE_TO_SET as java.util.Date)
     }
     
     // 'argInitialValue' attribute on Link (id=PolicyPeriodEffDateID) at PolicyFileAcceleratedMenuActions.pcf: line 28, column 31
-    function initArg_23 () : void {
+    function initArg_25 () : void {
       ArgValue = asOfDate;
     }
     
     // 'action' attribute on Link (id=PolicyPeriodEffDateID) at PolicyFileAcceleratedMenuActions.pcf: line 28, column 31
-    function onChange_19 () : void {
+    function onChange_21 () : void {
       gw.web.policy.PolicyPeriodDatePickerHelper.findPolicyPeriodAsOfDate(ArgValue, policyPeriod, \ p, d -> PolicyFileForward.go(p, d))
     }
     
     // Link (id=PolicyPeriodEffDateID) at PolicyFileAcceleratedMenuActions.pcf: line 28, column 31
-    function value_20 () : java.util.Date {
+    function value_22 () : java.util.Date {
       return ArgValue
     }
     

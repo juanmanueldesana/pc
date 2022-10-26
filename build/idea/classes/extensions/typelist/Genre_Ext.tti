@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<typelist xmlns="http://guidewire.com/typelists" name="Genre_Ext" desc="Genres">
+  <typecode
+    code="Masculino"
+    name="Masculino"/>
+  <typecode
+    code="Femenino"
+    name="Femenino"/>
+  <typecode
+    code="Otro"
+    name="Otro"/>
+</typelist>

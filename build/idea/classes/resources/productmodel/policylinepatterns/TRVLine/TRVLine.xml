@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<PolicyLinePattern
+  codeIdentifier="TRVLine"
+  policyLineSubtype="TRVLine"
+  priority="-1"
+  public-id="TRVLine"
+  territoryCodeNeeded="false">
+  <CoverageCategories>
+    <CoverageCategory priority="-1" codeIdentifier="TRVLineStndGrp" public-id="TRVLineStndGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVLineAddGrp" public-id="TRVLineAddGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVLineExclGrp" public-id="TRVLineExclGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVLineCondGrp" public-id="TRVLineCondGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVCoverAddGrp" public-id="TRVCoverAddGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVCoverStndGrp" public-id="TRVCoverStndGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVCoverExclGrp" public-id="TRVCoverExclGrp"/>
+    <CoverageCategory priority="-1" codeIdentifier="TRVCoverCondGrp" public-id="TRVCoverCondGrp"/>
+  </CoverageCategories>
+  <ModifierPatterns/>
+  <AvailableCoverageCurrencies>
+    <AvailableCoverageCurrency
+      codeIdentifier="TRVLineusd"
+      currency="usd"
+      public-id="TRVLineusd"/>
+  </AvailableCoverageCurrencies>
+</PolicyLinePattern>

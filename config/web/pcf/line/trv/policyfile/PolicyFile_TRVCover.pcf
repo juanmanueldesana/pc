@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Page
+    afterEnter="gw.api.web.PebblesUtil.addWebMessages(CurrentLocation, policyPeriod.PolicyFileMessages)"
+    canVisit="perm.PolicyPeriod.view(policyPeriod) and perm.System.pfiledetails"
+    id="PolicyFile_TRVCover"
+    parent="PolicyFile(policyPeriod, asOfDate)"
+    title="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.NamePlural&quot;)">
+    <LocationEntryPoint
+      signature="PolicyFile_TRVCover(policyPeriod : PolicyPeriod, asOfDate : java.util.Date)"/>
+    <Variable
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Variable
+      name="asOfDate"
+      type="java.util.Date"/>
+    <Screen
+      id="PolicyFile_TRVCoverScreen">
+      <TitleBar/>
+      <Toolbar/>
+      <PanelRef
+        def="TRVCoverPanelSet(policyPeriod, policyPeriod.TRVLine, false, null)"/>
+    </Screen>
+  </Page>
+</PCF>

@@ -47,7 +47,7 @@ class PolicyChangeWizard_DifferencesScreenExpressions {
     }
     
     // 'value' attribute on PanelIterator at PolicyChangeWizard_DifferencesScreen.pcf: line 65, column 43
-    function value_49 () : entity.PolicyLine[] {
+    function value_51 () : entity.PolicyLine[] {
       return policyPeriod.Lines
     }
     
@@ -121,7 +121,12 @@ class PolicyChangeWizard_DifferencesScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at PolicyChangeWizard_DifferencesScreen.pcf: line 68, column 48
-    function def_onEnter_46 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_46 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at PolicyChangeWizard_DifferencesScreen.pcf: line 68, column 48
+    function def_onEnter_48 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, jobWizardHelper)
     }
     
@@ -161,12 +166,17 @@ class PolicyChangeWizard_DifferencesScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at PolicyChangeWizard_DifferencesScreen.pcf: line 68, column 48
-    function def_refreshVariables_47 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_47 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at PolicyChangeWizard_DifferencesScreen.pcf: line 68, column 48
+    function def_refreshVariables_49 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, jobWizardHelper)
     }
     
     // 'mode' attribute on PanelRef at PolicyChangeWizard_DifferencesScreen.pcf: line 68, column 48
-    function mode_48 () : java.lang.Object {
+    function mode_50 () : java.lang.Object {
       return line.Pattern.CodeIdentifier
     }
     
@@ -208,7 +218,7 @@ class PolicyChangeWizard_DifferencesScreenExpressions {
     }
     
     // 'editable' attribute on Screen (id=PolicyChangeWizard_DifferencesScreen) at PolicyChangeWizard_DifferencesScreen.pcf: line 7, column 47
-    function editable_50 () : java.lang.Boolean {
+    function editable_52 () : java.lang.Boolean {
       return openForEdit
     }
     

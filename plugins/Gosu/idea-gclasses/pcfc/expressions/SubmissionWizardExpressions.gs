@@ -29,12 +29,12 @@ class SubmissionWizardExpressions {
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function acceleratedMenuActions_onEnter_90 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_onEnter_92 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
       def.onEnter(submission, policyPeriod, jobWizardHelper)
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function acceleratedMenuActions_refreshVariables_91 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_refreshVariables_93 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
       def.refreshVariables(submission, policyPeriod, jobWizardHelper)
     }
     
@@ -49,17 +49,17 @@ class SubmissionWizardExpressions {
     }
     
     // 'beforeSave' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function beforeSave_81 () : void {
+    function beforeSave_83 () : void {
       policyPeriodBillingInstructionsManager.saveStateToPolicyPeriod(policyPeriod)
     }
     
     // 'canEdit' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function canEdit_92 () : java.lang.Boolean {
+    function canEdit_94 () : java.lang.Boolean {
       return (not job.Complete) and perm.Submission.edit(submission)
     }
     
     // 'canVisit' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    static function canVisit_93 (locationPublicID :  String, policyPeriod :  PolicyPeriod, submission :  Submission, wizardStep :  String) : java.lang.Boolean {
+    static function canVisit_95 (locationPublicID :  String, policyPeriod :  PolicyPeriod, submission :  Submission, wizardStep :  String) : java.lang.Boolean {
       return perm.Submission.view(submission)
     }
     
@@ -104,17 +104,22 @@ class SubmissionWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
-    function def_onEnter_47 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_onEnter_47 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.onEnter(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
-    function def_onEnter_49 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_onEnter_49 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.onEnter(job, policyPeriod, jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
+    function def_onEnter_51 (def :  pcf.LineWizardStepSet_default) : void {
       def.onEnter(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 173, column 77
-    function def_onEnter_88 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_onEnter_90 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.onEnter(jobWizardHelper, policyPeriod)
     }
     
@@ -159,32 +164,37 @@ class SubmissionWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
-    function def_refreshVariables_48 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_refreshVariables_48 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.refreshVariables(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
-    function def_refreshVariables_50 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_refreshVariables_50 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.refreshVariables(job, policyPeriod, jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
+    function def_refreshVariables_52 (def :  pcf.LineWizardStepSet_default) : void {
       def.refreshVariables(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 173, column 77
-    function def_refreshVariables_89 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_refreshVariables_91 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.refreshVariables(jobWizardHelper, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function infoBar_onEnter_94 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_onEnter_96 (def :  pcf.JobWizardInfoBar) : void {
       def.onEnter(submission, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function infoBar_refreshVariables_95 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_refreshVariables_97 (def :  pcf.JobWizardInfoBar) : void {
       def.refreshVariables(submission, policyPeriod)
     }
     
     // 'initialStep' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function initialStep_104 () : java.lang.String {
+    function initialStep_106 () : java.lang.String {
       return wizardStep == null ? jobWizardHelper.getInitialWizardStepId( policyPeriod ) : wizardStep
     }
     
@@ -244,17 +254,17 @@ class SubmissionWizardExpressions {
     }
     
     // 'menuActions' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function menuActions_onEnter_96 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_onEnter_98 (def :  pcf.WizardMenuActions) : void {
       def.onEnter(jobWizardHelper,submission,policyPeriod)
     }
     
     // 'menuActions' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function menuActions_refreshVariables_97 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_refreshVariables_99 (def :  pcf.WizardMenuActions) : void {
       def.refreshVariables(jobWizardHelper,submission,policyPeriod)
     }
     
     // 'mode' attribute on WizardStepSetRef at SubmissionWizard.pcf: line 121, column 29
-    function mode_51 () : java.lang.Object {
+    function mode_53 () : java.lang.Object {
       return productCode
     }
     
@@ -264,7 +274,7 @@ class SubmissionWizardExpressions {
     }
     
     // 'onConcurrentDataChange' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function onConcurrentDataChange_98 () : void {
+    function onConcurrentDataChange_100 () : void {
       CurrentLocation.cancel(); JobForward.go(job)
     }
     
@@ -284,7 +294,7 @@ class SubmissionWizardExpressions {
     }
     
     // 'onEnter' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function onEnter_82 () : void {
+    function onEnter_84 () : void {
       policyPeriodBillingInstructionsManager.populateFromPolicyPeriod(policyPeriod)
     }
     
@@ -304,37 +314,37 @@ class SubmissionWizardExpressions {
     }
     
     // 'onExit' attribute on JobWizardStep (id=RiskAnalysis) at SubmissionWizard.pcf: line 129, column 189
-    function onExit_53 () : void {
+    function onExit_55 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=PolicyReview) at SubmissionWizard.pcf: line 135, column 93
-    function onExit_58 () : void {
+    function onExit_60 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewQuote) at SubmissionWizard.pcf: line 143, column 42
-    function onExit_62 () : void {
+    function onExit_64 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewMultiLineQuote) at SubmissionWizard.pcf: line 152, column 41
-    function onExit_68 () : void {
+    function onExit_70 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=Forms) at SubmissionWizard.pcf: line 160, column 50
-    function onExit_75 () : void {
+    function onExit_77 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function onExit_83 () : void {
+    function onExit_85 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'parent' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    static function parent_99 (locationPublicID :  String, policyPeriod :  PolicyPeriod, submission :  Submission, wizardStep :  String) : pcf.api.Destination {
+    static function parent_101 (locationPublicID :  String, policyPeriod :  PolicyPeriod, submission :  Submission, wizardStep :  String) : pcf.api.Destination {
       return pcf.JobForward.createDestination(submission)
     }
     
@@ -344,7 +354,7 @@ class SubmissionWizardExpressions {
     }
     
     // 'save' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function save_84 () : java.lang.Boolean {
+    function save_86 () : java.lang.Boolean {
       return (!policyPeriod.Promoted) and perm.Submission.edit(submission)
     }
     
@@ -364,37 +374,37 @@ class SubmissionWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at SubmissionWizard.pcf: line 129, column 189
-    function screen_onEnter_55 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_onEnter_57 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at SubmissionWizard.pcf: line 135, column 93
-    function screen_onEnter_59 (def :  pcf.SubmissionWizard_PolicyReviewScreen) : void {
+    function screen_onEnter_61 (def :  pcf.SubmissionWizard_PolicyReviewScreen) : void {
       def.onEnter(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at SubmissionWizard.pcf: line 143, column 42
-    function screen_onEnter_63 (def :  pcf.SubmissionWizard_QuoteScreen) : void {
+    function screen_onEnter_65 (def :  pcf.SubmissionWizard_QuoteScreen) : void {
       def.onEnter(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at SubmissionWizard.pcf: line 152, column 41
-    function screen_onEnter_69 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_onEnter_71 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.onEnter(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at SubmissionWizard.pcf: line 152, column 41
-    function screen_onEnter_71 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_onEnter_73 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_default) : void {
       def.onEnter(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at SubmissionWizard.pcf: line 160, column 50
-    function screen_onEnter_77 (def :  pcf.FormsScreen) : void {
+    function screen_onEnter_79 (def :  pcf.FormsScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function screen_onEnter_85 (def :  pcf.SubmissionWizard_PaymentScreen) : void {
+    function screen_onEnter_87 (def :  pcf.SubmissionWizard_PaymentScreen) : void {
       def.onEnter(submission, policyPeriod, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
@@ -414,57 +424,57 @@ class SubmissionWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at SubmissionWizard.pcf: line 129, column 189
-    function screen_refreshVariables_56 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_refreshVariables_58 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at SubmissionWizard.pcf: line 135, column 93
-    function screen_refreshVariables_60 (def :  pcf.SubmissionWizard_PolicyReviewScreen) : void {
+    function screen_refreshVariables_62 (def :  pcf.SubmissionWizard_PolicyReviewScreen) : void {
       def.refreshVariables(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at SubmissionWizard.pcf: line 143, column 42
-    function screen_refreshVariables_64 (def :  pcf.SubmissionWizard_QuoteScreen) : void {
+    function screen_refreshVariables_66 (def :  pcf.SubmissionWizard_QuoteScreen) : void {
       def.refreshVariables(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at SubmissionWizard.pcf: line 152, column 41
-    function screen_refreshVariables_70 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_refreshVariables_72 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.refreshVariables(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at SubmissionWizard.pcf: line 152, column 41
-    function screen_refreshVariables_72 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_refreshVariables_74 (def :  pcf.SubmissionWizard_MultiLine_QuoteScreen_default) : void {
       def.refreshVariables(submission, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at SubmissionWizard.pcf: line 160, column 50
-    function screen_refreshVariables_78 (def :  pcf.FormsScreen) : void {
+    function screen_refreshVariables_80 (def :  pcf.FormsScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function screen_refreshVariables_86 (def :  pcf.SubmissionWizard_PaymentScreen) : void {
+    function screen_refreshVariables_88 (def :  pcf.SubmissionWizard_PaymentScreen) : void {
       def.refreshVariables(submission, policyPeriod, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
     // 'subtitle' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function subtitle_103 () : java.lang.String {
+    function subtitle_105 () : java.lang.String {
       return policyPeriod.Status.DisplayName
     }
     
     // 'tabBar' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function tabBar_onEnter_100 (def :  pcf.TabBar) : void {
+    function tabBar_onEnter_102 (def :  pcf.TabBar) : void {
       def.onEnter()
     }
     
     // 'tabBar' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    function tabBar_refreshVariables_101 (def :  pcf.TabBar) : void {
+    function tabBar_refreshVariables_103 (def :  pcf.TabBar) : void {
       def.refreshVariables()
     }
     
     // 'title' attribute on JobWizard (id=SubmissionWizard) at SubmissionWizard.pcf: line 22, column 90
-    static function title_102 (locationPublicID :  String, policyPeriod :  PolicyPeriod, submission :  Submission, wizardStep :  String) : java.lang.Object {
+    static function title_104 (locationPublicID :  String, policyPeriod :  PolicyPeriod, submission :  Submission, wizardStep :  String) : java.lang.Object {
       return DisplayKey.get("Web.SubmissionWizard.Title", submission.JobNumber)
     }
     
@@ -479,42 +489,42 @@ class SubmissionWizardExpressions {
     }
     
     // 'visible' attribute on JobWizardStep (id=RiskAnalysis) at SubmissionWizard.pcf: line 129, column 189
-    function visible_52 () : java.lang.Boolean {
+    function visible_54 () : java.lang.Boolean {
       return submission.QuoteType == TC_FULL and (perm.System.viewriskevalissues or perm.System.viewriskpriorpolicies or perm.System.viewriskclaims or perm.System.viewriskpriorlosses)
     }
     
     // 'visible' attribute on JobWizardStep (id=PolicyReview) at SubmissionWizard.pcf: line 135, column 93
-    function visible_57 () : java.lang.Boolean {
+    function visible_59 () : java.lang.Boolean {
       return submission.QuoteType == TC_FULL and policy.Product.LinePatterns.Count == 1
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewQuote) at SubmissionWizard.pcf: line 143, column 42
-    function visible_61 () : java.lang.Boolean {
+    function visible_63 () : java.lang.Boolean {
       return !policyPeriod.MultiLine
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewMultiLineQuote) at SubmissionWizard.pcf: line 152, column 41
-    function visible_66 () : java.lang.Boolean {
+    function visible_68 () : java.lang.Boolean {
       return policyPeriod.MultiLine
     }
     
     // 'visible' attribute on JobWizardStep (id=Forms) at SubmissionWizard.pcf: line 160, column 50
-    function visible_74 () : java.lang.Boolean {
+    function visible_76 () : java.lang.Boolean {
       return submission.QuoteType == TC_FULL
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=ViewQuote) at SubmissionWizard.pcf: line 143, column 42
-    function wizardStepAvailable_65 () : java.lang.Boolean {
+    function wizardStepAvailable_67 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewQuote()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=Forms) at SubmissionWizard.pcf: line 160, column 50
-    function wizardStepAvailable_79 () : java.lang.Boolean {
+    function wizardStepAvailable_81 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewForms()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=BillingInfo) at SubmissionWizard.pcf: line 171, column 50
-    function wizardStepAvailable_87 () : java.lang.Boolean {
+    function wizardStepAvailable_89 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewBillingInfo()
     }
     

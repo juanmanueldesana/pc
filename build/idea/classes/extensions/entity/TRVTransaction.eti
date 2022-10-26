@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="TRVTransaction"
+  type="effdated"
+  desc="A transaction for the Seguro de Viaje line"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  platform="false"
+  loadable="false"
+  table="trvtransaction">
+  <implementsEntity
+    name="Transaction"/>
+  <implementsInterface
+    iface="gw.api.domain.financials.TransactionAdapter"
+    impl="gw.lob.trv.financials.TRVTransactionAdapter"/>
+  <foreignkey
+    name="TRVCost"
+    fkentity="TRVCost"
+    desc="The cost this transaction modifies."
+    nonEffDated="true"
+    nullok="false"/>
+
+</entity>

@@ -1715,4 +1715,150 @@
     <DistinguishingField field="CovTermPackCode"/>
   </LookupTable>
 
+<!-- ======================================================================================= -->
+<!-- Seguro de Viaje Lookup Tables -->
+<!-- ======================================================================================= -->
+<!-- TRVLine -->
+
+  <LookupTable code="TRVLineCov" entityName="CoverageLookup" root="TRVLine">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVLine.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVLine.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CoveragePatternCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVLineCovTerm" entityName="CovTermLookup" root="TRVLine">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVLine.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVLine.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CovTermPatternCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVLineCovOpt" entityName="CovTermOptLookup" root="gw.api.domain.covterm.CovTerm" appliesTo="TRVLine">
+    <Filter field="CovTermPatternCode" valuePath="CovTerm.PatternCode"/>
+    <Filter field="Currency" valuePath="CovTerm.Clause.Currency" exactMatch="false"/>
+    <Dimension field="State" valuePath="CovTerm.Clause.OwningCoverable.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="CovTerm.Clause.PolicyLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="CovTerm.Clause.PolicyLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CovTermOptCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVLineCovPack" entityName="CovTermPackLookup" root="gw.api.domain.covterm.CovTerm" appliesTo="TRVLine">
+    <Filter field="CovTermPatternCode" valuePath="CovTerm.PatternCode"/>
+    <Filter field="Currency" valuePath="CovTerm.Clause.Currency" exactMatch="false"/>
+    <Dimension field="State" valuePath="CovTerm.Clause.OwningCoverable.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="CovTerm.Clause.PolicyLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="CovTerm.Clause.PolicyLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CovTermPackCode"/>
+  </LookupTable>
+
+  <!-- Exclusion -->
+  <LookupTable code="TRVLineExcl" entityName="ExclusionLookup" root="TRVLine">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVLine.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVLine.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="ExclusionPatternCode"/>
+  </LookupTable>
+
+  <!-- Condition -->
+  <LookupTable code="TRVLineCond" entityName="ConditionLookup" root="TRVLine">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVLine.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVLine.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="ConditionPatternCode"/>
+  </LookupTable>
+
+  <!-- Modifier -->
+  <LookupTable code="TRVLineMod" entityName="ModifierLookup" root="TRVLine">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVLine.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVLine.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="ModifierPatternCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVLineRF" entityName="RateFactorLookup" root="TRVLine">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVLine.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVLine.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="RateFactorPatternCode"/>
+  </LookupTable>
+
+
+<!-- TRVCover -->
+
+  <LookupTable code="TRVCoverCov" entityName="CoverageLookup" root="TRVCover">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVCover.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVCover.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVCover.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVCover.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CoveragePatternCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVCoverCovTerm" entityName="CovTermLookup" root="TRVCover">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVCover.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVCover.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVCover.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVCover.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CovTermPatternCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVCoverCovOpt" entityName="CovTermOptLookup" root="gw.api.domain.covterm.CovTerm" appliesTo="TRVCover">
+    <Filter field="CovTermPatternCode" valuePath="CovTerm.PatternCode"/>
+    <Filter field="Currency" valuePath="CovTerm.Clause.Currency" exactMatch="false"/>
+    <Dimension field="State" valuePath="CovTerm.Clause.OwningCoverable.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="CovTerm.Clause.PolicyLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="CovTerm.Clause.PolicyLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CovTermOptCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVCoverCovPack" entityName="CovTermPackLookup" root="gw.api.domain.covterm.CovTerm" appliesTo="TRVCover">
+    <Filter field="CovTermPatternCode" valuePath="CovTerm.PatternCode"/>
+    <Filter field="Currency" valuePath="CovTerm.Clause.Currency" exactMatch="false"/>
+    <Dimension field="State" valuePath="CovTerm.Clause.OwningCoverable.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="CovTerm.Clause.PolicyLine.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="CovTerm.Clause.PolicyLine.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="CovTermPackCode"/>
+  </LookupTable>
+
+  <!-- Exclusion -->
+  <LookupTable code="TRVCoverExcl" entityName="ExclusionLookup" root="TRVCover">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVCover.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVCover.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVCover.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVCover.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="ExclusionPatternCode"/>
+  </LookupTable>
+
+  <!-- Condition -->
+  <LookupTable code="TRVCoverCond" entityName="ConditionLookup" root="TRVCover">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVCover.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVCover.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVCover.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVCover.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="ConditionPatternCode"/>
+  </LookupTable>
+
+  <!-- Modifier -->
+  <LookupTable code="TRVCoverMod" entityName="ModifierLookup" root="TRVCover">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVCover.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVCover.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVCover.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVCover.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="ModifierPatternCode"/>
+  </LookupTable>
+
+  <LookupTable code="TRVCoverRF" entityName="RateFactorLookup" root="TRVCover">
+    <Filter field="PolicyLinePatternCode" valuePath="TRVCover.PolicyLine.PatternCode"/>
+    <Dimension field="State" valuePath="TRVCover.CoverableState" precedence="0"/>
+    <Dimension field="UWCompanyCode" valuePath="TRVCover.Branch.UWCompany.Code" precedence="1"/>
+    <Dimension field="JobType" valuePath="TRVCover.Branch.Job.Subtype" precedence="2"/>
+    <DistinguishingField field="RateFactorPatternCode"/>
+  </LookupTable>
+
 </LookupTables>

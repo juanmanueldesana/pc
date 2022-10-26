@@ -72,12 +72,12 @@ class Common_MultiLine_QuoteScreenPanelSet_CommercialPackageExpressions {
     }
     
     // 'value' attribute on PanelIterator (id=tx) at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 46, column 63
-    function value_31 () : gw.api.productmodel.PolicyLinePattern[] {
+    function value_33 () : gw.api.productmodel.PolicyLinePattern[] {
       return policyPeriod.Policy.Product.LinePatterns
     }
     
     // 'visible' attribute on Card (id=JobWizard_Quote_TransactionCard) at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 41, column 39
-    function visible_32 () : java.lang.Boolean {
+    function visible_34 () : java.lang.Boolean {
       return showTransactionCard
     }
     
@@ -167,12 +167,17 @@ class Common_MultiLine_QuoteScreenPanelSet_CommercialPackageExpressions {
     }
     
     // 'def' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
-    function def_onEnter_26 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_26 (def :  pcf.RatingTxDetailsPanelSet_TRVLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Change"), DisplayKey.get("Web.Quote.TotalCostLabel.Change"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
-    function def_onEnter_28 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
+    function def_onEnter_28 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Change"), DisplayKey.get("Web.Quote.TotalCostLabel.Change"), isEditable, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
+    function def_onEnter_30 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Change"), DisplayKey.get("Web.Quote.TotalCostLabel.Change"), isEditable, jobWizardHelper)
     }
     
@@ -212,17 +217,22 @@ class Common_MultiLine_QuoteScreenPanelSet_CommercialPackageExpressions {
     }
     
     // 'def' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
-    function def_refreshVariables_27 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_27 (def :  pcf.RatingTxDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Change"), DisplayKey.get("Web.Quote.TotalCostLabel.Change"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
-    function def_refreshVariables_29 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
+    function def_refreshVariables_29 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Change"), DisplayKey.get("Web.Quote.TotalCostLabel.Change"), isEditable, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
+    function def_refreshVariables_31 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Change"), DisplayKey.get("Web.Quote.TotalCostLabel.Change"), isEditable, jobWizardHelper)
     }
     
     // 'mode' attribute on PanelRef at Common_MultiLine_QuoteScreenPanelSet.CommercialPackage.pcf: line 52, column 42
-    function mode_30 () : java.lang.Object {
+    function mode_32 () : java.lang.Object {
       return linePattern.PublicID
     }
     

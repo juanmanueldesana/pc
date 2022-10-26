@@ -234,6 +234,8 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo> STATUS_PROP = new com.guidewire.commons.metadata.types.TypekeyPropertyInfoCache(TYPE, "Status");
   
+  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo> TRVTRANSACTIONS_PROP = new com.guidewire.commons.metadata.types.ArrayPropertyInfoCache(TYPE, "TRVTransactions");
+  
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IMonetaryAmountPropertyInfo> TAXSURCHARGESRPT_PROP = new com.guidewire.commons.metadata.types.MonetaryAmountPropertyInfoCache(TYPE, "TaxSurchargesRPT");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> TAXSURCHARGESRPT_AMT_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "TaxSurchargesRPT_amt");
@@ -608,6 +610,13 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
    */
   public void addToRIRiskVersionLists(entity.RIRiskVersionList element) {
     __getInternalInterface().addArrayElement(RIRISKVERSIONLISTS_PROP.get(), element);
+  }
+  
+  /**
+   * Adds the given element to the TRVTransactions array. This is achieved by setting the parent foreign key to this entity instance.
+   */
+  public void addToTRVTransactions(entity.TRVTransaction element) {
+    __getInternalInterface().addArrayElement(TRVTRANSACTIONS_PROP.get(), element);
   }
   
   /**
@@ -2697,6 +2706,14 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
   }
   
   /**
+   * Gets the value of the TRVTransactions field.
+   */
+  @gw.internal.gosu.parser.ExtendedProperty
+  public entity.TRVTransaction[] getTRVTransactions() {
+    return (entity.TRVTransaction[])__getInternalInterface().getFieldValue(TRVTRANSACTIONS_PROP.get());
+  }
+  
+  /**
    * Gets the existing value of the TaxSurchargesRPT field. It also populates the value if it is null. This method uses the
    * {@link typekey.RateAmountType} typefilter TF_TAXESANDSURCHARGES to decide which costs qualify as taxes and surcharges.
    * 
@@ -3990,6 +4007,22 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
   }
   
   /**
+   * Removes the given element from the TRVTransactions array. This is achieved by marking the element for removal.
+   */
+  public void removeFromTRVTransactions(entity.TRVTransaction element) {
+    __getInternalInterface().removeArrayElement(TRVTRANSACTIONS_PROP.get(), element);
+  }
+  
+  /**
+   * Removes the given element from the TRVTransactions array. This is achieved by marking the element for removal.
+   * @deprecated Please use the version that takes an entity instead.
+   */
+  @java.lang.Deprecated
+  public void removeFromTRVTransactions(gw.pl.persistence.core.Key elementID) {
+    __getInternalInterface().removeArrayElement(TRVTRANSACTIONS_PROP.get(), elementID);
+  }
+  
+  /**
    * Removes the given element from the UWIssuesIncludingSoftDeleted array. This is achieved by marking the element for removal.
    */
   public void removeFromUWIssuesIncludingSoftDeleted(entity.UWIssue element) {
@@ -5011,6 +5044,13 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
   }
   
   /**
+   * Sets the value of the TRVTransactions field.
+   */
+  public void setTRVTransactions(entity.TRVTransaction[] value) {
+    __getInternalInterface().setFieldValue(TRVTRANSACTIONS_PROP.get(), value);
+  }
+  
+  /**
    * Sets the value of the TaxSurchargesRPT field.
    */
   public void setTaxSurchargesRPT(gw.pl.currency.MonetaryAmount value) {
@@ -5577,6 +5617,13 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
      */
     public void addToSelectedPaymentPlanArray(entity.PaymentPlanSummary element) {
       __getInternalInterface().addArrayElement(SELECTEDPAYMENTPLANARRAY_PROP.get(), element);
+    }
+    
+    /**
+     * Adds the given element to the TRVTransactions array. This is achieved by setting the parent foreign key to this entity instance.
+     */
+    public void addToTRVTransactions(entity.TRVTransaction element) {
+      __getInternalInterface().addArrayElement(TRVTRANSACTIONS_PROP.get(), element);
     }
     
     /**
@@ -8026,6 +8073,14 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
     }
     
     /**
+     * Gets the value of the TRVTransactions field.
+     */
+    @gw.internal.gosu.parser.ExtendedProperty
+    public entity.TRVTransaction[] getTRVTransactions() {
+      return (entity.TRVTransaction[])__getInternalInterface().getFieldValue(TRVTRANSACTIONS_PROP.get());
+    }
+    
+    /**
      * Gets the existing value of the TaxSurchargesRPT field. It also populates the value if it is null. This method uses the
      * {@link typekey.RateAmountType} typefilter TF_TAXESANDSURCHARGES to decide which costs qualify as taxes and surcharges.
      * 
@@ -9558,6 +9613,22 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
     }
     
     /**
+     * Removes the given element from the TRVTransactions array. This is achieved by marking the element for removal.
+     */
+    public void removeFromTRVTransactions(entity.TRVTransaction element) {
+      __getInternalInterface().removeArrayElement(TRVTRANSACTIONS_PROP.get(), element);
+    }
+    
+    /**
+     * Removes the given element from the TRVTransactions array. This is achieved by marking the element for removal.
+     * @deprecated Please use the version that takes an entity instead.
+     */
+    @java.lang.Deprecated
+    public void removeFromTRVTransactions(gw.pl.persistence.core.Key elementID) {
+      __getInternalInterface().removeArrayElement(TRVTRANSACTIONS_PROP.get(), elementID);
+    }
+    
+    /**
      * Removes the given element from the UWIssuesIncludingSoftDeleted array. This is achieved by marking the element for removal.
      */
     public void removeFromUWIssuesIncludingSoftDeleted(entity.UWIssue element) {
@@ -10726,6 +10797,13 @@ public class PolicyPeriod extends com.guidewire.pl.persistence.code.BeanBase imp
      */
     public void setStatus(typekey.PolicyPeriodStatus value) {
       __getInternalInterface().setFieldValue(STATUS_PROP.get(), value);
+    }
+    
+    /**
+     * Sets the value of the TRVTransactions field.
+     */
+    public void setTRVTransactions(entity.TRVTransaction[] value) {
+      __getInternalInterface().setFieldValue(TRVTRANSACTIONS_PROP.get(), value);
     }
     
     /**

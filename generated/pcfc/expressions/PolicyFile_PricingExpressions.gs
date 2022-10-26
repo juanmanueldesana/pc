@@ -52,12 +52,17 @@ class PolicyFile_PricingExpressions {
     }
     
     // 'def' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
-    function def_onEnter_26 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_26 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.onEnter(thePeriod, null, isEditable)
     }
     
     // 'def' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
-    function def_onEnter_28 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_onEnter_28 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(thePeriod, null, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
+    function def_onEnter_30 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.onEnter(thePeriod, null, isEditable)
     }
     
@@ -97,17 +102,22 @@ class PolicyFile_PricingExpressions {
     }
     
     // 'def' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
-    function def_refreshVariables_27 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_27 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(thePeriod, null, isEditable)
     }
     
     // 'def' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
-    function def_refreshVariables_29 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_refreshVariables_29 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(thePeriod, null, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
+    function def_refreshVariables_31 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.refreshVariables(thePeriod, null, isEditable)
     }
     
     // 'mode' attribute on PanelRef at PolicyFile_Pricing.pcf: line 57, column 44
-    function mode_30 () : java.lang.Object {
+    function mode_32 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     
@@ -143,12 +153,12 @@ class PolicyFile_PricingExpressions {
     }
     
     // 'afterEnter' attribute on Page (id=PolicyFile_Pricing) at PolicyFile_Pricing.pcf: line 10, column 64
-    function afterEnter_32 () : void {
+    function afterEnter_34 () : void {
       gw.api.web.PebblesUtil.addWebMessages(CurrentLocation, thePeriod.PolicyFileMessages)
     }
     
     // 'canVisit' attribute on Page (id=PolicyFile_Pricing) at PolicyFile_Pricing.pcf: line 10, column 64
-    static function canVisit_33 (asOfDate :  java.util.Date, refPeriod :  PolicyPeriod) : java.lang.Boolean {
+    static function canVisit_35 (asOfDate :  java.util.Date, refPeriod :  PolicyPeriod) : java.lang.Boolean {
       return perm.PolicyPeriod.view(refPeriod) and perm.System.pfilepricing
     }
     
@@ -203,12 +213,12 @@ class PolicyFile_PricingExpressions {
     }
     
     // 'parent' attribute on Page (id=PolicyFile_Pricing) at PolicyFile_Pricing.pcf: line 10, column 64
-    static function parent_34 (asOfDate :  java.util.Date, refPeriod :  PolicyPeriod) : pcf.api.Destination {
+    static function parent_36 (asOfDate :  java.util.Date, refPeriod :  PolicyPeriod) : pcf.api.Destination {
       return pcf.PolicyFile.createDestination(refPeriod, asOfDate)
     }
     
     // 'value' attribute on PanelIterator (id=cumul) at PolicyFile_Pricing.pcf: line 54, column 45
-    function value_31 () : entity.PolicyLine[] {
+    function value_33 () : entity.PolicyLine[] {
       return thePeriod.RepresentativePolicyLines
     }
     

@@ -58,6 +58,14 @@ enhancement PolicyPeriodLineEnhancement : entity.PolicyPeriod {
     return this.getLineExists(gw.api.productmodel.PolicyLinePatternLookup.getByPublicID("PersonalAutoLine"))
   }
   
+  property get TRVLine () : productmodel.TRVLine {
+    return this.getLine(gw.api.productmodel.PolicyLinePatternLookup.getByPublicID("TRVLine")) as productmodel.TRVLine
+  }
+  
+  property get TRVLineExists () : boolean {
+    return this.getLineExists(gw.api.productmodel.PolicyLinePatternLookup.getByPublicID("TRVLine"))
+  }
+  
   property get WorkersCompLine () : productmodel.WorkersCompLine {
     return this.getLine(gw.api.productmodel.PolicyLinePatternLookup.getByPublicID("WorkersCompLine")) as productmodel.WorkersCompLine
   }

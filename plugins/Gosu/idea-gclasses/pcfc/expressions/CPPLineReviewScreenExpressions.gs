@@ -57,7 +57,12 @@ class CPPLineReviewScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at CPPLineReviewScreen.pcf: line 38, column 41
-    function def_onEnter_37 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_37 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at CPPLineReviewScreen.pcf: line 38, column 41
+    function def_onEnter_39 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, jobWizardHelper)
     }
     
@@ -102,7 +107,12 @@ class CPPLineReviewScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at CPPLineReviewScreen.pcf: line 38, column 41
-    function def_refreshVariables_38 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_38 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at CPPLineReviewScreen.pcf: line 38, column 41
+    function def_refreshVariables_40 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, jobWizardHelper)
     }
     
@@ -117,7 +127,7 @@ class CPPLineReviewScreenExpressions {
     }
     
     // 'mode' attribute on PanelRef at CPPLineReviewScreen.pcf: line 38, column 41
-    function mode_39 () : java.lang.Object {
+    function mode_41 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     

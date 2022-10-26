@@ -37,7 +37,7 @@ class RenewalWizard_DifferencesScreenExpressions {
     }
     
     // 'value' attribute on PanelIterator at RenewalWizard_DifferencesScreen.pcf: line 50, column 43
-    function value_45 () : entity.PolicyLine[] {
+    function value_47 () : entity.PolicyLine[] {
       return policyPeriod.Lines
     }
     
@@ -106,7 +106,12 @@ class RenewalWizard_DifferencesScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at RenewalWizard_DifferencesScreen.pcf: line 53, column 48
-    function def_onEnter_42 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_42 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at RenewalWizard_DifferencesScreen.pcf: line 53, column 48
+    function def_onEnter_44 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, jobWizardHelper)
     }
     
@@ -146,12 +151,17 @@ class RenewalWizard_DifferencesScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at RenewalWizard_DifferencesScreen.pcf: line 53, column 48
-    function def_refreshVariables_43 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_43 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at RenewalWizard_DifferencesScreen.pcf: line 53, column 48
+    function def_refreshVariables_45 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, jobWizardHelper)
     }
     
     // 'mode' attribute on PanelRef at RenewalWizard_DifferencesScreen.pcf: line 53, column 48
-    function mode_44 () : java.lang.Object {
+    function mode_46 () : java.lang.Object {
       return line.Pattern.CodeIdentifier
     }
     
@@ -193,7 +203,7 @@ class RenewalWizard_DifferencesScreenExpressions {
     }
     
     // 'editable' attribute on Screen (id=RenewalWizard_DifferencesScreen) at RenewalWizard_DifferencesScreen.pcf: line 7, column 42
-    function editable_46 () : java.lang.Boolean {
+    function editable_48 () : java.lang.Boolean {
       return openForEdit
     }
     

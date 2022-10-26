@@ -25,22 +25,22 @@ class RenewalWizardExpressions {
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function acceleratedMenuActions_onEnter_76 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_onEnter_78 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
       def.onEnter(renewal,policyPeriod,jobWizardHelper)
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function acceleratedMenuActions_refreshVariables_77 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_refreshVariables_79 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
       def.refreshVariables(renewal,policyPeriod,jobWizardHelper)
     }
     
     // 'available' attribute on WizardStepSet (id=PostQuoteWizardStepSet) at RenewalWizard.pcf: line 110, column 35
-    function available_73 () : java.lang.Boolean {
+    function available_75 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewQuote()
     }
     
     // 'beforeSave' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function beforeSave_66 () : void {
+    function beforeSave_68 () : void {
       policyPeriodBillingInstructionsManager.saveStateToPolicyPeriod(policyPeriod)
     }
     
@@ -50,12 +50,12 @@ class RenewalWizardExpressions {
     }
     
     // 'canEdit' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function canEdit_78 () : java.lang.Boolean {
+    function canEdit_80 () : java.lang.Boolean {
       return (not job.Complete) and perm.Renewal.edit(renewal)
     }
     
     // 'canVisit' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    static function canVisit_79 (policyPeriod :  PolicyPeriod, renewal :  Renewal, wizardStep :  String) : java.lang.Boolean {
+    static function canVisit_81 (policyPeriod :  PolicyPeriod, renewal :  Renewal, wizardStep :  String) : java.lang.Boolean {
       return perm.Renewal.view(renewal)
     }
     
@@ -100,17 +100,22 @@ class RenewalWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
-    function def_onEnter_36 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_onEnter_36 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.onEnter(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
-    function def_onEnter_38 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_onEnter_38 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.onEnter(job, policyPeriod, jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
+    function def_onEnter_40 (def :  pcf.LineWizardStepSet_default) : void {
       def.onEnter(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 143, column 77
-    function def_onEnter_74 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_onEnter_76 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.onEnter(jobWizardHelper, policyPeriod)
     }
     
@@ -155,32 +160,37 @@ class RenewalWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
-    function def_refreshVariables_37 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_refreshVariables_37 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.refreshVariables(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
-    function def_refreshVariables_39 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_refreshVariables_39 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.refreshVariables(job, policyPeriod, jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
+    function def_refreshVariables_41 (def :  pcf.LineWizardStepSet_default) : void {
       def.refreshVariables(job, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RenewalWizard.pcf: line 143, column 77
-    function def_refreshVariables_75 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_refreshVariables_77 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.refreshVariables(jobWizardHelper, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function infoBar_onEnter_80 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_onEnter_82 (def :  pcf.JobWizardInfoBar) : void {
       def.onEnter(renewal, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function infoBar_refreshVariables_81 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_refreshVariables_83 (def :  pcf.JobWizardInfoBar) : void {
       def.refreshVariables(renewal, policyPeriod)
     }
     
     // 'initialStep' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function initialStep_90 () : java.lang.String {
+    function initialStep_92 () : java.lang.String {
       return wizardStep == null ? jobWizardHelper.getInitialWizardStepId(policyPeriod) : wizardStep
     }
     
@@ -225,22 +235,22 @@ class RenewalWizardExpressions {
     }
     
     // 'menuActions' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function menuActions_onEnter_82 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_onEnter_84 (def :  pcf.WizardMenuActions) : void {
       def.onEnter(jobWizardHelper,renewal,policyPeriod)
     }
     
     // 'menuActions' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function menuActions_refreshVariables_83 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_refreshVariables_85 (def :  pcf.WizardMenuActions) : void {
       def.refreshVariables(jobWizardHelper,renewal,policyPeriod)
     }
     
     // 'mode' attribute on WizardStepSetRef at RenewalWizard.pcf: line 93, column 29
-    function mode_40 () : java.lang.Object {
+    function mode_42 () : java.lang.Object {
       return productCode
     }
     
     // 'onConcurrentDataChange' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function onConcurrentDataChange_84 () : void {
+    function onConcurrentDataChange_86 () : void {
       CurrentLocation.cancel(); JobForward.go(job)
     }
     
@@ -255,12 +265,12 @@ class RenewalWizardExpressions {
     }
     
     // 'onEnter' attribute on JobWizardStep (id=PolicyReview) at RenewalWizard.pcf: line 106, column 69
-    function onEnter_46 () : void {
+    function onEnter_48 () : void {
       policyPeriod.AllAccountSyncables.each(\ a -> a.prepareForDiff())
     }
     
     // 'onEnter' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function onEnter_67 () : void {
+    function onEnter_69 () : void {
       policyPeriodBillingInstructionsManager.populateFromPolicyPeriod(policyPeriod)
     }
     
@@ -275,37 +285,37 @@ class RenewalWizardExpressions {
     }
     
     // 'onExit' attribute on JobWizardStep (id=RiskAnalysis) at RenewalWizard.pcf: line 100, column 153
-    function onExit_42 () : void {
+    function onExit_44 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=PolicyReview) at RenewalWizard.pcf: line 106, column 69
-    function onExit_47 () : void {
+    function onExit_49 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewQuote) at RenewalWizard.pcf: line 116, column 44
-    function onExit_51 () : void {
+    function onExit_53 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewMultiLineQuote) at RenewalWizard.pcf: line 123, column 43
-    function onExit_56 () : void {
+    function onExit_58 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=Forms) at RenewalWizard.pcf: line 130, column 89
-    function onExit_61 () : void {
+    function onExit_63 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function onExit_68 () : void {
+    function onExit_70 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'parent' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    static function parent_85 (policyPeriod :  PolicyPeriod, renewal :  Renewal, wizardStep :  String) : pcf.api.Destination {
+    static function parent_87 (policyPeriod :  PolicyPeriod, renewal :  Renewal, wizardStep :  String) : pcf.api.Destination {
       return pcf.JobForward.createDestination(renewal)
     }
     
@@ -315,7 +325,7 @@ class RenewalWizardExpressions {
     }
     
     // 'save' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function save_69 () : java.lang.Boolean {
+    function save_71 () : java.lang.Boolean {
       return policyPeriod.Status == TC_QUOTED and perm.Renewal.edit(renewal)
     }
     
@@ -330,37 +340,37 @@ class RenewalWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at RenewalWizard.pcf: line 100, column 153
-    function screen_onEnter_44 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_onEnter_46 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at RenewalWizard.pcf: line 106, column 69
-    function screen_onEnter_48 (def :  pcf.RenewalWizard_DifferencesScreen) : void {
+    function screen_onEnter_50 (def :  pcf.RenewalWizard_DifferencesScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at RenewalWizard.pcf: line 116, column 44
-    function screen_onEnter_52 (def :  pcf.RenewalWizard_QuoteScreen) : void {
+    function screen_onEnter_54 (def :  pcf.RenewalWizard_QuoteScreen) : void {
       def.onEnter(renewal, policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RenewalWizard.pcf: line 123, column 43
-    function screen_onEnter_57 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_onEnter_59 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.onEnter(renewal, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RenewalWizard.pcf: line 123, column 43
-    function screen_onEnter_59 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_onEnter_61 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_default) : void {
       def.onEnter(renewal, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at RenewalWizard.pcf: line 130, column 89
-    function screen_onEnter_63 (def :  pcf.FormsScreen) : void {
+    function screen_onEnter_65 (def :  pcf.FormsScreen) : void {
       def.onEnter(policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function screen_onEnter_70 (def :  pcf.RenewalWizard_PaymentScreen) : void {
+    function screen_onEnter_72 (def :  pcf.RenewalWizard_PaymentScreen) : void {
       def.onEnter(renewal, policyPeriod, billingPageEditable, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
@@ -375,72 +385,72 @@ class RenewalWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at RenewalWizard.pcf: line 100, column 153
-    function screen_refreshVariables_45 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_refreshVariables_47 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at RenewalWizard.pcf: line 106, column 69
-    function screen_refreshVariables_49 (def :  pcf.RenewalWizard_DifferencesScreen) : void {
+    function screen_refreshVariables_51 (def :  pcf.RenewalWizard_DifferencesScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at RenewalWizard.pcf: line 116, column 44
-    function screen_refreshVariables_53 (def :  pcf.RenewalWizard_QuoteScreen) : void {
+    function screen_refreshVariables_55 (def :  pcf.RenewalWizard_QuoteScreen) : void {
       def.refreshVariables(renewal, policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RenewalWizard.pcf: line 123, column 43
-    function screen_refreshVariables_58 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_refreshVariables_60 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.refreshVariables(renewal, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RenewalWizard.pcf: line 123, column 43
-    function screen_refreshVariables_60 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_refreshVariables_62 (def :  pcf.RenewalWizard_MultiLine_QuoteScreen_default) : void {
       def.refreshVariables(renewal, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at RenewalWizard.pcf: line 130, column 89
-    function screen_refreshVariables_64 (def :  pcf.FormsScreen) : void {
+    function screen_refreshVariables_66 (def :  pcf.FormsScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function screen_refreshVariables_71 (def :  pcf.RenewalWizard_PaymentScreen) : void {
+    function screen_refreshVariables_73 (def :  pcf.RenewalWizard_PaymentScreen) : void {
       def.refreshVariables(renewal, policyPeriod, billingPageEditable, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
     // 'subtitle' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function subtitle_89 () : java.lang.String {
+    function subtitle_91 () : java.lang.String {
       return policyPeriod.Status.DisplayName
     }
     
     // 'tabBar' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function tabBar_onEnter_86 (def :  pcf.TabBar) : void {
+    function tabBar_onEnter_88 (def :  pcf.TabBar) : void {
       def.onEnter()
     }
     
     // 'tabBar' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    function tabBar_refreshVariables_87 (def :  pcf.TabBar) : void {
+    function tabBar_refreshVariables_89 (def :  pcf.TabBar) : void {
       def.refreshVariables()
     }
     
     // 'title' attribute on JobWizard (id=RenewalWizard) at RenewalWizard.pcf: line 22, column 84
-    static function title_88 (policyPeriod :  PolicyPeriod, renewal :  Renewal, wizardStep :  String) : java.lang.Object {
+    static function title_90 (policyPeriod :  PolicyPeriod, renewal :  Renewal, wizardStep :  String) : java.lang.Object {
       return DisplayKey.get("Web.RenewalWizard.Title", renewal.JobNumber)
     }
     
     // 'visible' attribute on JobWizardStep (id=RiskAnalysis) at RenewalWizard.pcf: line 100, column 153
-    function visible_41 () : java.lang.Boolean {
+    function visible_43 () : java.lang.Boolean {
       return perm.System.viewriskevalissues or perm.System.viewriskpriorpolicies or perm.System.viewriskclaims or perm.System.viewriskpriorlosses
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewQuote) at RenewalWizard.pcf: line 116, column 44
-    function visible_50 () : java.lang.Boolean {
+    function visible_52 () : java.lang.Boolean {
       return !policyPeriod.MultiLine
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewMultiLineQuote) at RenewalWizard.pcf: line 123, column 43
-    function visible_54 () : java.lang.Boolean {
+    function visible_56 () : java.lang.Boolean {
       return policyPeriod.MultiLine
     }
     
@@ -450,12 +460,12 @@ class RenewalWizardExpressions {
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=Forms) at RenewalWizard.pcf: line 130, column 89
-    function wizardStepAvailable_65 () : java.lang.Boolean {
+    function wizardStepAvailable_67 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewForms()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=BillingInfo) at RenewalWizard.pcf: line 140, column 76
-    function wizardStepAvailable_72 () : java.lang.Boolean {
+    function wizardStepAvailable_74 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewBillingInfo()
     }
     

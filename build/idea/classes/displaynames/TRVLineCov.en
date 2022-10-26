@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<Entity
+  name="TRVLineCov">
+  <Columns>
+    <Column
+      beanPath="TRVLineCov.Pattern"
+      name="pattern"/>
+  </Columns>
+  <DisplayName><![CDATA[pattern]]></DisplayName>
+</Entity>

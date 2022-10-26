@@ -47,7 +47,7 @@ class RewriteWizard_DifferencesScreenExpressions {
     }
     
     // 'value' attribute on PanelIterator at RewriteWizard_DifferencesScreen.pcf: line 54, column 43
-    function value_48 () : entity.PolicyLine[] {
+    function value_50 () : entity.PolicyLine[] {
       return policyPeriod.Lines
     }
     
@@ -121,7 +121,12 @@ class RewriteWizard_DifferencesScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at RewriteWizard_DifferencesScreen.pcf: line 57, column 48
-    function def_onEnter_45 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_45 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at RewriteWizard_DifferencesScreen.pcf: line 57, column 48
+    function def_onEnter_47 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, jobWizardHelper)
     }
     
@@ -161,12 +166,17 @@ class RewriteWizard_DifferencesScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at RewriteWizard_DifferencesScreen.pcf: line 57, column 48
-    function def_refreshVariables_46 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_46 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at RewriteWizard_DifferencesScreen.pcf: line 57, column 48
+    function def_refreshVariables_48 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, jobWizardHelper)
     }
     
     // 'mode' attribute on PanelRef at RewriteWizard_DifferencesScreen.pcf: line 57, column 48
-    function mode_47 () : java.lang.Object {
+    function mode_49 () : java.lang.Object {
       return line.Pattern.CodeIdentifier
     }
     
@@ -208,7 +218,7 @@ class RewriteWizard_DifferencesScreenExpressions {
     }
     
     // 'editable' attribute on Screen (id=RewriteWizard_DifferencesScreen) at RewriteWizard_DifferencesScreen.pcf: line 7, column 42
-    function editable_49 () : java.lang.Boolean {
+    function editable_51 () : java.lang.Boolean {
       return policyPeriod.OpenForEdit
     }
     

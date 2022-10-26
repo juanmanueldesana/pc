@@ -365,6 +365,12 @@ public interface PolicyPeriodInternal extends com.guidewire._generated.entity.Ef
   
   
   /**
+   * Adds the given element to the TRVTransactions array. This is achieved by setting the parent foreign key to this entity instance.
+   */
+  public void addToTRVTransactions(entity.TRVTransaction element);
+  
+  
+  /**
    * Adds the given element to the UWIssuesIncludingSoftDeleted array. This is achieved by setting the parent foreign key to this entity instance.
    */
   public void addToUWIssuesIncludingSoftDeleted(entity.UWIssue element);
@@ -1004,6 +1010,13 @@ public interface PolicyPeriodInternal extends com.guidewire._generated.entity.Ef
   
   
   /**
+   * Gets the value of the TRVTransactions field.
+   */
+  @gw.internal.gosu.parser.ExtendedProperty
+  public entity.TRVTransaction[] getTRVTransactions();
+  
+  
+  /**
    * Gets the value of the TaxSurchargesRPT field.
    * Total amount of tax and surcharges on the policy period. The total is denormalized for higher performance UI display and reporting support.
    */
@@ -1598,6 +1611,20 @@ public interface PolicyPeriodInternal extends com.guidewire._generated.entity.Ef
   
   
   /**
+   * Removes the given element from the TRVTransactions array. This is achieved by marking the element for removal.
+   */
+  public void removeFromTRVTransactions(entity.TRVTransaction element);
+  
+  
+  /**
+   * Removes the given element from the TRVTransactions array. This is achieved by marking the element for removal.
+   * @deprecated Please use the version that takes an entity instead.
+   */
+  @java.lang.Deprecated
+  public void removeFromTRVTransactions(gw.pl.persistence.core.Key elementID);
+  
+  
+  /**
    * Removes the given element from the UWIssuesIncludingSoftDeleted array. This is achieved by marking the element for removal.
    */
   public void removeFromUWIssuesIncludingSoftDeleted(entity.UWIssue element);
@@ -2188,6 +2215,12 @@ public interface PolicyPeriodInternal extends com.guidewire._generated.entity.Ef
    * Sets the value of the Status field.
    */
   public void setStatus(typekey.PolicyPeriodStatus value);
+  
+  
+  /**
+   * Sets the value of the TRVTransactions field.
+   */
+  public void setTRVTransactions(entity.TRVTransaction[] value);
   
   
   /**

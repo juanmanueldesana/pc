@@ -46,12 +46,17 @@ class ImpactTestingPolicyPeriodOverviewPopupExpressions {
     }
     
     // 'def' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
-    function def_onEnter_19 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_19 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.onEnter(policyPeriod, null, false)
     }
     
     // 'def' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
-    function def_onEnter_21 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_onEnter_21 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(policyPeriod, null, false)
+    }
+    
+    // 'def' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
+    function def_onEnter_23 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.onEnter(policyPeriod, null, false)
     }
     
@@ -106,12 +111,17 @@ class ImpactTestingPolicyPeriodOverviewPopupExpressions {
     }
     
     // 'def' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
-    function def_refreshVariables_20 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_20 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(policyPeriod, null, false)
     }
     
     // 'def' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
-    function def_refreshVariables_22 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_refreshVariables_22 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(policyPeriod, null, false)
+    }
+    
+    // 'def' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
+    function def_refreshVariables_24 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.refreshVariables(policyPeriod, null, false)
     }
     
@@ -131,7 +141,7 @@ class ImpactTestingPolicyPeriodOverviewPopupExpressions {
     }
     
     // 'mode' attribute on PanelRef at ImpactTestingPolicyPeriodOverviewPopup.pcf: line 27, column 81
-    function mode_23 () : java.lang.Object {
+    function mode_25 () : java.lang.Object {
       return policyPeriod.RepresentativePolicyLines.first().Pattern.PublicID
     }
     

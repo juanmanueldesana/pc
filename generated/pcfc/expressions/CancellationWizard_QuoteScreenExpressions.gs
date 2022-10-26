@@ -67,57 +67,67 @@ class CancellationWizard_QuoteScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
-    function def_onEnter_43 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_43 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.onEnter(policyPeriod, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
-    function def_onEnter_45 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_onEnter_45 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(policyPeriod, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
+    function def_onEnter_47 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.onEnter(policyPeriod, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_50 (def :  pcf.RatingTxDetailsPanelSet_BOPLine) : void {
+    function def_onEnter_52 (def :  pcf.RatingTxDetailsPanelSet_BOPLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_52 (def :  pcf.RatingTxDetailsPanelSet_BusinessAutoLine) : void {
+    function def_onEnter_54 (def :  pcf.RatingTxDetailsPanelSet_BusinessAutoLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_54 (def :  pcf.RatingTxDetailsPanelSet_CPLine) : void {
+    function def_onEnter_56 (def :  pcf.RatingTxDetailsPanelSet_CPLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_56 (def :  pcf.RatingTxDetailsPanelSet_GLLine) : void {
+    function def_onEnter_58 (def :  pcf.RatingTxDetailsPanelSet_GLLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_58 (def :  pcf.RatingTxDetailsPanelSet_HOPLine) : void {
+    function def_onEnter_60 (def :  pcf.RatingTxDetailsPanelSet_HOPLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_60 (def :  pcf.RatingTxDetailsPanelSet_IMLine) : void {
+    function def_onEnter_62 (def :  pcf.RatingTxDetailsPanelSet_IMLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_62 (def :  pcf.RatingTxDetailsPanelSet_PersonalAutoLine) : void {
+    function def_onEnter_64 (def :  pcf.RatingTxDetailsPanelSet_PersonalAutoLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_64 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_66 (def :  pcf.RatingTxDetailsPanelSet_TRVLine) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_onEnter_66 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
+    function def_onEnter_68 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
+    function def_onEnter_70 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
       def.onEnter(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
@@ -167,57 +177,67 @@ class CancellationWizard_QuoteScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
-    function def_refreshVariables_44 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_44 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(policyPeriod, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
-    function def_refreshVariables_46 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_refreshVariables_46 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(policyPeriod, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
+    function def_refreshVariables_48 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.refreshVariables(policyPeriod, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_51 (def :  pcf.RatingTxDetailsPanelSet_BOPLine) : void {
+    function def_refreshVariables_53 (def :  pcf.RatingTxDetailsPanelSet_BOPLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_53 (def :  pcf.RatingTxDetailsPanelSet_BusinessAutoLine) : void {
+    function def_refreshVariables_55 (def :  pcf.RatingTxDetailsPanelSet_BusinessAutoLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_55 (def :  pcf.RatingTxDetailsPanelSet_CPLine) : void {
+    function def_refreshVariables_57 (def :  pcf.RatingTxDetailsPanelSet_CPLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_57 (def :  pcf.RatingTxDetailsPanelSet_GLLine) : void {
+    function def_refreshVariables_59 (def :  pcf.RatingTxDetailsPanelSet_GLLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_59 (def :  pcf.RatingTxDetailsPanelSet_HOPLine) : void {
+    function def_refreshVariables_61 (def :  pcf.RatingTxDetailsPanelSet_HOPLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_61 (def :  pcf.RatingTxDetailsPanelSet_IMLine) : void {
+    function def_refreshVariables_63 (def :  pcf.RatingTxDetailsPanelSet_IMLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_63 (def :  pcf.RatingTxDetailsPanelSet_PersonalAutoLine) : void {
+    function def_refreshVariables_65 (def :  pcf.RatingTxDetailsPanelSet_PersonalAutoLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_65 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_67 (def :  pcf.RatingTxDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
     // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
-    function def_refreshVariables_67 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
+    function def_refreshVariables_69 (def :  pcf.RatingTxDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 64, column 40
+    function def_refreshVariables_71 (def :  pcf.RatingTxDetailsPanelSet_default) : void {
       def.refreshVariables(policyPeriod, DisplayKey.get("Web.Quote.TotalPremLabel.Total"), DisplayKey.get("Web.Quote.TotalCostLabel.Total"), isEditable, jobWizardHelper)
     }
     
@@ -242,7 +262,7 @@ class CancellationWizard_QuoteScreenExpressions {
     }
     
     // 'mode' attribute on PanelRef at CancellationWizard_QuoteScreen.pcf: line 53, column 40
-    function mode_47 () : java.lang.Object {
+    function mode_49 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     

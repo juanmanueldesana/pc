@@ -32,7 +32,12 @@ class PolicyFile_PolicyReviewExpressions {
     }
     
     // 'def' attribute on PanelRef at PolicyFile_PolicyReview.pcf: line 34, column 44
-    function def_onEnter_16 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_16 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, null)
+    }
+    
+    // 'def' attribute on PanelRef at PolicyFile_PolicyReview.pcf: line 34, column 44
+    function def_onEnter_18 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, null)
     }
     
@@ -72,7 +77,12 @@ class PolicyFile_PolicyReviewExpressions {
     }
     
     // 'def' attribute on PanelRef at PolicyFile_PolicyReview.pcf: line 34, column 44
-    function def_refreshVariables_17 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_17 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, null)
+    }
+    
+    // 'def' attribute on PanelRef at PolicyFile_PolicyReview.pcf: line 34, column 44
+    function def_refreshVariables_19 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, null)
     }
     
@@ -97,7 +107,7 @@ class PolicyFile_PolicyReviewExpressions {
     }
     
     // 'mode' attribute on PanelRef at PolicyFile_PolicyReview.pcf: line 34, column 44
-    function mode_18 () : java.lang.Object {
+    function mode_20 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     
@@ -133,17 +143,17 @@ class PolicyFile_PolicyReviewExpressions {
     }
     
     // 'canVisit' attribute on Page (id=PolicyFile_PolicyReview) at PolicyFile_PolicyReview.pcf: line 9, column 69
-    static function canVisit_20 (asOfDate :  java.util.Date, policyPeriod :  PolicyPeriod) : java.lang.Boolean {
+    static function canVisit_22 (asOfDate :  java.util.Date, policyPeriod :  PolicyPeriod) : java.lang.Boolean {
       return perm.PolicyPeriod.view(policyPeriod) and perm.System.pfiledetails
     }
     
     // 'parent' attribute on Page (id=PolicyFile_PolicyReview) at PolicyFile_PolicyReview.pcf: line 9, column 69
-    static function parent_21 (asOfDate :  java.util.Date, policyPeriod :  PolicyPeriod) : pcf.api.Destination {
+    static function parent_23 (asOfDate :  java.util.Date, policyPeriod :  PolicyPeriod) : pcf.api.Destination {
       return pcf.PolicyFile.createDestination(policyPeriod, asOfDate)
     }
     
     // 'value' attribute on PanelIterator at PolicyFile_PolicyReview.pcf: line 31, column 45
-    function value_19 () : entity.PolicyLine[] {
+    function value_21 () : entity.PolicyLine[] {
       return policyPeriod.Lines
     }
     

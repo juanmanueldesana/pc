@@ -53,6 +53,12 @@ public class PolicyLine implements gw.entity.TypeKey {
   public static final typekey.PolicyLine TC_POLICYLINE = new typekey.PolicyLine("PolicyLine");
   
   /**
+   * Seguro de Viaje
+   * TRVLine
+   */
+  public static final typekey.PolicyLine TC_TRVLINE = new typekey.PolicyLine("TRVLine");
+  
+  /**
    * Workers' Comp
    * WorkersCompLine
    */

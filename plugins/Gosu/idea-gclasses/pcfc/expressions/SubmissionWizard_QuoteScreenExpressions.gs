@@ -67,12 +67,17 @@ class SubmissionWizard_QuoteScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
-    function def_onEnter_42 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_42 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.onEnter(policyPeriod, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
-    function def_onEnter_44 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_onEnter_44 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(policyPeriod, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
+    function def_onEnter_46 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.onEnter(policyPeriod, jobWizardHelper, isEditable)
     }
     
@@ -122,12 +127,17 @@ class SubmissionWizard_QuoteScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
-    function def_refreshVariables_43 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_43 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(policyPeriod, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
-    function def_refreshVariables_45 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_refreshVariables_45 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(policyPeriod, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
+    function def_refreshVariables_47 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.refreshVariables(policyPeriod, jobWizardHelper, isEditable)
     }
     
@@ -147,7 +157,7 @@ class SubmissionWizard_QuoteScreenExpressions {
     }
     
     // 'mode' attribute on PanelRef at SubmissionWizard_QuoteScreen.pcf: line 51, column 40
-    function mode_46 () : java.lang.Object {
+    function mode_48 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     

@@ -21,17 +21,17 @@ class IssuanceWizardExpressions {
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function acceleratedMenuActions_onEnter_77 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_onEnter_79 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
       def.onEnter(issuance, policyPeriod, jobWizardHelper)
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function acceleratedMenuActions_refreshVariables_78 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_refreshVariables_80 (def :  pcf.MultiQuoteAcceleratedMenuActions) : void {
       def.refreshVariables(issuance, policyPeriod, jobWizardHelper)
     }
     
     // 'beforeSave' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function beforeSave_68 () : void {
+    function beforeSave_70 () : void {
       policyPeriodBillingInstructionsManager.saveStateToPolicyPeriod(policyPeriod)
     }
     
@@ -41,12 +41,12 @@ class IssuanceWizardExpressions {
     }
     
     // 'canEdit' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function canEdit_79 () : java.lang.Boolean {
+    function canEdit_81 () : java.lang.Boolean {
       return (not issuance.Complete) and perm.Issuance.edit(issuance)
     }
     
     // 'canVisit' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    static function canVisit_80 (issuance :  Issuance, policyPeriod :  PolicyPeriod) : java.lang.Boolean {
+    static function canVisit_82 (issuance :  Issuance, policyPeriod :  PolicyPeriod) : java.lang.Boolean {
       return perm.Issuance.view(issuance)
     }
     
@@ -91,17 +91,22 @@ class IssuanceWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
-    function def_onEnter_36 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_onEnter_36 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.onEnter(issuance, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
-    function def_onEnter_38 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_onEnter_38 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.onEnter(issuance, policyPeriod, jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
+    function def_onEnter_40 (def :  pcf.LineWizardStepSet_default) : void {
       def.onEnter(issuance, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 137, column 77
-    function def_onEnter_75 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_onEnter_77 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.onEnter(jobWizardHelper, policyPeriod)
     }
     
@@ -146,32 +151,37 @@ class IssuanceWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
-    function def_refreshVariables_37 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_refreshVariables_37 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.refreshVariables(issuance, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
-    function def_refreshVariables_39 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_refreshVariables_39 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.refreshVariables(issuance, policyPeriod, jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
+    function def_refreshVariables_41 (def :  pcf.LineWizardStepSet_default) : void {
       def.refreshVariables(issuance, policyPeriod, jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 137, column 77
-    function def_refreshVariables_76 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_refreshVariables_78 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.refreshVariables(jobWizardHelper, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function infoBar_onEnter_81 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_onEnter_83 (def :  pcf.JobWizardInfoBar) : void {
       def.onEnter(issuance, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function infoBar_refreshVariables_82 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_refreshVariables_84 (def :  pcf.JobWizardInfoBar) : void {
       def.refreshVariables(issuance, policyPeriod)
     }
     
     // 'initialStep' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function initialStep_91 () : java.lang.String {
+    function initialStep_93 () : java.lang.String {
       return jobWizardHelper.getInitialWizardStepId( policyPeriod )
     }
     
@@ -216,22 +226,22 @@ class IssuanceWizardExpressions {
     }
     
     // 'menuActions' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function menuActions_onEnter_83 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_onEnter_85 (def :  pcf.WizardMenuActions) : void {
       def.onEnter(jobWizardHelper,issuance,policyPeriod)
     }
     
     // 'menuActions' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function menuActions_refreshVariables_84 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_refreshVariables_86 (def :  pcf.WizardMenuActions) : void {
       def.refreshVariables(jobWizardHelper,issuance,policyPeriod)
     }
     
     // 'mode' attribute on WizardStepSetRef at IssuanceWizard.pcf: line 89, column 29
-    function mode_40 () : java.lang.Object {
+    function mode_42 () : java.lang.Object {
       return productCode
     }
     
     // 'onConcurrentDataChange' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function onConcurrentDataChange_85 () : void {
+    function onConcurrentDataChange_87 () : void {
       CurrentLocation.cancel(); JobForward.go(issuance)
     }
     
@@ -246,12 +256,12 @@ class IssuanceWizardExpressions {
     }
     
     // 'onEnter' attribute on JobWizardStep (id=PolicyReview) at IssuanceWizard.pcf: line 103, column 82
-    function onEnter_46 () : void {
+    function onEnter_48 () : void {
       policyPeriod.AllAccountSyncables.each(\ a -> a.prepareForDiff())
     }
     
     // 'onEnter' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function onEnter_69 () : void {
+    function onEnter_71 () : void {
       policyPeriodBillingInstructionsManager.populateFromPolicyPeriod(policyPeriod)
     }
     
@@ -266,37 +276,37 @@ class IssuanceWizardExpressions {
     }
     
     // 'onExit' attribute on JobWizardStep (id=RiskAnalysis) at IssuanceWizard.pcf: line 97, column 151
-    function onExit_42 () : void {
+    function onExit_44 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=PolicyReview) at IssuanceWizard.pcf: line 103, column 82
-    function onExit_47 () : void {
+    function onExit_49 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewQuote) at IssuanceWizard.pcf: line 110, column 42
-    function onExit_51 () : void {
+    function onExit_53 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewMultiLineQuote) at IssuanceWizard.pcf: line 118, column 41
-    function onExit_57 () : void {
+    function onExit_59 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=Forms) at IssuanceWizard.pcf: line 125, column 87
-    function onExit_63 () : void {
+    function onExit_65 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function onExit_70 () : void {
+    function onExit_72 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'parent' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    static function parent_86 (issuance :  Issuance, policyPeriod :  PolicyPeriod) : pcf.api.Destination {
+    static function parent_88 (issuance :  Issuance, policyPeriod :  PolicyPeriod) : pcf.api.Destination {
       return pcf.JobForward.createDestination(issuance)
     }
     
@@ -306,7 +316,7 @@ class IssuanceWizardExpressions {
     }
     
     // 'save' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function save_71 () : java.lang.Boolean {
+    function save_73 () : java.lang.Boolean {
       return (!policyPeriod.Promoted) and perm.Issuance.edit(issuance)
     }
     
@@ -321,37 +331,37 @@ class IssuanceWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at IssuanceWizard.pcf: line 97, column 151
-    function screen_onEnter_44 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_onEnter_46 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at IssuanceWizard.pcf: line 103, column 82
-    function screen_onEnter_48 (def :  pcf.IssuanceWizard_PolicyReviewScreen) : void {
+    function screen_onEnter_50 (def :  pcf.IssuanceWizard_PolicyReviewScreen) : void {
       def.onEnter(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at IssuanceWizard.pcf: line 110, column 42
-    function screen_onEnter_52 (def :  pcf.IssuanceWizard_QuoteScreen) : void {
+    function screen_onEnter_54 (def :  pcf.IssuanceWizard_QuoteScreen) : void {
       def.onEnter(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at IssuanceWizard.pcf: line 118, column 41
-    function screen_onEnter_58 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_onEnter_60 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.onEnter(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at IssuanceWizard.pcf: line 118, column 41
-    function screen_onEnter_60 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_onEnter_62 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_default) : void {
       def.onEnter(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at IssuanceWizard.pcf: line 125, column 87
-    function screen_onEnter_65 (def :  pcf.FormsScreen) : void {
+    function screen_onEnter_67 (def :  pcf.FormsScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function screen_onEnter_72 (def :  pcf.IssuanceWizard_PaymentScreen) : void {
+    function screen_onEnter_74 (def :  pcf.IssuanceWizard_PaymentScreen) : void {
       def.onEnter(issuance, policyPeriod, billingPageEditable, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
@@ -366,72 +376,72 @@ class IssuanceWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at IssuanceWizard.pcf: line 97, column 151
-    function screen_refreshVariables_45 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_refreshVariables_47 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at IssuanceWizard.pcf: line 103, column 82
-    function screen_refreshVariables_49 (def :  pcf.IssuanceWizard_PolicyReviewScreen) : void {
+    function screen_refreshVariables_51 (def :  pcf.IssuanceWizard_PolicyReviewScreen) : void {
       def.refreshVariables(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at IssuanceWizard.pcf: line 110, column 42
-    function screen_refreshVariables_53 (def :  pcf.IssuanceWizard_QuoteScreen) : void {
+    function screen_refreshVariables_55 (def :  pcf.IssuanceWizard_QuoteScreen) : void {
       def.refreshVariables(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at IssuanceWizard.pcf: line 118, column 41
-    function screen_refreshVariables_59 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_refreshVariables_61 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.refreshVariables(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at IssuanceWizard.pcf: line 118, column 41
-    function screen_refreshVariables_61 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_refreshVariables_63 (def :  pcf.IssuanceWizard_MultiLine_QuoteScreen_default) : void {
       def.refreshVariables(issuance, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at IssuanceWizard.pcf: line 125, column 87
-    function screen_refreshVariables_66 (def :  pcf.FormsScreen) : void {
+    function screen_refreshVariables_68 (def :  pcf.FormsScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function screen_refreshVariables_73 (def :  pcf.IssuanceWizard_PaymentScreen) : void {
+    function screen_refreshVariables_75 (def :  pcf.IssuanceWizard_PaymentScreen) : void {
       def.refreshVariables(issuance, policyPeriod, billingPageEditable, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
     // 'subtitle' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function subtitle_90 () : java.lang.String {
+    function subtitle_92 () : java.lang.String {
       return policyPeriod.Status.DisplayName
     }
     
     // 'tabBar' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function tabBar_onEnter_87 (def :  pcf.TabBar) : void {
+    function tabBar_onEnter_89 (def :  pcf.TabBar) : void {
       def.onEnter()
     }
     
     // 'tabBar' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    function tabBar_refreshVariables_88 (def :  pcf.TabBar) : void {
+    function tabBar_refreshVariables_90 (def :  pcf.TabBar) : void {
       def.refreshVariables()
     }
     
     // 'title' attribute on JobWizard (id=IssuanceWizard) at IssuanceWizard.pcf: line 22, column 86
-    static function title_89 (issuance :  Issuance, policyPeriod :  PolicyPeriod) : java.lang.Object {
+    static function title_91 (issuance :  Issuance, policyPeriod :  PolicyPeriod) : java.lang.Object {
       return DisplayKey.get("Web.IssuanceWizard.Title", issuance.JobNumber)
     }
     
     // 'visible' attribute on JobWizardStep (id=RiskAnalysis) at IssuanceWizard.pcf: line 97, column 151
-    function visible_41 () : java.lang.Boolean {
+    function visible_43 () : java.lang.Boolean {
       return perm.System.viewriskevalissues or perm.System.viewriskpriorpolicies or perm.System.viewriskclaims or perm.System.viewriskpriorlosses
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewQuote) at IssuanceWizard.pcf: line 110, column 42
-    function visible_50 () : java.lang.Boolean {
+    function visible_52 () : java.lang.Boolean {
       return !policyPeriod.MultiLine
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewMultiLineQuote) at IssuanceWizard.pcf: line 118, column 41
-    function visible_55 () : java.lang.Boolean {
+    function visible_57 () : java.lang.Boolean {
       return policyPeriod.MultiLine
     }
     
@@ -441,17 +451,17 @@ class IssuanceWizardExpressions {
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=ViewQuote) at IssuanceWizard.pcf: line 110, column 42
-    function wizardStepAvailable_54 () : java.lang.Boolean {
+    function wizardStepAvailable_56 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewQuote()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=Forms) at IssuanceWizard.pcf: line 125, column 87
-    function wizardStepAvailable_67 () : java.lang.Boolean {
+    function wizardStepAvailable_69 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewForms()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=BillingInfo) at IssuanceWizard.pcf: line 135, column 77
-    function wizardStepAvailable_74 () : java.lang.Boolean {
+    function wizardStepAvailable_76 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewBillingInfo()
     }
     

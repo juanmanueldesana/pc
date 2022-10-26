@@ -1,0 +1,58 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Page
+    afterEnter="gw.api.web.PebblesUtil.addWebMessages(CurrentLocation, policyPeriod.PolicyFileMessages)"
+    canVisit="perm.PolicyPeriod.view(policyPeriod) and perm.System.pfiledetails"
+    id="PolicyFile_TRVLineCoverages"
+    parent="PolicyFile(policyPeriod, asOfDate)"
+    title="DisplayKey.get(&quot;Web.Policy.TRV.LineLevelCoverages&quot;)">
+    <LocationEntryPoint
+      signature="PolicyFile_TRVLineCoverages(policyPeriod : PolicyPeriod, asOfDate : java.util.Date)"/>
+    <Variable
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Variable
+      name="asOfDate"
+      type="java.util.Date"/>
+    <Screen
+      id="PolicyFile_TRVLineCoverages_Screen">
+      <Variable
+        initialValue="policyPeriod.TRVLine"
+        name="line"
+        type="TRVLine"/>
+      <TitleBar/>
+      <Toolbar/>
+      <PanelSet>
+        <CardViewPanel>
+          <Card
+            id="Coverages"
+            title="DisplayKey.get(&quot;Web.Policy.Coverages&quot;)">
+            <PanelRef
+              def="TRVLineStandardCoveragesDV(line, false)">
+              <TitleBar
+                title="DisplayKey.get(&quot;Web.LineWizard.StandardCoverages&quot;)"/>
+            </PanelRef>
+          </Card>
+          <Card
+            id="AdditionalCoverages"
+            title="DisplayKey.get(&quot;Web.LineWizard.AdditionalCoverages&quot;)">
+            <PanelRef
+              def="AdditionalCoveragesDV(line, new String[]{&quot;TRVLineAddGrp&quot;}, true)">
+              <TitleBar
+                title="DisplayKey.get(&quot;Web.LineWizard.AdditionalCoverages&quot;)"/>
+            </PanelRef>
+          </Card>
+          <Card
+            id="exclusionsAndConditionsCard"
+            title="DisplayKey.get(&quot;Web.LineWizard.ExclusionsAndConditions&quot;)">
+            <PanelRef
+              def="AdditionalExclusionsAndConditionsPanelSet(line, new String[] {&quot;TRVLineExclGrp&quot;, &quot;TRVLineCondGrp&quot;}, true)"
+              id="policyLevelExclusionsAndConditions"/>
+          </Card>
+        </CardViewPanel>
+      </PanelSet>
+    </Screen>
+  </Page>
+</PCF>

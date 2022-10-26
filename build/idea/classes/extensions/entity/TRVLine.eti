@@ -1,0 +1,66 @@
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="TRVLine"
+  desc="Seguro de Viaje line of business"
+  displayName="Seguro de Viaje"
+  supertype="PolicyLine">
+  <implementsInterface
+    iface="gw.api.policy.PolicyLineMethods"
+    impl="gw.lob.trv.TRVPolicyLineMethods"/>
+  <implementsEntity
+    name="Coverable"/>
+  <implementsInterface
+    iface="gw.api.domain.CoverableAdapter"
+    impl="gw.lob.trv.TRVLineCoverableModifiableAdapter"/>
+  <implementsEntity
+    name="Modifiable"/>
+  <implementsInterface
+    iface="gw.api.domain.ModifiableAdapter"
+    impl="gw.lob.trv.TRVLineCoverableModifiableAdapter"/>
+  <array
+    name="TRVCosts"
+    arrayentity="TRVCost"
+    cascadeDelete="true"/>
+  <array
+    name="TRVLineCoverages"
+    desc="Line-level coverages for Seguro de Viaje"
+    arrayentity="TRVLineCov"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="TRVLineConditions"
+    desc="Line-level conditions for Seguro de Viaje"
+    arrayentity="TRVLineCond"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="TRVLineExclusions"
+    desc="Line-level exclusions for Seguro de Viaje"
+    arrayentity="TRVLineExcl"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="TRVLineModifiers"
+    desc="Line-level modifiers for Seguro de Viaje"
+    arrayentity="TRVLineMod"
+    owner="false"
+    cascadeDelete="true"/>
+
+  <array
+    name="TRVCovers"
+    desc="Traveler Insured"
+    arrayentity="TRVCover"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="TRVCoverCosts"
+    desc="Traveler Costs"
+    arrayentity="TRVCoverCost"
+    owner="false"
+    cascadeDelete="true"/>
+
+</subtype>

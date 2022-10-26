@@ -1,0 +1,37 @@
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <WizardStepSet
+    id="LineWizardStepSet"
+    mode="TravelInsurance">
+    <Require
+      name="job"
+      type="Job"/>
+    <Require
+      name="policyPeriod"
+      type="PolicyPeriod"/>
+    <Require
+      name="jobWizardHelper"
+      type="gw.api.web.job.JobWizardHelper"/>
+    <Require
+      name="openForEdit"
+      type="boolean"/>
+    <JobWizardStep
+      beforeSave="gw.policy.PolicyLocationValidation.validateLocationsStep(policyPeriod.PolicyLocations)"
+      id="Locations"
+      save="policyPeriod.OpenForEdit"
+      screen="LocationsScreen(policyPeriod, openForEdit, jobWizardHelper, policyPeriod.TRVLine.SupportsNonSpecificLocations)"
+      title="DisplayKey.get(&quot;Web.LineWizardMenu.Locations&quot;)"/>
+    <JobWizardStep
+      id="LineCoverages"
+      onEnter="if (openForEdit) { gw.web.productmodel.ProductModelSyncIssuesHandler.sync(policyPeriod.TRVLine.AllCoverables, policyPeriod.TRVLine.AllModifiables, null, policyPeriod, jobWizardHelper) }"
+      save="policyPeriod.OpenForEdit"
+      screen="TRVLineCoveragesScreen(policyPeriod, openForEdit, jobWizardHelper)"
+      title="DisplayKey.get(&quot;Web.Policy.TRV.LineLevelCoverages&quot;)"/>
+    <JobWizardStep
+      id="TRVCover"
+      save="policyPeriod.OpenForEdit"
+      screen="TRVCoverScreen(policyPeriod, openForEdit,jobWizardHelper)"
+      title="DisplayKey.get(&quot;Web.LineWizardMenu.TRV.TRVCoverScreen&quot;)"/>
+  </WizardStepSet>
+</PCF>

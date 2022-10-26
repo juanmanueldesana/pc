@@ -36,12 +36,17 @@ class CPPRatingCumulPopupExpressions {
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
-    function def_onEnter_14 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_14 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.onEnter(period, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
-    function def_onEnter_16 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_onEnter_16 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(period, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
+    function def_onEnter_18 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.onEnter(period, jobWizardHelper, isEditable)
     }
     
@@ -81,12 +86,17 @@ class CPPRatingCumulPopupExpressions {
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
-    function def_refreshVariables_15 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_15 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(period, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
-    function def_refreshVariables_17 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_refreshVariables_17 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(period, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
+    function def_refreshVariables_19 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.refreshVariables(period, jobWizardHelper, isEditable)
     }
     
@@ -111,12 +121,12 @@ class CPPRatingCumulPopupExpressions {
     }
     
     // 'mode' attribute on PanelRef at CPPRatingCumulPopup.pcf: line 25, column 39
-    function mode_18 () : java.lang.Object {
+    function mode_20 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     
     // 'title' attribute on Popup (id=CPPRatingCumulPopup) at CPPRatingCumulPopup.pcf: line 7, column 30
-    static function title_19 (isEditable :  boolean, jobWizardHelper :  gw.api.web.job.JobWizardHelper, line :  PolicyLine, period :  PolicyPeriod) : java.lang.Object {
+    static function title_21 (isEditable :  boolean, jobWizardHelper :  gw.api.web.job.JobWizardHelper, line :  PolicyLine, period :  PolicyPeriod) : java.lang.Object {
       return line.DisplayName
     }
     

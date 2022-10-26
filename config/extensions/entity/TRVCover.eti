@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<entity
+  xmlns="http://guidewire.com/datamodel"
+  entity="TRVCover"
+  type="effdated"
+  desc="Traveler Insured"
+  displayName="TRV Cover"
+  effDatedBranchType="PolicyPeriod"
+  exportable="true"
+  extendable="true"
+  platform="false"
+  loadable="false"
+  table="trvcover">
+  <implementsEntity
+    name="Coverable"/>
+  <implementsInterface
+    iface="gw.api.domain.CoverableAdapter"
+    impl="gw.lob.trv.TRVCoverCoverableModifiableAdapter"/>
+  <implementsEntity
+    name="Modifiable"/>
+  <implementsInterface
+    iface="gw.api.domain.ModifiableAdapter"
+    impl="gw.lob.trv.TRVCoverCoverableModifiableAdapter"/>
+  <foreignkey
+    name="TRVLine"
+    fkentity="TRVLine"
+    exportable="true"
+    nullok="false"/>
+
+  <array
+    name="Coverages"
+    desc="Coverages directly attached to TRV Cover"
+    arrayentity="TRVCoverCov"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="Exclusions"
+    desc="Exclusions directly attached to TRV Cover"
+    arrayentity="TRVCoverExcl"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="Conditions"
+    desc="Conditions directly attached to TRV Cover"
+    arrayentity="TRVCoverCond"
+    owner="true"
+    cascadeDelete="true"/>
+
+  <array
+    name="Modifiers"
+    desc="Modifiers directly attached to TRV Cover"
+    arrayentity="TRVCoverMod"
+    owner="false"
+    cascadeDelete="true"/>
+
+  <column
+    name="PAXNumber"
+    desc="Numero de Pasajero"
+    nullok="true"
+    type="integer"/>
+
+  <column
+    name="FirstName"
+    desc="PAX First Name"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="50"/>
+  </column>
+
+  <column
+    default="true"
+    name="IsAdult"
+    desc="Is Adult?"
+    nullok="true"
+    type="bit"/>
+
+  <column
+    name="LastName"
+    desc="PAX Last Name"
+    nullok="true"
+    type="varchar">
+    <columnParam
+      name="size"
+      value="50"/>
+  </column>
+  <column
+    name="BirthDate"
+    nullok="true"
+    type="dateonly"/>
+  <column
+    default="false"
+    name="IsForeigner"
+    nullok="true"
+    type="bit"/>
+  <column
+    default="false"
+    name="HasChronicDisease"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="ChronicDiseaseDetails"
+    nullok="true"
+    type="longtext"/>
+  <column
+    default="false"
+    name="HasPreExisteningDisease"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="PreExisteningDiseaseDetails"
+    nullok="true"
+    type="longtext"/>
+  <column
+    default="false"
+    name="HasDifferentAddress"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="DifferentAddressDetails"
+    nullok="true"
+    type="mediumtext"/>
+  <column
+    default="false"
+    name="HasHealthInsurance"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="HealthInsuranceDetails"
+    nullok="true"
+    type="mediumtext"/>
+  <typekey
+    name="Genre"
+    nullok="true"
+    typelist="Genre_Ext"/>
+
+</entity>

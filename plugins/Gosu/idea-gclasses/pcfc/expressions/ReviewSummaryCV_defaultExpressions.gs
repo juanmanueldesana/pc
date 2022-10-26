@@ -32,7 +32,12 @@ class ReviewSummaryCV_defaultExpressions {
     }
     
     // 'def' attribute on PanelRef at ReviewSummaryCV.default.pcf: line 25, column 46
-    function def_onEnter_16 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_16 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at ReviewSummaryCV.default.pcf: line 25, column 46
+    function def_onEnter_18 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, jobWizardHelper)
     }
     
@@ -72,7 +77,12 @@ class ReviewSummaryCV_defaultExpressions {
     }
     
     // 'def' attribute on PanelRef at ReviewSummaryCV.default.pcf: line 25, column 46
-    function def_refreshVariables_17 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_17 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at ReviewSummaryCV.default.pcf: line 25, column 46
+    function def_refreshVariables_19 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, jobWizardHelper)
     }
     
@@ -97,7 +107,7 @@ class ReviewSummaryCV_defaultExpressions {
     }
     
     // 'mode' attribute on PanelRef at ReviewSummaryCV.default.pcf: line 25, column 46
-    function mode_18 () : java.lang.Object {
+    function mode_20 () : java.lang.Object {
       return line.Pattern.CodeIdentifier
     }
     
@@ -129,7 +139,7 @@ class ReviewSummaryCV_defaultExpressions {
     }
     
     // 'value' attribute on PanelIterator at ReviewSummaryCV.default.pcf: line 22, column 41
-    function value_19 () : entity.PolicyLine[] {
+    function value_21 () : entity.PolicyLine[] {
       return policyPeriod.Lines
     }
     

@@ -47,6 +47,12 @@ public class InstalledPolicyLine implements gw.entity.TypeKey {
   public static final typekey.InstalledPolicyLine TC_PA = new typekey.InstalledPolicyLine("PA");
   
   /**
+   * TRVLine
+   * Seguro de Viaje
+   */
+  public static final typekey.InstalledPolicyLine TC_TRV = new typekey.InstalledPolicyLine("TRV");
+  
+  /**
    * WorkersCompLine
    * WorkersCompLine
    */

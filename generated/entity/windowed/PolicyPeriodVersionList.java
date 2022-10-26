@@ -52,6 +52,9 @@ public interface PolicyPeriodVersionList extends gw.pl.persistence.core.effdate.
   java.util.List<? extends entity.PolicyRisk> PolicyRisksAsOf(java.util.Date date);
   
   
+  java.util.List<? extends entity.TRVTransaction> TRVTransactionsAsOf(java.util.Date date);
+  
+  
   java.util.List<? extends entity.UWIssue> UWIssuesIncludingSoftDeletedAsOf(java.util.Date date);
   
   
@@ -101,6 +104,9 @@ public interface PolicyPeriodVersionList extends gw.pl.persistence.core.effdate.
   
   
   void addToPolicyRisks(entity.PolicyRisk bean);
+  
+  
+  void addToTRVTransactions(entity.TRVTransaction bean);
   
   
   void addToUWIssuesIncludingSoftDeleted(entity.UWIssue bean);
@@ -155,6 +161,9 @@ public interface PolicyPeriodVersionList extends gw.pl.persistence.core.effdate.
   
   
   java.util.List<? extends entity.windowed.PolicyRiskVersionList> getPolicyRisks();
+  
+  
+  java.util.List<? extends entity.windowed.TRVTransactionVersionList> getTRVTransactions();
   
   
   java.util.List<? extends entity.windowed.UWIssueVersionList> getUWIssuesIncludingSoftDeleted();

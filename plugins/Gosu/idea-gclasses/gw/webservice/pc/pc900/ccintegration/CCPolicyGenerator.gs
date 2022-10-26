@@ -239,7 +239,9 @@ class CCPolicyGenerator {
       case "WorkersCompLine":
         mapper = new CCWCPolicyLineMapper(line, this);
         break;
-      // Add additional policy lines here
+      case "TRVLine":
+        mapper = new gw.webservice.pc.pc900.ccintegration.lob.CCTRVPolicyLineMapper(line, this);
+        break;// Add additional policy lines here
       default:
         PCLoggerCategory.INTEGRATION.warn("CCPolicyGenerator: No line-specific mapping provided for policy line type: " + line.PatternCode);
         mapper = new CCBasePolicyLineMapper(line, this);

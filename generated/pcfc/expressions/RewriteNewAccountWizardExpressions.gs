@@ -25,12 +25,12 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function acceleratedMenuActions_onEnter_87 (def :  pcf.BlankAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_onEnter_89 (def :  pcf.BlankAcceleratedMenuActions) : void {
       def.onEnter()
     }
     
     // 'acceleratedMenuActions' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function acceleratedMenuActions_refreshVariables_88 (def :  pcf.BlankAcceleratedMenuActions) : void {
+    function acceleratedMenuActions_refreshVariables_90 (def :  pcf.BlankAcceleratedMenuActions) : void {
       def.refreshVariables()
     }
     
@@ -45,17 +45,17 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'beforeSave' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function beforeSave_78 () : void {
+    function beforeSave_80 () : void {
       policyPeriodBillingInstructionsManager.saveStateToPolicyPeriod(policyPeriod)
     }
     
     // 'canEdit' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function canEdit_89 () : java.lang.Boolean {
+    function canEdit_91 () : java.lang.Boolean {
       return not job.Complete
     }
     
     // 'canVisit' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    static function canVisit_90 (policyPeriod :  PolicyPeriod, rewriteNewAccount :  RewriteNewAccount, wizardStep :  String) : java.lang.Boolean {
+    static function canVisit_92 (policyPeriod :  PolicyPeriod, rewriteNewAccount :  RewriteNewAccount, wizardStep :  String) : java.lang.Boolean {
       return perm.RewriteNewAccount.view(rewriteNewAccount)
     }
     
@@ -100,17 +100,22 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
-    function def_onEnter_46 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_onEnter_46 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.onEnter(job, policyPeriod,jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
-    function def_onEnter_48 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_onEnter_48 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.onEnter(job, policyPeriod,jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
+    function def_onEnter_50 (def :  pcf.LineWizardStepSet_default) : void {
       def.onEnter(job, policyPeriod,jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 163, column 77
-    function def_onEnter_85 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_onEnter_87 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.onEnter(jobWizardHelper, policyPeriod)
     }
     
@@ -155,32 +160,37 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
-    function def_refreshVariables_47 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+    function def_refreshVariables_47 (def :  pcf.LineWizardStepSet_TravelInsurance) : void {
       def.refreshVariables(job, policyPeriod,jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
-    function def_refreshVariables_49 (def :  pcf.LineWizardStepSet_default) : void {
+    function def_refreshVariables_49 (def :  pcf.LineWizardStepSet_WorkersComp) : void {
+      def.refreshVariables(job, policyPeriod,jobWizardHelper, openForEdit)
+    }
+    
+    // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
+    function def_refreshVariables_51 (def :  pcf.LineWizardStepSet_default) : void {
       def.refreshVariables(job, policyPeriod,jobWizardHelper, openForEdit)
     }
     
     // 'def' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 163, column 77
-    function def_refreshVariables_86 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
+    function def_refreshVariables_88 (def :  pcf.JobWizardToolsMenuWizardStepSet) : void {
       def.refreshVariables(jobWizardHelper, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function infoBar_onEnter_91 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_onEnter_93 (def :  pcf.JobWizardInfoBar) : void {
       def.onEnter(rewriteNewAccount, policyPeriod)
     }
     
     // 'infoBar' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function infoBar_refreshVariables_92 (def :  pcf.JobWizardInfoBar) : void {
+    function infoBar_refreshVariables_94 (def :  pcf.JobWizardInfoBar) : void {
       def.refreshVariables(rewriteNewAccount, policyPeriod)
     }
     
     // 'initialStep' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function initialStep_101 () : java.lang.String {
+    function initialStep_103 () : java.lang.String {
       return wizardStep == null ? jobWizardHelper.getInitialWizardStepId(policyPeriod) : wizardStep
     }
     
@@ -240,27 +250,27 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'menuActions' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function menuActions_onEnter_93 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_onEnter_95 (def :  pcf.WizardMenuActions) : void {
       def.onEnter(jobWizardHelper,rewriteNewAccount,policyPeriod)
     }
     
     // 'menuActions' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function menuActions_refreshVariables_94 (def :  pcf.WizardMenuActions) : void {
+    function menuActions_refreshVariables_96 (def :  pcf.WizardMenuActions) : void {
       def.refreshVariables(jobWizardHelper,rewriteNewAccount,policyPeriod)
     }
     
     // 'mode' attribute on WizardStepSetRef at RewriteNewAccountWizard.pcf: line 115, column 41
-    function mode_50 () : java.lang.Object {
+    function mode_52 () : java.lang.Object {
       return policy.Product.PublicID
     }
     
     // 'mode' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function mode_66 () : java.lang.Object {
+    function mode_68 () : java.lang.Object {
       return productCode
     }
     
     // 'onConcurrentDataChange' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function onConcurrentDataChange_95 () : void {
+    function onConcurrentDataChange_97 () : void {
       CurrentLocation.cancel(); JobForward.go(job)
     }
     
@@ -280,12 +290,12 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'onEnter' attribute on JobWizardStep (id=PolicyReview) at RewriteNewAccountWizard.pcf: line 129, column 79
-    function onEnter_56 () : void {
+    function onEnter_58 () : void {
       policyPeriod.AllAccountSyncables.each(\ a -> a.prepareForDiff())
     }
     
     // 'onEnter' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function onEnter_79 () : void {
+    function onEnter_81 () : void {
       policyPeriodBillingInstructionsManager.populateFromPolicyPeriod(policyPeriod)
     }
     
@@ -305,37 +315,37 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'onExit' attribute on JobWizardStep (id=RiskAnalysis) at RewriteNewAccountWizard.pcf: line 123, column 151
-    function onExit_52 () : void {
+    function onExit_54 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=PolicyReview) at RewriteNewAccountWizard.pcf: line 129, column 79
-    function onExit_57 () : void {
+    function onExit_59 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewQuote) at RewriteNewAccountWizard.pcf: line 136, column 42
-    function onExit_61 () : void {
+    function onExit_63 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function onExit_67 () : void {
+    function onExit_69 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=Forms) at RewriteNewAccountWizard.pcf: line 151, column 87
-    function onExit_73 () : void {
+    function onExit_75 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'onExit' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function onExit_80 () : void {
+    function onExit_82 () : void {
       jobWizardHelper.reloadPolicyPeriodIfAsyncQuoteComplete(policyPeriod)
     }
     
     // 'parent' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    static function parent_96 (policyPeriod :  PolicyPeriod, rewriteNewAccount :  RewriteNewAccount, wizardStep :  String) : pcf.api.Destination {
+    static function parent_98 (policyPeriod :  PolicyPeriod, rewriteNewAccount :  RewriteNewAccount, wizardStep :  String) : pcf.api.Destination {
       return pcf.JobForward.createDestination(rewriteNewAccount)
     }
     
@@ -345,7 +355,7 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'save' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function save_81 () : java.lang.Boolean {
+    function save_83 () : java.lang.Boolean {
       return (!policyPeriod.Promoted)
     }
     
@@ -365,37 +375,37 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at RewriteNewAccountWizard.pcf: line 123, column 151
-    function screen_onEnter_54 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_onEnter_56 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.onEnter(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at RewriteNewAccountWizard.pcf: line 129, column 79
-    function screen_onEnter_58 (def :  pcf.RewriteNewAccountWizard_PolicyReviewScreen) : void {
+    function screen_onEnter_60 (def :  pcf.RewriteNewAccountWizard_PolicyReviewScreen) : void {
       def.onEnter(rewriteNewAccount, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at RewriteNewAccountWizard.pcf: line 136, column 42
-    function screen_onEnter_62 (def :  pcf.RewriteNewAccountWizard_QuoteScreen) : void {
+    function screen_onEnter_64 (def :  pcf.RewriteNewAccountWizard_QuoteScreen) : void {
       def.onEnter(job, policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function screen_onEnter_68 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_onEnter_70 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.onEnter(job, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function screen_onEnter_70 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_onEnter_72 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_default) : void {
       def.onEnter(job, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at RewriteNewAccountWizard.pcf: line 151, column 87
-    function screen_onEnter_75 (def :  pcf.FormsScreen) : void {
+    function screen_onEnter_77 (def :  pcf.FormsScreen) : void {
       def.onEnter(policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function screen_onEnter_82 (def :  pcf.RewriteNewAccountWizard_PaymentScreen) : void {
+    function screen_onEnter_84 (def :  pcf.RewriteNewAccountWizard_PaymentScreen) : void {
       def.onEnter(rewriteNewAccount, policyPeriod, billingPageEditable, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
@@ -415,57 +425,57 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'screen' attribute on JobWizardStep (id=RiskAnalysis) at RewriteNewAccountWizard.pcf: line 123, column 151
-    function screen_refreshVariables_55 (def :  pcf.Job_RiskAnalysisScreen) : void {
+    function screen_refreshVariables_57 (def :  pcf.Job_RiskAnalysisScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=PolicyReview) at RewriteNewAccountWizard.pcf: line 129, column 79
-    function screen_refreshVariables_59 (def :  pcf.RewriteNewAccountWizard_PolicyReviewScreen) : void {
+    function screen_refreshVariables_61 (def :  pcf.RewriteNewAccountWizard_PolicyReviewScreen) : void {
       def.refreshVariables(rewriteNewAccount, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewQuote) at RewriteNewAccountWizard.pcf: line 136, column 42
-    function screen_refreshVariables_63 (def :  pcf.RewriteNewAccountWizard_QuoteScreen) : void {
+    function screen_refreshVariables_65 (def :  pcf.RewriteNewAccountWizard_QuoteScreen) : void {
       def.refreshVariables(job, policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function screen_refreshVariables_69 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
+    function screen_refreshVariables_71 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_CommercialPackage) : void {
       def.refreshVariables(job, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function screen_refreshVariables_71 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_default) : void {
+    function screen_refreshVariables_73 (def :  pcf.RewriteNewAccountWizard_MultiLine_QuoteScreen_default) : void {
       def.refreshVariables(job, policyPeriod, openForEdit, jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=Forms) at RewriteNewAccountWizard.pcf: line 151, column 87
-    function screen_refreshVariables_76 (def :  pcf.FormsScreen) : void {
+    function screen_refreshVariables_78 (def :  pcf.FormsScreen) : void {
       def.refreshVariables(policyPeriod, openForEdit,jobWizardHelper)
     }
     
     // 'screen' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function screen_refreshVariables_83 (def :  pcf.RewriteNewAccountWizard_PaymentScreen) : void {
+    function screen_refreshVariables_85 (def :  pcf.RewriteNewAccountWizard_PaymentScreen) : void {
       def.refreshVariables(rewriteNewAccount, policyPeriod, billingPageEditable, jobWizardHelper, policyPeriodBillingInstructionsManager)
     }
     
     // 'subtitle' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function subtitle_100 () : java.lang.String {
+    function subtitle_102 () : java.lang.String {
       return policyPeriod.Status.DisplayName
     }
     
     // 'tabBar' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function tabBar_onEnter_97 (def :  pcf.TabBar) : void {
+    function tabBar_onEnter_99 (def :  pcf.TabBar) : void {
       def.onEnter()
     }
     
     // 'tabBar' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    function tabBar_refreshVariables_98 (def :  pcf.TabBar) : void {
+    function tabBar_refreshVariables_100 (def :  pcf.TabBar) : void {
       def.refreshVariables()
     }
     
     // 'title' attribute on JobWizard (id=RewriteNewAccountWizard) at RewriteNewAccountWizard.pcf: line 22, column 104
-    static function title_99 (policyPeriod :  PolicyPeriod, rewriteNewAccount :  RewriteNewAccount, wizardStep :  String) : java.lang.Object {
+    static function title_101 (policyPeriod :  PolicyPeriod, rewriteNewAccount :  RewriteNewAccount, wizardStep :  String) : java.lang.Object {
       return DisplayKey.get("Web.RewriteNewAccountWizard.Title", rewriteNewAccount.JobNumber)
     }
     
@@ -480,32 +490,32 @@ class RewriteNewAccountWizardExpressions {
     }
     
     // 'visible' attribute on JobWizardStep (id=RiskAnalysis) at RewriteNewAccountWizard.pcf: line 123, column 151
-    function visible_51 () : java.lang.Boolean {
+    function visible_53 () : java.lang.Boolean {
       return perm.System.viewriskevalissues or perm.System.viewriskpriorpolicies or perm.System.viewriskclaims or perm.System.viewriskpriorlosses
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewQuote) at RewriteNewAccountWizard.pcf: line 136, column 42
-    function visible_60 () : java.lang.Boolean {
+    function visible_62 () : java.lang.Boolean {
       return !policyPeriod.MultiLine
     }
     
     // 'visible' attribute on JobWizardStep (id=ViewMultiLineQuote) at RewriteNewAccountWizard.pcf: line 144, column 41
-    function visible_65 () : java.lang.Boolean {
+    function visible_67 () : java.lang.Boolean {
       return policyPeriod.MultiLine
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=ViewQuote) at RewriteNewAccountWizard.pcf: line 136, column 42
-    function wizardStepAvailable_64 () : java.lang.Boolean {
+    function wizardStepAvailable_66 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewQuote()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=Forms) at RewriteNewAccountWizard.pcf: line 151, column 87
-    function wizardStepAvailable_77 () : java.lang.Boolean {
+    function wizardStepAvailable_79 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewForms()
     }
     
     // '$$wizardStepAvailable' attribute on JobWizardStep (id=BillingInfo) at RewriteNewAccountWizard.pcf: line 161, column 70
-    function wizardStepAvailable_84 () : java.lang.Boolean {
+    function wizardStepAvailable_86 () : java.lang.Boolean {
       return policyPeriod.JobProcess.canViewBillingInfo()
     }
     

@@ -217,7 +217,12 @@ class IssuanceWizard_PolicyReviewScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 54, column 48
-    function def_onEnter_42 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_onEnter_42 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.onEnter(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 54, column 48
+    function def_onEnter_44 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.onEnter(line, jobWizardHelper)
     }
     
@@ -257,12 +262,17 @@ class IssuanceWizard_PolicyReviewScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 54, column 48
-    function def_refreshVariables_43 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_43 (def :  pcf.PolicyLineSummaryPanelSet_TRVLine) : void {
+      def.refreshVariables(line, jobWizardHelper)
+    }
+    
+    // 'def' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 54, column 48
+    function def_refreshVariables_45 (def :  pcf.PolicyLineSummaryPanelSet_WorkersCompLine) : void {
       def.refreshVariables(line, jobWizardHelper)
     }
     
     // 'mode' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 54, column 48
-    function mode_44 () : java.lang.Object {
+    function mode_46 () : java.lang.Object {
       return line.Pattern.CodeIdentifier
     }
     
@@ -294,12 +304,12 @@ class IssuanceWizard_PolicyReviewScreenExpressions {
     }
     
     // 'def' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 66, column 117
-    function def_onEnter_46 (def :  pcf.DifferencesPanelSet) : void {
+    function def_onEnter_48 (def :  pcf.DifferencesPanelSet) : void {
       def.onEnter(TC_POLICYREVIEW, policyPeriod.BasedOn, policyPeriod, rootNode, diffTreeConfig)
     }
     
     // 'def' attribute on PanelRef at IssuanceWizard_PolicyReviewScreen.pcf: line 66, column 117
-    function def_refreshVariables_47 (def :  pcf.DifferencesPanelSet) : void {
+    function def_refreshVariables_49 (def :  pcf.DifferencesPanelSet) : void {
       def.refreshVariables(TC_POLICYREVIEW, policyPeriod.BasedOn, policyPeriod, rootNode, diffTreeConfig)
     }
     
@@ -314,7 +324,7 @@ class IssuanceWizard_PolicyReviewScreenExpressions {
     }
     
     // 'value' attribute on PanelIterator at IssuanceWizard_PolicyReviewScreen.pcf: line 51, column 43
-    function value_45 () : entity.PolicyLine[] {
+    function value_47 () : entity.PolicyLine[] {
       return policyPeriod.Lines
     }
     

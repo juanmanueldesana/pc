@@ -22,7 +22,7 @@ class CPPRatingCumulPanelSet_scrollExpressions {
     }
     
     // 'value' attribute on PanelIterator (id=eachline) at CPPRatingCumulPanelSet.scroll.pcf: line 21, column 39
-    function value_22 () : entity.PolicyLine[] {
+    function value_24 () : entity.PolicyLine[] {
       return period.Lines
     }
     
@@ -79,12 +79,17 @@ class CPPRatingCumulPanelSet_scrollExpressions {
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
-    function def_onEnter_17 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_onEnter_17 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.onEnter(period, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
-    function def_onEnter_19 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_onEnter_19 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.onEnter(period, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
+    function def_onEnter_21 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.onEnter(period, jobWizardHelper, isEditable)
     }
     
@@ -129,12 +134,17 @@ class CPPRatingCumulPanelSet_scrollExpressions {
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
-    function def_refreshVariables_18 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+    function def_refreshVariables_18 (def :  pcf.RatingCumulDetailsPanelSet_TRVLine) : void {
       def.refreshVariables(period, jobWizardHelper, isEditable)
     }
     
     // 'def' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
-    function def_refreshVariables_20 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
+    function def_refreshVariables_20 (def :  pcf.RatingCumulDetailsPanelSet_WorkersCompLine) : void {
+      def.refreshVariables(period, jobWizardHelper, isEditable)
+    }
+    
+    // 'def' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
+    function def_refreshVariables_22 (def :  pcf.RatingCumulDetailsPanelSet_default) : void {
       def.refreshVariables(period, jobWizardHelper, isEditable)
     }
     
@@ -159,7 +169,7 @@ class CPPRatingCumulPanelSet_scrollExpressions {
     }
     
     // 'mode' attribute on PanelRef at CPPRatingCumulPanelSet.scroll.pcf: line 27, column 38
-    function mode_21 () : java.lang.Object {
+    function mode_23 () : java.lang.Object {
       return line.Pattern.PublicID
     }
     

@@ -92,6 +92,11 @@ public class PolicyPeriodVersionListImpl extends com.guidewire.pl.system.entity.
   }
   
   @java.lang.Override
+  public java.util.List<? extends entity.TRVTransaction> TRVTransactionsAsOf(java.util.Date date) {
+    return (java.util.List)getArrayAsOf(entity.PolicyPeriod.TRVTRANSACTIONS_PROP.get(), date);
+  }
+  
+  @java.lang.Override
   public java.util.List<? extends entity.UWIssue> UWIssuesIncludingSoftDeletedAsOf(java.util.Date date) {
     return (java.util.List)getArrayAsOf(entity.PolicyPeriod.UWISSUESINCLUDINGSOFTDELETED_PROP.get(), date);
   }
@@ -174,6 +179,11 @@ public class PolicyPeriodVersionListImpl extends com.guidewire.pl.system.entity.
   @java.lang.Override
   public void addToPolicyRisks(entity.PolicyRisk bean) {
     addToArray(entity.PolicyPeriod.POLICYRISKS_PROP.get(), bean);
+  }
+  
+  @java.lang.Override
+  public void addToTRVTransactions(entity.TRVTransaction bean) {
+    addToArray(entity.PolicyPeriod.TRVTRANSACTIONS_PROP.get(), bean);
   }
   
   @java.lang.Override
@@ -264,6 +274,11 @@ public class PolicyPeriodVersionListImpl extends com.guidewire.pl.system.entity.
   @java.lang.Override
   public java.util.List<? extends entity.windowed.PolicyRiskVersionList> getPolicyRisks() {
     return (java.util.List)getArray(entity.PolicyPeriod.POLICYRISKS_PROP.get());
+  }
+  
+  @java.lang.Override
+  public java.util.List<? extends entity.windowed.TRVTransactionVersionList> getTRVTransactions() {
+    return (java.util.List)getArray(entity.PolicyPeriod.TRVTRANSACTIONS_PROP.get());
   }
   
   @java.lang.Override

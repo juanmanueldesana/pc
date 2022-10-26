@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<Product
+  abbreviation="TRV"
+  codeIdentifier="TravelInsurance"
+  daysUntilQuoteNeeded="14"
+  defaultTermType="Annual"
+  priority="50"
+  productAccountType="Any"
+  productType="Personal"
+  public-id="TravelInsurance"
+  quoteRoundingLevel="0"
+  quoteRoundingMode="HALF_UP">
+  <AvailablePolicyTerms>
+    <AvailablePolicyTerm
+      codeIdentifier="z6lh073k0vkts8e4mdieip9n029"
+      public-id="z6lh073k0vkts8e4mdieip9n029"
+      termType="Other"/>
+    <AvailablePolicyTerm
+      codeIdentifier="zfrg4h194bfdoe7hgqhifs3djj8"
+      public-id="zfrg4h194bfdoe7hgqhifs3djj8"
+      termType="Annual"/>
+  </AvailablePolicyTerms>
+  <DocTemplateRefs/>
+  <InitializeScript/>
+  <ProductPolicyLinePatterns>
+    <ProductPolicyLinePattern
+      codeIdentifier="z51joufljv64h98i9q6q1sd4e18"
+      policyLinePattern="TRVLine"
+      public-id="z51joufljv64h98i9q6q1sd4e18"/>
+  </ProductPolicyLinePatterns>
+  <ProductQuestionSetPatterns/>
+</Product>
