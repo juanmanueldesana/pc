@@ -37,6 +37,11 @@ public class TRVLineVersionListImpl extends com.guidewire.pl.system.entity.proxy
   }
   
   @java.lang.Override
+  public java.util.List<? extends entity.PolicyTraveler> PolicyTravelersAsOf(java.util.Date date) {
+    return (java.util.List)getArrayAsOf(entity.TRVLine.POLICYTRAVELERS_PROP.get(), date);
+  }
+  
+  @java.lang.Override
   public java.util.List<? extends entity.TRVCost> TRVCostsAsOf(java.util.Date date) {
     return (java.util.List)getArrayAsOf(entity.TRVLine.TRVCOSTS_PROP.get(), date);
   }
@@ -89,6 +94,11 @@ public class TRVLineVersionListImpl extends com.guidewire.pl.system.entity.proxy
   @java.lang.Override
   public void addToLineAnswers(entity.PolicyLineAnswer bean) {
     addToArray(entity.TRVLine.LINEANSWERS_PROP.get(), bean);
+  }
+  
+  @java.lang.Override
+  public void addToPolicyTravelers(entity.PolicyTraveler bean) {
+    addToArray(entity.TRVLine.POLICYTRAVELERS_PROP.get(), bean);
   }
   
   @java.lang.Override
@@ -149,6 +159,11 @@ public class TRVLineVersionListImpl extends com.guidewire.pl.system.entity.proxy
   @java.lang.Override
   public java.util.List<? extends entity.windowed.PolicyLineAnswerVersionList> getLineAnswers() {
     return (java.util.List)getArray(entity.TRVLine.LINEANSWERS_PROP.get());
+  }
+  
+  @java.lang.Override
+  public java.util.List<? extends entity.windowed.PolicyTravelerVersionList> getPolicyTravelers() {
+    return (java.util.List)getArray(entity.TRVLine.POLICYTRAVELERS_PROP.get());
   }
   
   @java.lang.Override

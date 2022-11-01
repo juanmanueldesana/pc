@@ -16,21 +16,38 @@
     <Require
       name="jobWizardHelper"
       type="gw.api.web.job.JobWizardHelper"/>
-    <PanelRef>
-      <TitleBar
-        id="ListTitle"
-        title="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.NamePlural&quot;)"/>
-      <Toolbar>
-        <IteratorButtons
-          addLabel="DisplayKey.get(&quot;Web.Generic.Add&quot;)"
-          iterator="CoverableLV"
-          removeLabel="DisplayKey.get(&quot;Web.Generic.Remove&quot;)"/>
-        <ToolbarDivider/>
-      </Toolbar>
-      <ListDetailPanel
-        id="CoverableListDetailPanel"
-        selectionName="selectedItem"
-        selectionType="TRVCover">
+    <Variable
+      initialValue="gw.plugin.Plugins.get(gw.plugin.contact.IContactConfigPlugin)"
+      name="contactConfigPlugin"
+      type="gw.plugin.contact.IContactConfigPlugin"/>
+    <ListDetailPanel
+      id="CoverableListDetailPanel"
+      selectionName="selectedItem"
+      selectionType="PolicyTraveler">
+      <PanelRef
+        id="TravelerPanelRef">
+        <TitleBar
+          id="TravelersTitle"
+          title="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.NamePlural&quot;)"/>
+        <Toolbar>
+          <AddButton
+            id="AddTraveler"
+            iterator="CoverableLV"
+            label="DisplayKey.get(&quot;Button.Add&quot;)">
+            <AddMenuItemIterator
+              elementName="contactType"
+              value="contactConfigPlugin.getAllowedContactTypesForPolicyContactRoleType(typekey.PolicyContactRole.TC_POLICYTRAVELER)"
+              valueType="typekey.ContactType[]">
+              <AddMenuItem
+                id="ContactType"
+                iterator="CoverableLV"
+                label="DisplayKey.get(&quot;Web.Contact.AddNewOfType&quot;, contactType)"
+                pickLocation="NewPolicyTravelerPopup.push(line, contactType)"/>
+            </AddMenuItemIterator>
+          </AddButton>
+          <IteratorButtons
+            iterator="CoverableLV"/>
+        </Toolbar>
         <ListViewPanel
           id="CoverableLV">
           <RowIterator
@@ -38,64 +55,43 @@
             elementName="item"
             hasCheckBoxes="true"
             hideCheckBoxesIfReadOnly="true"
-            toCreateAndAdd="line.createAndAddTRVCover()"
-            toRemove="line.removeTRVCover(item)"
-            type="TRVCover"
-            value="line.TRVCovers"
-            valueType="entity.TRVCover[]">
+            id="TravelerIterator"
+            toRemove="line.removeFromPolicyTravelers(item)"
+            value="line.PolicyTravelers"
+            valueType="entity.PolicyTraveler[]">
             <ToolbarFlag
               name="item"/>
             <Row>
               <TextCell
                 align="right"
-                id="ItemID"
-                label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.ID&quot;)"
+                id="FirstName"
+                label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.FirstName&quot;)"
                 sortBy="item.FixedId"
                 sortOrder="1"
-                value="item.FixedId"
-                valueType="gw.pl.persistence.core.Key"
+                value="item.FirstName"
                 width="80"/>
               <TextCell
-                align="left"
-                id="CreateUser"
-                label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.CreatedBy&quot;)"
-                value="item.CreateUser.DisplayName"
-                valueType="String"
-                width="200"/>
+                align="right"
+                id="LastName"
+                label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.LastName&quot;)"
+                sortBy="item.FixedId"
+                sortOrder="1"
+                value="item.LastName"
+                width="80"/>
+              <TextCell
+                align="right"
+                id="Genre"
+                label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.Genre&quot;)"
+                sortBy="item.FixedId"
+                sortOrder="1"
+                value="(item.AccountContactRole as Traveler).Genre.DisplayName"
+                width="80"/>
             </Row>
           </RowIterator>
         </ListViewPanel>
-        <CardViewPanel
-          id="CoverableDetailsCV">
-          <Card
-            id="CoverableDetailCard"
-            title="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.Details&quot;)">
-            <PanelRow>
-              <PanelColumn>
-                <PanelRef
-                  def="TRVCoverDetailsDV(selectedItem, policyPeriod, line, openForEdit, jobWizardHelper)"/>
-              </PanelColumn>
-            </PanelRow>
-          </Card>
-          <Card
-            id="CoveragesCard"
-            title="DisplayKey.get(&quot;Web.Policy.Coverages&quot;)">
-            <PanelRef
-              def="TRVCoverCoveragesDV(selectedItem, openForEdit)"
-              visible="selectedItem != null"/>
-          </Card>
-          <Card
-            id="AdditionalCoverages"
-            title="DisplayKey.get(&quot;Web.LineWizard.AdditionalCoverages&quot;)">
-            <PanelRef
-              def="AdditionalCoveragesPanelSet(selectedItem, new String[]{&quot;TRVCoverAddGrp&quot;}, true)">
-              <TitleBar
-                title="DisplayKey.get(&quot;Web.LineWizard.AdditionalCoverages&quot;)"/>
-              <Toolbar/>
-            </PanelRef>
-          </Card>
-        </CardViewPanel>
-      </ListDetailPanel>
-    </PanelRef>
+      </PanelRef>
+      <PanelRef
+        def="NewContactTravelerDetailsCV(selectedItem, false)"></PanelRef>
+    </ListDetailPanel>
   </PanelSet>
 </PCF>

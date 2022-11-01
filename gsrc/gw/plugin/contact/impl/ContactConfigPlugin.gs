@@ -25,6 +25,7 @@ class ContactConfigPlugin implements IContactConfigPlugin {
       new ContactConfig(true, {TC_COMPANY, TC_PERSON}, TC_BILLINGCONTACT,     {TC_POLICYBILLINGCONTACT}),
       new ContactConfig(true, {TC_COMPANY, TC_PERSON}, TC_CLAIMSINFOCONTACT,  {}),
       new ContactConfig(true, {            TC_PERSON}, TC_DRIVER,             {TC_POLICYDRIVER}),
+        new ContactConfig(true, {   TC_PERSON},   TC_TRAVELER,  {TC_POLICYTRAVELER}),
       new ContactConfig(true, {TC_COMPANY, TC_PERSON}, TC_INSPECTIONCONTACT,  {}),
       new ContactConfig(true, {TC_COMPANY           }, TC_LABORCLIENT,        {TC_POLICYLABORCLIENT}),
       new ContactConfig(true, {TC_COMPANY           }, TC_LABORCONTRACTOR,    {TC_POLICYLABORCONTRACTOR}),

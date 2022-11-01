@@ -19,6 +19,9 @@ public interface TRVLineVersionList extends entity.windowed.PolicyLineVersionLis
   java.util.List<? extends entity.PolicyLineAnswer> LineAnswersAsOf(java.util.Date date);
   
   
+  java.util.List<? extends entity.PolicyTraveler> PolicyTravelersAsOf(java.util.Date date);
+  
+  
   java.util.List<? extends entity.TRVCost> TRVCostsAsOf(java.util.Date date);
   
   
@@ -50,6 +53,9 @@ public interface TRVLineVersionList extends entity.windowed.PolicyLineVersionLis
   
   
   void addToLineAnswers(entity.PolicyLineAnswer bean);
+  
+  
+  void addToPolicyTravelers(entity.PolicyTraveler bean);
   
   
   void addToTRVCosts(entity.TRVCost bean);
@@ -86,6 +92,9 @@ public interface TRVLineVersionList extends entity.windowed.PolicyLineVersionLis
   
   
   java.util.List<? extends entity.windowed.PolicyLineAnswerVersionList> getLineAnswers();
+  
+  
+  java.util.List<? extends entity.windowed.PolicyTravelerVersionList> getPolicyTravelers();
   
   
   java.util.List<? extends entity.windowed.TRVCostVersionList> getTRVCosts();

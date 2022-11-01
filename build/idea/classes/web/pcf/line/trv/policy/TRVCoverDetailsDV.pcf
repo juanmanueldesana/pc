@@ -39,13 +39,15 @@
         id="FirstName"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.FirstName&quot;)"
         value="item.FirstName"
-        valueType="String"/>
+        valueType="String"
+        __disabled="true"/>
       <TextInput
         editable="true"
         id="LastName"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.LastName&quot;)"
         value="item.LastName"
-        valueType="String"/>
+        valueType="String"
+        __disabled="true"/>
       <TypeKeyInput
         editable="true"
         id="DocumentType"
@@ -63,17 +65,20 @@
         editable="true"
         id="BirthDate"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.BirthDate&quot;)"
-        value="item.BirthDate"/>
+        value="item.BirthDate"
+        __disabled="true"/>
       <CheckBoxInput
         editable="true"
         id="IsForeigner"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.IsForeigner&quot;)"
-        value="item.IsForeigner"/>
+        value="item.IsForeigner"
+        __disabled="true"/>
       <CheckBoxInput
         editable="true"
         id="HasChronicDisease"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.HasChronicDisease&quot;)"
-        value="item.HasChronicDisease">
+        value="item.HasChronicDisease"
+        __disabled="true">
         <PostOnChange
           target="ChronicDiseaseDetails"/>
       </CheckBoxInput>
@@ -83,12 +88,14 @@
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.ChronicDiseaseDetails&quot;)"
         value="item.ChronicDiseaseDetails"
         valueType="String"
-        visible="item.HasChronicDisease"></TextInput>
+        visible="item.HasChronicDisease"
+        __disabled="true"></TextInput>
       <CheckBoxInput
         editable="true"
         id="HasPreExisteningDisease"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.HasPreExisteningDisease&quot;)"
-        value="item.HasPreExisteningDisease">
+        value="item.HasPreExisteningDisease"
+        __disabled="true">
         <PostOnChange
           target="PreExisteningDiseaseDetails"/>
       </CheckBoxInput>
@@ -98,18 +105,21 @@
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.PreExisteningDiseaseDetails&quot;)"
         value="item.PreExisteningDiseaseDetails"
         valueType="String"
-        visible="item.HasPreExisteningDisease"></TextInput>
+        visible="item.HasPreExisteningDisease"
+        __disabled="true"></TextInput>
       <TypeKeyInput
         editable="true"
         id="Genre"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.Genre&quot;)"
         value="item.Genre"
-        valueType="typekey.Genre_Ext"/>
+        valueType="typekey.Genre_Ext"
+        __disabled="true"/>
       <CheckBoxInput
         editable="true"
         id="HasDifferentAddress"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.HasDifferentAddress&quot;)"
-        value="item.HasDifferentAddress">
+        value="item.HasDifferentAddress"
+        __disabled="true">
         <PostOnChange
           target="DifferentAddressDetails"/>
       </CheckBoxInput>
@@ -119,12 +129,14 @@
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.DifferentAddressDetails&quot;)"
         value="item.DifferentAddressDetails"
         valueType="String"
-        visible="item.HasDifferentAddress"></TextInput>
+        visible="item.HasDifferentAddress"
+        __disabled="true"></TextInput>
       <CheckBoxInput
         editable="true"
         id="HasHealthInsurance"
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.HasHealthInsurance&quot;)"
-        value="item.HasHealthInsurance">
+        value="item.HasHealthInsurance"
+        __disabled="true">
         <PostOnChange
           target="HealthInsuranceDetails"/>
       </CheckBoxInput>
@@ -134,7 +146,8 @@
         label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.HealthInsuranceDetails&quot;)"
         value="item.HealthInsuranceDetails"
         valueType="String"
-        visible="item.HasHealthInsurance"></TextInput>
+        visible="item.HasHealthInsurance"
+        __disabled="true"></TextInput>
     </InputColumn>
   </DetailViewPanel>
 </PCF>

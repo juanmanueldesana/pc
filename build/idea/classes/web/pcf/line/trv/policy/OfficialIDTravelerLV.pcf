@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <ListViewPanel
+    id="OfficialIDTravelerLV">
+    <Require
+      name="aTraveler"
+      type="Contact"/>
+    <ExposeIterator
+      valueType="entity.OfficialID"
+      widget="OfficialIDTravelerLV"/>
+    <RowIterator
+      editable="true"
+      elementName="CurrentTraveler"
+      toAdd="aTraveler.addToOfficialIDs(CurrentTraveler)"
+      toRemove="aTraveler.removeFromOfficialIDs(CurrentTraveler)"
+      value="aTraveler.OfficialIDs"
+      valueType="entity.OfficialID[]">
+      <Row>
+        <TypeKeyCell
+          editable="true"
+          id="DocumentType"
+          label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.OfficialIDType&quot;)"
+          value="CurrentTraveler.OfficialIDType"
+          valueType="typekey.OfficialIDType"/>
+        <TextCell
+          editable="true"
+          id="OfficialIDValue"
+          label="DisplayKey.get(&quot;Web.Policy.TRV.TRVCover.OfficialIDValue&quot;)"
+          value="CurrentTraveler.OfficialIDValue"
+          valueType="java.lang.String"/>
+      </Row>
+    </RowIterator>
+  </ListViewPanel>
+</PCF>

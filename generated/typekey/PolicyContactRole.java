@@ -119,6 +119,12 @@ public class PolicyContactRole implements gw.entity.TypeKey {
   public static final typekey.PolicyContactRole TC_POLICYSECNAMEDINSURED = new typekey.PolicyContactRole("PolicySecNamedInsured");
   
   /**
+   * PolicyTraveler
+   * PolicyTraveler
+   */
+  public static final typekey.PolicyContactRole TC_POLICYTRAVELER = new typekey.PolicyContactRole("PolicyTraveler");
+  
+  /**
    * WCLaborContact
    * WCLaborContact
    */

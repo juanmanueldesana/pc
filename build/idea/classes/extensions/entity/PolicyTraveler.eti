@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<subtype
+  desc="PolicyTraveler"
+  xmlns="http://guidewire.com/datamodel"
+  entity="PolicyTraveler"
+  supertype="PolicyContactRole">
+  <foreignkey
+    fkentity="TRVLine"
+    name="TRVLine"
+    nullok="false"/>
+</subtype>

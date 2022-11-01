@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<PCF
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="../../../../../../../pcf.xsd">
+  <Popup
+    beforeCommit="policyTraveler.resetContactAndRoles(duplicateContactsPopupHelper.existingPCContactWithABContactMatch);"
+    canEdit="true"
+    countsAsWork="false"
+    id="NewPolicyTravelerPopup"
+    returnType="PolicyTraveler"
+    startInEditMode="true"
+    title="DisplayKey.get(&quot;Web.Contact.NewContact&quot;, Traveler.Type.TypeInfo.DisplayName)">
+    <LocationEntryPoint
+      signature="NewPolicyTravelerPopup(line: TRVLine, contactType: ContactType)"/>
+    <Variable
+      name="line"
+      type="entity.TRVLine"/>
+    <Variable
+      name="contactType"
+      type="ContactType"/>
+    <Variable
+      initialValue="new gw.pcf.duplicatecontacts.DuplicateContactsPopupHelper(policyTraveler.AccountContactRole.AccountContact.Contact, existingContacts)"
+      name="duplicateContactsPopupHelper"
+      type="gw.pcf.duplicatecontacts.DuplicateContactsPopupHelper"/>
+    <Variable
+      initialValue="line.addNewPolicyTravelerOfContactType(contactType)"
+      name="policyTraveler"
+      type="PolicyTraveler"/>
+    <Variable
+      initialValue="line.PolicyTravelers.map(\elt -&gt; elt.AccountContactRole.AccountContact.Contact)"
+      name="existingContacts"
+      type="Contact[]"/>
+    <Screen>
+      <Toolbar>
+        <ToolbarButton
+          action="duplicateContactsPopupHelper.checkForDuplicatesOrUpdate(\ -&gt; CurrentLocation.pickValueAndCommit(policyTraveler))"
+          id="ForceDupCheckUpdate"
+          label="DisplayKey.get(&quot;Button.OK&quot;)"
+          visible="duplicateContactsPopupHelper.ShowButton"/>
+        <EditButtons
+          pickValue="policyTraveler"
+          updateVisible="not duplicateContactsPopupHelper.ShowButton"/>
+      </Toolbar>
+      <PanelRef
+        def="NewContactTravelerDetailsCV(policyTraveler, false)"/>
+    </Screen>
+  </Popup>
+</PCF>

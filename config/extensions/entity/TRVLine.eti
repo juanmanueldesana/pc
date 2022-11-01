@@ -62,5 +62,9 @@
     arrayentity="TRVCoverCost"
     owner="false"
     cascadeDelete="true"/>
+  <array
+    arrayentity="PolicyTraveler"
+    desc="PolicyTravelers"
+    name="PolicyTravelers"/>
 
 </subtype>

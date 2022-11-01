@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<subtype
+  xmlns="http://guidewire.com/datamodel"
+  entity="Traveler"
+  desc="Traveler"
+  supertype="AccountContactRole">
+
+  <column
+    default="false"
+    name="IsForeigner"
+    nullok="true"
+    type="bit"/>
+  <column
+    default="false"
+    name="HasChronicDisease"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="ChronicDiseaseDetails"
+    nullok="true"
+    type="longtext"/>
+  <column
+    default="false"
+    name="HasPreExisteningDisease"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="PreExisteningDiseaseDetails"
+    nullok="true"
+    type="longtext"/>
+
+  <column
+    default="false"
+    name="HasHealthInsurance"
+    nullok="true"
+    type="bit"/>
+  <column
+    name="HealthInsuranceDetails"
+    nullok="true"
+    type="mediumtext"/>
+  <typekey
+    name="Genre"
+    nullok="true"
+    typelist="Genre_Ext"/>
+  
+</subtype>

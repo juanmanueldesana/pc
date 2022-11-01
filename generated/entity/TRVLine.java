@@ -18,6 +18,8 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> INITIALEXCLUSIONSCREATED_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "InitialExclusionsCreated");
   
+  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo> POLICYTRAVELERS_PROP = new com.guidewire.commons.metadata.types.ArrayPropertyInfoCache(TYPE, "PolicyTravelers");
+  
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo> PREFERREDCOVERAGECURRENCY_PROP = new com.guidewire.commons.metadata.types.TypekeyPropertyInfoCache(TYPE, "PreferredCoverageCurrency");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> REFERENCEDATEINTERNAL_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "ReferenceDateInternal");
@@ -68,6 +70,13 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
   
   protected com.guidewire._generated.entity.TRVLineInternal __getInternalInterface() {
     return (com.guidewire._generated.entity.TRVLineInternal)super.__getInternalInterface();
+  }
+  
+  /**
+   * Adds the given element to the PolicyTravelers array. This is achieved by setting the parent foreign key to this entity instance.
+   */
+  public void addToPolicyTravelers(entity.PolicyTraveler element) {
+    __getInternalInterface().addArrayElement(POLICYTRAVELERS_PROP.get(), element);
   }
   
   /**
@@ -531,6 +540,15 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
   }
   
   /**
+   * Gets the value of the PolicyTravelers field.
+   * PolicyTravelers
+   */
+  @gw.internal.gosu.parser.ExtendedProperty
+  public entity.PolicyTraveler[] getPolicyTravelers() {
+    return (entity.PolicyTraveler[])__getInternalInterface().getFieldValue(POLICYTRAVELERS_PROP.get());
+  }
+  
+  /**
    * Gets the Preferred Coverage Currency for coverages associated with this coverable and initializes the value if null.
    */
   @com.guidewire.pl.persistence.codegen.annotation.OverridesAccessor
@@ -802,6 +820,22 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
   }
   
   /**
+   * Removes the given element from the PolicyTravelers array. This is achieved by marking the element for removal.
+   */
+  public void removeFromPolicyTravelers(entity.PolicyTraveler element) {
+    __getInternalInterface().removeArrayElement(POLICYTRAVELERS_PROP.get(), element);
+  }
+  
+  /**
+   * Removes the given element from the PolicyTravelers array. This is achieved by marking the element for removal.
+   * @deprecated Please use the version that takes an entity instead.
+   */
+  @java.lang.Deprecated
+  public void removeFromPolicyTravelers(gw.pl.persistence.core.Key elementID) {
+    __getInternalInterface().removeArrayElement(POLICYTRAVELERS_PROP.get(), elementID);
+  }
+  
+  /**
    * Removes the given element from the TRVCosts array. This is achieved by marking the element for removal.
    */
   public void removeFromTRVCosts(entity.TRVCost element) {
@@ -1003,6 +1037,13 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
   }
   
   /**
+   * Sets the value of the PolicyTravelers field.
+   */
+  public void setPolicyTravelers(entity.PolicyTraveler[] value) {
+    __getInternalInterface().setFieldValue(POLICYTRAVELERS_PROP.get(), value);
+  }
+  
+  /**
    * Sets the value of the PreferredCoverageCurrency field.
    */
   public void setPreferredCoverageCurrency(typekey.Currency value) {
@@ -1156,6 +1197,13 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
      */
     public void addToModifiers(entity.Modifier element) {
       ((gw.api.domain.ModifiableAdapter)__getDelegateManager().getImplementation("gw.api.domain.ModifiableAdapter")).addToModifiers(element);
+    }
+    
+    /**
+     * Adds the given element to the PolicyTravelers array. This is achieved by setting the parent foreign key to this entity instance.
+     */
+    public void addToPolicyTravelers(entity.PolicyTraveler element) {
+      __getInternalInterface().addArrayElement(POLICYTRAVELERS_PROP.get(), element);
     }
     
     /**
@@ -2302,6 +2350,15 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
     }
     
     /**
+     * Gets the value of the PolicyTravelers field.
+     * PolicyTravelers
+     */
+    @gw.internal.gosu.parser.ExtendedProperty
+    public entity.PolicyTraveler[] getPolicyTravelers() {
+      return (entity.PolicyTraveler[])__getInternalInterface().getFieldValue(POLICYTRAVELERS_PROP.get());
+    }
+    
+    /**
      * Gets the Preferred Coverage Currency for coverages associated with this coverable and initializes the value if null.
      */
     @com.guidewire.pl.persistence.codegen.annotation.OverridesAccessor
@@ -3166,6 +3223,22 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
     }
     
     /**
+     * Removes the given element from the PolicyTravelers array. This is achieved by marking the element for removal.
+     */
+    public void removeFromPolicyTravelers(entity.PolicyTraveler element) {
+      __getInternalInterface().removeArrayElement(POLICYTRAVELERS_PROP.get(), element);
+    }
+    
+    /**
+     * Removes the given element from the PolicyTravelers array. This is achieved by marking the element for removal.
+     * @deprecated Please use the version that takes an entity instead.
+     */
+    @java.lang.Deprecated
+    public void removeFromPolicyTravelers(gw.pl.persistence.core.Key elementID) {
+      __getInternalInterface().removeArrayElement(POLICYTRAVELERS_PROP.get(), elementID);
+    }
+    
+    /**
      * Removes the given element from the TRVCosts array. This is achieved by marking the element for removal.
      */
     public void removeFromTRVCosts(entity.TRVCost element) {
@@ -3597,6 +3670,13 @@ public class TRVLine extends entity.PolicyLine implements entity.Coverable, enti
     
     public void setPeriodWindow(com.guidewire.pl.system.util.DateRange oldPeriodRange) {
       ((com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods")).setPeriodWindow(oldPeriodRange);
+    }
+    
+    /**
+     * Sets the value of the PolicyTravelers field.
+     */
+    public void setPolicyTravelers(entity.PolicyTraveler[] value) {
+      __getInternalInterface().setFieldValue(POLICYTRAVELERS_PROP.get(), value);
     }
     
     /**

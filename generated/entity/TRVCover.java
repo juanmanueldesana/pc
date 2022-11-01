@@ -18,13 +18,9 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> BEANVERSION_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "BeanVersion");
   
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> BIRTHDATE_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "BirthDate");
-  
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo> BRANCHVALUE_PROP = new com.guidewire.commons.metadata.types.LinkPropertyInfoCache(TYPE, "BranchValue");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo> CHANGETYPE_PROP = new com.guidewire.commons.metadata.types.TypekeyPropertyInfoCache(TYPE, "ChangeType");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> CHRONICDISEASEDETAILS_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "ChronicDiseaseDetails");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo> CONDITIONS_PROP = new com.guidewire.commons.metadata.types.ArrayPropertyInfoCache(TYPE, "Conditions");
   
@@ -34,31 +30,15 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo> CREATEUSER_PROP = new com.guidewire.commons.metadata.types.LinkPropertyInfoCache(TYPE, "CreateUser");
   
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> DIFFERENTADDRESSDETAILS_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "DifferentAddressDetails");
-  
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> EFFECTIVEDATE_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "EffectiveDate");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo> EXCLUSIONS_PROP = new com.guidewire.commons.metadata.types.ArrayPropertyInfoCache(TYPE, "Exclusions");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> EXPIRATIONDATE_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "ExpirationDate");
   
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> FIRSTNAME_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "FirstName");
-  
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo> FIXED_PROP = new com.guidewire.commons.metadata.types.LinkPropertyInfoCache(TYPE, "Fixed");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ILinkPropertyInfo> FROZENSET_PROP = new com.guidewire.commons.metadata.types.LinkPropertyInfoCache(TYPE, "FrozenSet");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo> GENRE_PROP = new com.guidewire.commons.metadata.types.TypekeyPropertyInfoCache(TYPE, "Genre");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> HASCHRONICDISEASE_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "HasChronicDisease");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> HASDIFFERENTADDRESS_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "HasDifferentAddress");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> HASHEALTHINSURANCE_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "HasHealthInsurance");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> HASPREEXISTENINGDISEASE_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "HasPreExisteningDisease");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> HEALTHINSURANCEDETAILS_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "HealthInsuranceDetails");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> ID_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "ID");
   
@@ -68,17 +48,7 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> INITIALEXCLUSIONSCREATED_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "InitialExclusionsCreated");
   
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> ISADULT_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "IsAdult");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> ISFOREIGNER_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "IsForeigner");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> LASTNAME_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "LastName");
-  
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IArrayPropertyInfo> MODIFIERS_PROP = new com.guidewire.commons.metadata.types.ArrayPropertyInfoCache(TYPE, "Modifiers");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> PAXNUMBER_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "PAXNumber");
-  
-  public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.IColumnPropertyInfo> PREEXISTENINGDISEASEDETAILS_PROP = new com.guidewire.commons.metadata.types.ColumnPropertyInfoCache(TYPE, "PreExisteningDiseaseDetails");
   
   public static final gw.pl.persistence.type.EntityPropertyInfoReference<gw.entity.ITypekeyPropertyInfo> PREFERREDCOVERAGECURRENCY_PROP = new com.guidewire.commons.metadata.types.TypekeyPropertyInfoCache(TYPE, "PreferredCoverageCurrency");
   
@@ -483,14 +453,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     return ((com.guidewire.pl.domain.persistence.core.VersionablePublicMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.VersionablePublicMethods")).getBeanVersion();
   }
   
-  /**
-   * Gets the value of the BirthDate field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.util.Date getBirthDate() {
-    return (java.util.Date)__getInternalInterface().getFieldValue(BIRTHDATE_PROP.get());
-  }
-  
   public entity.PolicyPeriod getBranch() {
     return (entity.PolicyPeriod)getBranchUntyped();
   }
@@ -520,14 +482,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   @gw.internal.gosu.parser.ExtendedProperty
   public typekey.EffDatedChangeType getChangeType() {
     return (typekey.EffDatedChangeType)__getInternalInterface().getFieldValue(CHANGETYPE_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the ChronicDiseaseDetails field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.String getChronicDiseaseDetails() {
-    return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(CHRONICDISEASEDETAILS_PROP.get());
   }
   
   /**
@@ -631,14 +585,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Gets the value of the DifferentAddressDetails field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.String getDifferentAddressDetails() {
-    return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(DIFFERENTADDRESSDETAILS_PROP.get());
-  }
-  
-  /**
    * Get an effective date independent key for this bean. This key will include
    * the BranchId and the FixedId. This is the key for the "logical" bean.
    * <p/>
@@ -694,15 +640,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Gets the value of the FirstName field.
-   * PAX First Name
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.String getFirstName() {
-    return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(FIRSTNAME_PROP.get());
-  }
-  
-  /**
    * 
    * @deprecated This field is not intended to be accessed directly. This method may be removed in a future release.
    */
@@ -728,35 +665,10 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     return (entity.FrozenSet)__getInternalInterface().getFieldValue(FROZENSET_PROP.get());
   }
   
-  /**
-   * Gets the value of the Genre field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public typekey.Genre_Ext getGenre() {
-    return (typekey.Genre_Ext)__getInternalInterface().getFieldValue(GENRE_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the HealthInsuranceDetails field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.String getHealthInsuranceDetails() {
-    return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(HEALTHINSURANCEDETAILS_PROP.get());
-  }
-  
   @com.guidewire.pl.persistence.codegen.annotation.OverridesAccessor
   @gw.internal.gosu.parser.ExtendedProperty
   public gw.pl.persistence.core.Key getID() {
     return ((com.guidewire.pl.domain.persistence.core.KeyableBeanPublicMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.KeyableBeanPublicMethods")).getID();
-  }
-  
-  /**
-   * Gets the value of the LastName field.
-   * PAX Last Name
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.String getLastName() {
-    return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(LASTNAME_PROP.get());
   }
   
   /**
@@ -836,29 +748,12 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     return (entity.TRVCoverMod[])__getInternalInterface().getFieldValue(MODIFIERS_PROP.get());
   }
   
-  /**
-   * Gets the value of the PAXNumber field.
-   * Numero de Pasajero
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Integer getPAXNumber() {
-    return (java.lang.Integer)__getInternalInterface().getFieldValue(PAXNUMBER_PROP.get());
-  }
-  
   public entity.PolicyLine getPolicyLine() {
     return ((gw.api.domain.CoverableAbstractDomainMethods)__getDelegateManager().getImplementation("gw.api.domain.CoverableAbstractDomainMethods")).getPolicyLine();
   }
   
   public entity.PolicyLocation[] getPolicyLocations() {
     return ((gw.api.domain.CoverableAbstractDomainMethods)__getDelegateManager().getImplementation("gw.api.domain.CoverableAbstractDomainMethods")).getPolicyLocations();
-  }
-  
-  /**
-   * Gets the value of the PreExisteningDiseaseDetails field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.String getPreExisteningDiseaseDetails() {
-    return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(PREEXISTENINGDISEASEDETAILS_PROP.get());
   }
   
   /**
@@ -1127,38 +1022,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Gets the value of the HasChronicDisease field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Boolean isHasChronicDisease() {
-    return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASCHRONICDISEASE_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the HasDifferentAddress field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Boolean isHasDifferentAddress() {
-    return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASDIFFERENTADDRESS_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the HasHealthInsurance field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Boolean isHasHealthInsurance() {
-    return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASHEALTHINSURANCE_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the HasPreExisteningDisease field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Boolean isHasPreExisteningDisease() {
-    return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASPREEXISTENINGDISEASE_PROP.get());
-  }
-  
-  /**
    * Gets the value of the InitialConditionsCreated field.
    * Whether or not the initial set of conditions has been created on this Coverable.
    */
@@ -1183,23 +1046,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   @gw.internal.gosu.parser.ExtendedProperty
   public java.lang.Boolean isInitialExclusionsCreated() {
     return (java.lang.Boolean)__getInternalInterface().getFieldValue(INITIALEXCLUSIONSCREATED_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the IsAdult field.
-   * Is Adult?
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Boolean isIsAdult() {
-    return (java.lang.Boolean)__getInternalInterface().getFieldValue(ISADULT_PROP.get());
-  }
-  
-  /**
-   * Gets the value of the IsForeigner field.
-   */
-  @gw.internal.gosu.parser.ExtendedProperty
-  public java.lang.Boolean isIsForeigner() {
-    return (java.lang.Boolean)__getInternalInterface().getFieldValue(ISFOREIGNER_PROP.get());
   }
   
   /**
@@ -1387,13 +1233,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Sets the value of the BirthDate field.
-   */
-  public void setBirthDate(java.util.Date value) {
-    __getInternalInterface().setFieldValue(BIRTHDATE_PROP.get(), value);
-  }
-  
-  /**
    * Sets the value of the BranchValue field.
    */
   private void setBranchValue(entity.PolicyPeriod value) {
@@ -1405,13 +1244,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
    */
   private void setChangeType(typekey.EffDatedChangeType value) {
     __getInternalInterface().setFieldValue(CHANGETYPE_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the ChronicDiseaseDetails field.
-   */
-  public void setChronicDiseaseDetails(java.lang.String value) {
-    __getInternalInterface().setFieldValueForCodegen(CHRONICDISEASEDETAILS_PROP.get(), value);
   }
   
   /**
@@ -1494,13 +1326,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Sets the value of the DifferentAddressDetails field.
-   */
-  public void setDifferentAddressDetails(java.lang.String value) {
-    __getInternalInterface().setFieldValueForCodegen(DIFFERENTADDRESSDETAILS_PROP.get(), value);
-  }
-  
-  /**
    * Change when the effective date of this bean. You cannot change the
    * effective date when in slice mode. In window mode there are no
    * restrictions.
@@ -1566,13 +1391,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Sets the value of the FirstName field.
-   */
-  public void setFirstName(java.lang.String value) {
-    __getInternalInterface().setFieldValueForCodegen(FIRSTNAME_PROP.get(), value);
-  }
-  
-  /**
    * Sets the value of the Fixed field.
    */
   private void setFixed(entity.TRVCover value) {
@@ -1584,48 +1402,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
    */
   public void setFrozenSet(entity.FrozenSet value) {
     __getInternalInterface().setFieldValue(FROZENSET_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the Genre field.
-   */
-  public void setGenre(typekey.Genre_Ext value) {
-    __getInternalInterface().setFieldValue(GENRE_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the HasChronicDisease field.
-   */
-  public void setHasChronicDisease(java.lang.Boolean value) {
-    __getInternalInterface().setFieldValue(HASCHRONICDISEASE_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the HasDifferentAddress field.
-   */
-  public void setHasDifferentAddress(java.lang.Boolean value) {
-    __getInternalInterface().setFieldValue(HASDIFFERENTADDRESS_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the HasHealthInsurance field.
-   */
-  public void setHasHealthInsurance(java.lang.Boolean value) {
-    __getInternalInterface().setFieldValue(HASHEALTHINSURANCE_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the HasPreExisteningDisease field.
-   */
-  public void setHasPreExisteningDisease(java.lang.Boolean value) {
-    __getInternalInterface().setFieldValue(HASPREEXISTENINGDISEASE_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the HealthInsuranceDetails field.
-   */
-  public void setHealthInsuranceDetails(java.lang.String value) {
-    __getInternalInterface().setFieldValueForCodegen(HEALTHINSURANCEDETAILS_PROP.get(), value);
   }
   
   /**
@@ -1657,27 +1433,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
   }
   
   /**
-   * Sets the value of the IsAdult field.
-   */
-  public void setIsAdult(java.lang.Boolean value) {
-    __getInternalInterface().setFieldValue(ISADULT_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the IsForeigner field.
-   */
-  public void setIsForeigner(java.lang.Boolean value) {
-    __getInternalInterface().setFieldValue(ISFOREIGNER_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the LastName field.
-   */
-  public void setLastName(java.lang.String value) {
-    __getInternalInterface().setFieldValueForCodegen(LASTNAME_PROP.get(), value);
-  }
-  
-  /**
    * Set a foreign key by passing in an EFfDatedKey (effectively the
    * EffDatedVersionList or FixedId of the bean). You need this method because
    * it's the only way to set a foreign key given a FixedId (and no context for
@@ -1706,20 +1461,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
    */
   public void setNewlyImported(boolean newlyImported) {
     ((com.guidewire.commons.entity.Sourceable)__getDelegateManager().getImplementation("com.guidewire.commons.entity.Sourceable")).setNewlyImported(newlyImported);
-  }
-  
-  /**
-   * Sets the value of the PAXNumber field.
-   */
-  public void setPAXNumber(java.lang.Integer value) {
-    __getInternalInterface().setFieldValue(PAXNUMBER_PROP.get(), value);
-  }
-  
-  /**
-   * Sets the value of the PreExisteningDiseaseDetails field.
-   */
-  public void setPreExisteningDiseaseDetails(java.lang.String value) {
-    __getInternalInterface().setFieldValueForCodegen(PREEXISTENINGDISEASEDETAILS_PROP.get(), value);
   }
   
   /**
@@ -2306,14 +2047,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
       return ((com.guidewire.pl.domain.persistence.core.VersionablePublicMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.VersionablePublicMethods")).getBeanVersion();
     }
     
-    /**
-     * Gets the value of the BirthDate field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.util.Date getBirthDate() {
-      return (java.util.Date)__getInternalInterface().getFieldValue(BIRTHDATE_PROP.get());
-    }
-    
     public gw.pl.persistence.core.Key getBranchId() {
       return ((com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedBaseInternalMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedBaseInternalMethods")).getBranchId();
     }
@@ -2355,14 +2088,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     
     public java.util.Set<gw.lang.reflect.IPropertyInfo> getChangedFieldsFromBasedOn() {
       return ((com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods")).getChangedFieldsFromBasedOn();
-    }
-    
-    /**
-     * Gets the value of the ChronicDiseaseDetails field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.String getChronicDiseaseDetails() {
-      return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(CHRONICDISEASEDETAILS_PROP.get());
     }
     
     /**
@@ -2491,14 +2216,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     }
     
     /**
-     * Gets the value of the DifferentAddressDetails field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.String getDifferentAddressDetails() {
-      return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(DIFFERENTADDRESSDETAILS_PROP.get());
-    }
-    
-    /**
      * Get an effective date independent key for this bean. This key will include
      * the BranchId and the FixedId. This is the key for the "logical" bean.
      * <p/>
@@ -2566,15 +2283,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     }
     
     /**
-     * Gets the value of the FirstName field.
-     * PAX First Name
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.String getFirstName() {
-      return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(FIRSTNAME_PROP.get());
-    }
-    
-    /**
      * Gets the value of the Fixed field.
      * Unique ID for this 'object' across all branches and periods
      */
@@ -2611,22 +2319,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
       return ((com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods")).getFutureVersions();
     }
     
-    /**
-     * Gets the value of the Genre field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public typekey.Genre_Ext getGenre() {
-      return (typekey.Genre_Ext)__getInternalInterface().getFieldValue(GENRE_PROP.get());
-    }
-    
-    /**
-     * Gets the value of the HealthInsuranceDetails field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.String getHealthInsuranceDetails() {
-      return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(HEALTHINSURANCEDETAILS_PROP.get());
-    }
-    
     @com.guidewire.pl.persistence.codegen.annotation.OverridesAccessor
     @gw.internal.gosu.parser.ExtendedProperty
     public gw.pl.persistence.core.Key getID() {
@@ -2635,15 +2327,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     
     public gw.pl.persistence.core.Key getIdToSetForForeignKey(gw.entity.ILinkPropertyInfo link) {
       return ((com.guidewire.pl.domain.persistence.core.impl.KeyableBeanInternalMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.impl.KeyableBeanInternalMethods")).getIdToSetForForeignKey(link);
-    }
-    
-    /**
-     * Gets the value of the LastName field.
-     * PAX Last Name
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.String getLastName() {
-      return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(LASTNAME_PROP.get());
     }
     
     /**
@@ -2727,15 +2410,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
       return (entity.TRVCoverMod[])__getInternalInterface().getFieldValue(MODIFIERS_PROP.get());
     }
     
-    /**
-     * Gets the value of the PAXNumber field.
-     * Numero de Pasajero
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Integer getPAXNumber() {
-      return (java.lang.Integer)__getInternalInterface().getFieldValue(PAXNUMBER_PROP.get());
-    }
-    
     public entity.PolicyLine getPolicyLine() {
       return ((gw.api.domain.CoverableAbstractDomainMethods)__getDelegateManager().getImplementation("gw.api.domain.CoverableAbstractDomainMethods")).getPolicyLine();
     }
@@ -2749,14 +2423,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
      */
     public entity.PolicyPeriod getPolicyPeriod() {
       return ((gw.api.domain.ModifiableAdapter)__getDelegateManager().getImplementation("gw.api.domain.ModifiableAdapter")).getPolicyPeriod();
-    }
-    
-    /**
-     * Gets the value of the PreExisteningDiseaseDetails field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.String getPreExisteningDiseaseDetails() {
-      return (java.lang.String)__getInternalInterface().getFieldValueForCodegen(PREEXISTENINGDISEASEDETAILS_PROP.get());
     }
     
     /**
@@ -3065,38 +2731,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     }
     
     /**
-     * Gets the value of the HasChronicDisease field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Boolean isHasChronicDisease() {
-      return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASCHRONICDISEASE_PROP.get());
-    }
-    
-    /**
-     * Gets the value of the HasDifferentAddress field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Boolean isHasDifferentAddress() {
-      return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASDIFFERENTADDRESS_PROP.get());
-    }
-    
-    /**
-     * Gets the value of the HasHealthInsurance field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Boolean isHasHealthInsurance() {
-      return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASHEALTHINSURANCE_PROP.get());
-    }
-    
-    /**
-     * Gets the value of the HasPreExisteningDisease field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Boolean isHasPreExisteningDisease() {
-      return (java.lang.Boolean)__getInternalInterface().getFieldValue(HASPREEXISTENINGDISEASE_PROP.get());
-    }
-    
-    /**
      * Gets the value of the InitialConditionsCreated field.
      * Whether or not the initial set of conditions has been created on this Coverable.
      */
@@ -3121,23 +2755,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     @gw.internal.gosu.parser.ExtendedProperty
     public java.lang.Boolean isInitialExclusionsCreated() {
       return (java.lang.Boolean)__getInternalInterface().getFieldValue(INITIALEXCLUSIONSCREATED_PROP.get());
-    }
-    
-    /**
-     * Gets the value of the IsAdult field.
-     * Is Adult?
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Boolean isIsAdult() {
-      return (java.lang.Boolean)__getInternalInterface().getFieldValue(ISADULT_PROP.get());
-    }
-    
-    /**
-     * Gets the value of the IsForeigner field.
-     */
-    @gw.internal.gosu.parser.ExtendedProperty
-    public java.lang.Boolean isIsForeigner() {
-      return (java.lang.Boolean)__getInternalInterface().getFieldValue(ISFOREIGNER_PROP.get());
     }
     
     public java.lang.Boolean isLocked() {
@@ -3452,13 +3069,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     }
     
     /**
-     * Sets the value of the BirthDate field.
-     */
-    public void setBirthDate(java.util.Date value) {
-      __getInternalInterface().setFieldValue(BIRTHDATE_PROP.get(), value);
-    }
-    
-    /**
      * Sets the value of the BranchValue field.
      */
     public void setBranchValue(entity.PolicyPeriod value) {
@@ -3474,13 +3084,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
      */
     public void setChangeType(typekey.EffDatedChangeType value) {
       __getInternalInterface().setFieldValue(CHANGETYPE_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the ChronicDiseaseDetails field.
-     */
-    public void setChronicDiseaseDetails(java.lang.String value) {
-      __getInternalInterface().setFieldValueForCodegen(CHRONICDISEASEDETAILS_PROP.get(), value);
     }
     
     /**
@@ -3567,13 +3170,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     }
     
     /**
-     * Sets the value of the DifferentAddressDetails field.
-     */
-    public void setDifferentAddressDetails(java.lang.String value) {
-      __getInternalInterface().setFieldValueForCodegen(DIFFERENTADDRESSDETAILS_PROP.get(), value);
-    }
-    
-    /**
      * Change when the effective date of this bean. You cannot change the
      * effective date when in slice mode. In window mode there are no
      * restrictions.
@@ -3655,13 +3251,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     }
     
     /**
-     * Sets the value of the FirstName field.
-     */
-    public void setFirstName(java.lang.String value) {
-      __getInternalInterface().setFieldValueForCodegen(FIRSTNAME_PROP.get(), value);
-    }
-    
-    /**
      * Sets the value of the Fixed field.
      */
     public void setFixed(entity.TRVCover value) {
@@ -3681,48 +3270,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
     
     public void setFrozenSetID(gw.pl.persistence.core.Key value) {
       setFieldValue(FROZENSET_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the Genre field.
-     */
-    public void setGenre(typekey.Genre_Ext value) {
-      __getInternalInterface().setFieldValue(GENRE_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the HasChronicDisease field.
-     */
-    public void setHasChronicDisease(java.lang.Boolean value) {
-      __getInternalInterface().setFieldValue(HASCHRONICDISEASE_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the HasDifferentAddress field.
-     */
-    public void setHasDifferentAddress(java.lang.Boolean value) {
-      __getInternalInterface().setFieldValue(HASDIFFERENTADDRESS_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the HasHealthInsurance field.
-     */
-    public void setHasHealthInsurance(java.lang.Boolean value) {
-      __getInternalInterface().setFieldValue(HASHEALTHINSURANCE_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the HasPreExisteningDisease field.
-     */
-    public void setHasPreExisteningDisease(java.lang.Boolean value) {
-      __getInternalInterface().setFieldValue(HASPREEXISTENINGDISEASE_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the HealthInsuranceDetails field.
-     */
-    public void setHealthInsuranceDetails(java.lang.String value) {
-      __getInternalInterface().setFieldValueForCodegen(HEALTHINSURANCEDETAILS_PROP.get(), value);
     }
     
     /**
@@ -3751,27 +3298,6 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
      */
     public void setInitialExclusionsCreated(java.lang.Boolean value) {
       __getInternalInterface().setFieldValue(INITIALEXCLUSIONSCREATED_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the IsAdult field.
-     */
-    public void setIsAdult(java.lang.Boolean value) {
-      __getInternalInterface().setFieldValue(ISADULT_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the IsForeigner field.
-     */
-    public void setIsForeigner(java.lang.Boolean value) {
-      __getInternalInterface().setFieldValue(ISFOREIGNER_PROP.get(), value);
-    }
-    
-    /**
-     * Sets the value of the LastName field.
-     */
-    public void setLastName(java.lang.String value) {
-      __getInternalInterface().setFieldValueForCodegen(LASTNAME_PROP.get(), value);
     }
     
     public void setLazyLoadedRow() {
@@ -3813,22 +3339,8 @@ public class TRVCover extends com.guidewire.pl.persistence.code.BeanBase impleme
       ((com.guidewire.commons.entity.Sourceable)__getDelegateManager().getImplementation("com.guidewire.commons.entity.Sourceable")).setNewlyImported(newlyImported);
     }
     
-    /**
-     * Sets the value of the PAXNumber field.
-     */
-    public void setPAXNumber(java.lang.Integer value) {
-      __getInternalInterface().setFieldValue(PAXNUMBER_PROP.get(), value);
-    }
-    
     public void setPeriodWindow(com.guidewire.pl.system.util.DateRange oldPeriodRange) {
       ((com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods)__getDelegateManager().getImplementation("com.guidewire.pl.domain.persistence.core.effdate.impl.EffDatedInternalMethods")).setPeriodWindow(oldPeriodRange);
-    }
-    
-    /**
-     * Sets the value of the PreExisteningDiseaseDetails field.
-     */
-    public void setPreExisteningDiseaseDetails(java.lang.String value) {
-      __getInternalInterface().setFieldValueForCodegen(PREEXISTENINGDISEASEDETAILS_PROP.get(), value);
     }
     
     /**

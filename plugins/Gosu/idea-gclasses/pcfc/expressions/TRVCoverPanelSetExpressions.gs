@@ -16,77 +16,104 @@ class TRVCoverPanelSetExpressions {
       super(widget, scopeDepth)
     }
     
-    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 76, column 108
-    function def_onEnter_12 (def :  pcf.TRVCoverDetailsDV) : void {
-      def.onEnter(selectedItem, policyPeriod, line, openForEdit, jobWizardHelper)
+    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 95, column 40
+    function def_onEnter_20 (def :  pcf.NewContactTravelerDetailsCV) : void {
+      def.onEnter(selectedItem, false)
     }
     
-    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 85, column 47
-    function def_onEnter_15 (def :  pcf.TRVCoverCoveragesDV) : void {
-      def.onEnter(selectedItem, openForEdit)
+    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 95, column 40
+    function def_refreshVariables_21 (def :  pcf.NewContactTravelerDetailsCV) : void {
+      def.refreshVariables(selectedItem, false)
     }
     
-    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 91, column 111
-    function def_onEnter_17 (def :  pcf.AdditionalCoveragesPanelSet) : void {
-      def.onEnter(selectedItem, new String[]{"TRVCoverAddGrp"}, true)
-    }
-    
-    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 76, column 108
-    function def_refreshVariables_13 (def :  pcf.TRVCoverDetailsDV) : void {
-      def.refreshVariables(selectedItem, policyPeriod, line, openForEdit, jobWizardHelper)
-    }
-    
-    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 85, column 47
-    function def_refreshVariables_16 (def :  pcf.TRVCoverCoveragesDV) : void {
-      def.refreshVariables(selectedItem, openForEdit)
-    }
-    
-    // 'def' attribute on PanelRef at TRVCoverPanelSet.pcf: line 91, column 111
-    function def_refreshVariables_18 (def :  pcf.AdditionalCoveragesPanelSet) : void {
-      def.refreshVariables(selectedItem, new String[]{"TRVCoverAddGrp"}, true)
-    }
-    
-    // 'editable' attribute on RowIterator at TRVCoverPanelSet.pcf: line 45, column 43
-    function editable_2 () : java.lang.Boolean {
+    // 'editable' attribute on RowIterator (id=TravelerIterator) at TRVCoverPanelSet.pcf: line 61, column 49
+    function editable_7 () : java.lang.Boolean {
       return openForEdit
     }
     
-    // 'sortBy' attribute on TextCell (id=ItemID_Cell) at TRVCoverPanelSet.pcf: line 57, column 29
-    function sortValue_0 (item :  TRVCover) : java.lang.Object {
+    // 'sortBy' attribute on TextCell (id=FirstName_Cell) at TRVCoverPanelSet.pcf: line 72, column 29
+    function sortValue_4 (item :  entity.PolicyTraveler) : java.lang.Object {
       return item.FixedId
     }
     
-    // 'value' attribute on TextCell (id=CreateUser_Cell) at TRVCoverPanelSet.pcf: line 64, column 30
-    function sortValue_1 (item :  TRVCover) : java.lang.Object {
-      return item.CreateUser.DisplayName
+    // 'sortBy' attribute on TextCell (id=LastName_Cell) at TRVCoverPanelSet.pcf: line 80, column 29
+    function sortValue_5 (item :  entity.PolicyTraveler) : java.lang.Object {
+      return item.FixedId
     }
     
-    // 'toCreateAndAdd' attribute on RowIterator at TRVCoverPanelSet.pcf: line 45, column 43
-    function toCreateAndAdd_9 () : TRVCover {
-      return line.createAndAddTRVCover()
+    // 'sortBy' attribute on TextCell (id=Genre_Cell) at TRVCoverPanelSet.pcf: line 88, column 29
+    function sortValue_6 (item :  entity.PolicyTraveler) : java.lang.Object {
+      return item.FixedId
     }
     
-    // 'toRemove' attribute on RowIterator at TRVCoverPanelSet.pcf: line 45, column 43
-    function toRemove_10 (item :  TRVCover) : void {
-      line.removeTRVCover(item)
+    // 'toRemove' attribute on RowIterator (id=TravelerIterator) at TRVCoverPanelSet.pcf: line 61, column 49
+    function toRemove_17 (item :  entity.PolicyTraveler) : void {
+      line.removeFromPolicyTravelers(item)
     }
     
-    // 'value' attribute on RowIterator at TRVCoverPanelSet.pcf: line 45, column 43
-    function value_11 () : entity.TRVCover[] {
-      return line.TRVCovers
+    // 'value' attribute on RowIterator (id=TravelerIterator) at TRVCoverPanelSet.pcf: line 61, column 49
+    function value_18 () : entity.PolicyTraveler[] {
+      return line.PolicyTravelers
     }
     
-    // 'visible' attribute on PanelRef at TRVCoverPanelSet.pcf: line 85, column 47
-    function visible_14 () : java.lang.Boolean {
+    // 'value' attribute on AddMenuItemIterator at TRVCoverPanelSet.pcf: line 40, column 49
+    function value_3 () : typekey.ContactType[] {
+      return contactConfigPlugin.getAllowedContactTypesForPolicyContactRoleType(typekey.PolicyContactRole.TC_POLICYTRAVELER)
+    }
+    
+    // 'visible' attribute on PanelRef at TRVCoverPanelSet.pcf: line 95, column 40
+    function visible_19 () : java.lang.Boolean {
       return selectedItem != null
     }
     
-    property get selectedItem () : TRVCover {
-      return getCurrentSelection(1) as TRVCover
+    property get selectedItem () : PolicyTraveler {
+      return getCurrentSelection(1) as PolicyTraveler
     }
     
-    property set selectedItem ($arg :  TRVCover) {
+    property set selectedItem ($arg :  PolicyTraveler) {
       setCurrentSelection(1, $arg)
+    }
+    
+    
+  }
+  
+  @javax.annotation.Generated("config/web/pcf/line/trv/policy/TRVCoverPanelSet.pcf", "", "com.guidewire.pcfgen.PCFClassGenerator")
+  public static class IteratorEntry2ExpressionsImpl extends CoverableListDetailPanelExpressionsImpl {
+    public construct(widget :  Object) {
+      super(widget, 2)
+    }
+    
+    protected construct(widget :  Object, scopeDepth :  int) {
+      super(widget, scopeDepth)
+    }
+    
+    // 'value' attribute on TextCell (id=Genre_Cell) at TRVCoverPanelSet.pcf: line 88, column 29
+    function valueRoot_15 () : java.lang.Object {
+      return (item.AccountContactRole as Traveler).Genre
+    }
+    
+    // 'value' attribute on TextCell (id=FirstName_Cell) at TRVCoverPanelSet.pcf: line 72, column 29
+    function valueRoot_9 () : java.lang.Object {
+      return item
+    }
+    
+    // 'value' attribute on TextCell (id=LastName_Cell) at TRVCoverPanelSet.pcf: line 80, column 29
+    function value_11 () : java.lang.String {
+      return item.LastName
+    }
+    
+    // 'value' attribute on TextCell (id=Genre_Cell) at TRVCoverPanelSet.pcf: line 88, column 29
+    function value_14 () : java.lang.String {
+      return (item.AccountContactRole as Traveler).Genre.DisplayName
+    }
+    
+    // 'value' attribute on TextCell (id=FirstName_Cell) at TRVCoverPanelSet.pcf: line 72, column 29
+    function value_8 () : java.lang.String {
+      return item.FirstName
+    }
+    
+    property get item () : entity.PolicyTraveler {
+      return getIteratedValue(2) as entity.PolicyTraveler
     }
     
     
@@ -102,28 +129,18 @@ class TRVCoverPanelSetExpressions {
       super(widget, scopeDepth)
     }
     
-    // 'value' attribute on TextCell (id=ItemID_Cell) at TRVCoverPanelSet.pcf: line 57, column 29
-    function valueRoot_4 () : java.lang.Object {
-      return item
+    // 'label' attribute on AddMenuItem (id=ContactType) at TRVCoverPanelSet.pcf: line 45, column 80
+    function label_1 () : java.lang.Object {
+      return DisplayKey.get("Web.Contact.AddNewOfType", contactType)
     }
     
-    // 'value' attribute on TextCell (id=CreateUser_Cell) at TRVCoverPanelSet.pcf: line 64, column 30
-    function valueRoot_7 () : java.lang.Object {
-      return item.CreateUser
+    // 'pickLocation' attribute on AddMenuItem (id=ContactType) at TRVCoverPanelSet.pcf: line 45, column 80
+    function pickLocation_2 () : void {
+      NewPolicyTravelerPopup.push(line, contactType)
     }
     
-    // 'value' attribute on TextCell (id=ItemID_Cell) at TRVCoverPanelSet.pcf: line 57, column 29
-    function value_3 () : gw.pl.persistence.core.Key {
-      return item.FixedId
-    }
-    
-    // 'value' attribute on TextCell (id=CreateUser_Cell) at TRVCoverPanelSet.pcf: line 64, column 30
-    function value_6 () : String {
-      return item.CreateUser.DisplayName
-    }
-    
-    property get item () : TRVCover {
-      return getIteratedValue(2) as TRVCover
+    property get contactType () : typekey.ContactType {
+      return getIteratedValue(2) as typekey.ContactType
     }
     
     
@@ -137,6 +154,19 @@ class TRVCoverPanelSetExpressions {
     
     protected construct(widget :  Object, scopeDepth :  int) {
       super(widget, scopeDepth)
+    }
+    
+    // 'initialValue' attribute on Variable at TRVCoverPanelSet.pcf: line 22, column 54
+    function initialValue_0 () : gw.plugin.contact.IContactConfigPlugin {
+      return gw.plugin.Plugins.get(gw.plugin.contact.IContactConfigPlugin)
+    }
+    
+    property get contactConfigPlugin () : gw.plugin.contact.IContactConfigPlugin {
+      return getVariableValue("contactConfigPlugin", 0) as gw.plugin.contact.IContactConfigPlugin
+    }
+    
+    property set contactConfigPlugin ($arg :  gw.plugin.contact.IContactConfigPlugin) {
+      setVariableValue("contactConfigPlugin", 0, $arg)
     }
     
     property get jobWizardHelper () : gw.api.web.job.JobWizardHelper {

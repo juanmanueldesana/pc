@@ -88,6 +88,12 @@ public class AccountContactRole implements gw.entity.TypeKey {
    */
   public static final typekey.AccountContactRole TC_SECONDARYCONTACT = new typekey.AccountContactRole("SecondaryContact");
   
+  /**
+   * Traveler
+   * Traveler
+   */
+  public static final typekey.AccountContactRole TC_TRAVELER = new typekey.AccountContactRole("Traveler");
+  
   public static final gw.pl.persistence.type.TypeListTypeReference<typekey.AccountContactRole> TYPE = new com.guidewire.commons.metadata.types.TypeListIntrinsicTypeCache<typekey.AccountContactRole>("AccountContactRole");
   
   private final com.guidewire.commons.typelist.TypeKeyImplManager _typeKeyImplManager;

@@ -4,6 +4,12 @@ package com.guidewire._generated.entity;
 @java.lang.SuppressWarnings(value = {"deprecation", "unchecked"})
 public interface TRVLineInternal extends com.guidewire._generated.entity.PolicyLineInternal, com.guidewire._generated.entity.CoverableInternal, com.guidewire._generated.entity.ModifiableInternal, gw.api.domain.CoverableAdapter, gw.api.domain.ModifiableAdapter, gw.api.policy.PolicyLineJavaMethods {
   /**
+   * Adds the given element to the PolicyTravelers array. This is achieved by setting the parent foreign key to this entity instance.
+   */
+  public void addToPolicyTravelers(entity.PolicyTraveler element);
+  
+  
+  /**
    * Adds the given element to the TRVCosts array. This is achieved by setting the parent foreign key to this entity instance.
    */
   public void addToTRVCosts(entity.TRVCost element);
@@ -43,6 +49,14 @@ public interface TRVLineInternal extends com.guidewire._generated.entity.PolicyL
    * Adds the given element to the TRVLineModifiers array. This is achieved by setting the parent foreign key to this entity instance.
    */
   public void addToTRVLineModifiers(entity.TRVLineMod element);
+  
+  
+  /**
+   * Gets the value of the PolicyTravelers field.
+   * PolicyTravelers
+   */
+  @gw.internal.gosu.parser.ExtendedProperty
+  public entity.PolicyTraveler[] getPolicyTravelers();
   
   
   /**
@@ -98,6 +112,20 @@ public interface TRVLineInternal extends com.guidewire._generated.entity.PolicyL
    */
   @gw.internal.gosu.parser.ExtendedProperty
   public entity.TRVLineMod[] getTRVLineModifiers();
+  
+  
+  /**
+   * Removes the given element from the PolicyTravelers array. This is achieved by marking the element for removal.
+   */
+  public void removeFromPolicyTravelers(entity.PolicyTraveler element);
+  
+  
+  /**
+   * Removes the given element from the PolicyTravelers array. This is achieved by marking the element for removal.
+   * @deprecated Please use the version that takes an entity instead.
+   */
+  @java.lang.Deprecated
+  public void removeFromPolicyTravelers(gw.pl.persistence.core.Key elementID);
   
   
   /**
@@ -196,6 +224,12 @@ public interface TRVLineInternal extends com.guidewire._generated.entity.PolicyL
    */
   @java.lang.Deprecated
   public void removeFromTRVLineModifiers(gw.pl.persistence.core.Key elementID);
+  
+  
+  /**
+   * Sets the value of the PolicyTravelers field.
+   */
+  public void setPolicyTravelers(entity.PolicyTraveler[] value);
   
   
   /**
