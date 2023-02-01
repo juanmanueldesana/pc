@@ -139,7 +139,12 @@ class FXRateServiceImpl implements FXRateService {
     new Pair<Currency, Currency>(TC_RUB, TC_USD) -> 0.030264435bd,
     new Pair<Currency, Currency>(TC_AUD, TC_USD) -> 1.003458816bd,
     new Pair<Currency, Currency>(TC_CAD, TC_USD) -> 0.972785402bd,
-    new Pair<Currency, Currency>(TC_JPY, TC_USD) -> 0.01260483bd
+    new Pair<Currency, Currency>(TC_JPY, TC_USD) -> 0.01260483bd,
+
+          new Pair<Currency, Currency>(TC_EUR, TC_PEN) -> 4.08bd,
+          new Pair<Currency, Currency>(TC_USD, TC_PEN) -> 3.801000000bd,
+          new Pair<Currency, Currency>(TC_PEN, TC_EUR) -> 0.24bd,
+          new Pair<Currency, Currency>(TC_PEN, TC_USD) -> 0.270000000bd
 
   }
 

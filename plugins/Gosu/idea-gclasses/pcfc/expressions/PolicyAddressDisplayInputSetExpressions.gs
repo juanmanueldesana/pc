@@ -22,13 +22,28 @@ class PolicyAddressDisplayInputSetExpressions {
     }
     
     // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
-    function def_onEnter_3 (def :  pcf.GlobalAddressInputSet_PostCodeBeforeCity) : void {
+    function def_onEnter_3 (def :  pcf.GlobalAddressInputSet_PE) : void {
       def.onEnter(addressOwner)
     }
     
     // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
-    function def_onEnter_5 (def :  pcf.GlobalAddressInputSet_default) : void {
+    function def_onEnter_5 (def :  pcf.GlobalAddressInputSet_PostCodeBeforeCity) : void {
       def.onEnter(addressOwner)
+    }
+    
+    // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
+    function def_onEnter_7 (def :  pcf.GlobalAddressInputSet_PostCodeBeforeCityState) : void {
+      def.onEnter(addressOwner)
+    }
+    
+    // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
+    function def_onEnter_9 (def :  pcf.GlobalAddressInputSet_default) : void {
+      def.onEnter(addressOwner)
+    }
+    
+    // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
+    function def_refreshVariables_10 (def :  pcf.GlobalAddressInputSet_default) : void {
+      def.refreshVariables(addressOwner)
     }
     
     // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
@@ -37,12 +52,17 @@ class PolicyAddressDisplayInputSetExpressions {
     }
     
     // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
-    function def_refreshVariables_4 (def :  pcf.GlobalAddressInputSet_PostCodeBeforeCity) : void {
+    function def_refreshVariables_4 (def :  pcf.GlobalAddressInputSet_PE) : void {
       def.refreshVariables(addressOwner)
     }
     
     // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
-    function def_refreshVariables_6 (def :  pcf.GlobalAddressInputSet_default) : void {
+    function def_refreshVariables_6 (def :  pcf.GlobalAddressInputSet_PostCodeBeforeCity) : void {
+      def.refreshVariables(addressOwner)
+    }
+    
+    // 'def' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
+    function def_refreshVariables_8 (def :  pcf.GlobalAddressInputSet_PostCodeBeforeCityState) : void {
       def.refreshVariables(addressOwner)
     }
     
@@ -52,23 +72,23 @@ class PolicyAddressDisplayInputSetExpressions {
     }
     
     // 'mode' attribute on InputSetRef (id=globalAddressContainer) at PolicyAddressDisplayInputSet.pcf: line 23, column 41
-    function mode_7 () : java.lang.Object {
+    function mode_11 () : java.lang.Object {
       return addressOwner.SelectedMode
     }
     
     // 'value' attribute on TypeKeyInput (id=AddressType_Input) at PolicyAddressDisplayInputSet.pcf: line 28, column 40
-    function valueRoot_9 () : java.lang.Object {
+    function valueRoot_13 () : java.lang.Object {
       return period.PolicyAddress
     }
     
-    // 'value' attribute on TextInput (id=AddressDescription_Input) at PolicyAddressDisplayInputSet.pcf: line 32, column 49
-    function value_11 () : java.lang.String {
-      return period.PolicyAddress.Description
+    // 'value' attribute on TypeKeyInput (id=AddressType_Input) at PolicyAddressDisplayInputSet.pcf: line 28, column 40
+    function value_12 () : typekey.AddressType {
+      return period.PolicyAddress.AddressType
     }
     
-    // 'value' attribute on TypeKeyInput (id=AddressType_Input) at PolicyAddressDisplayInputSet.pcf: line 28, column 40
-    function value_8 () : typekey.AddressType {
-      return period.PolicyAddress.AddressType
+    // 'value' attribute on TextInput (id=AddressDescription_Input) at PolicyAddressDisplayInputSet.pcf: line 32, column 49
+    function value_15 () : java.lang.String {
+      return period.PolicyAddress.Description
     }
     
     property get addressOwner () : gw.api.address.AddressOwner {

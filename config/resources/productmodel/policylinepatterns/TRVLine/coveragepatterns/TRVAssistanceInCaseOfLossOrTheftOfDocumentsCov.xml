@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVAssistanceInCaseOfLossOrTheftOfDocumentsCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Required"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="2300"
+  public-id="z8hgadmp8imsbbnal8t7pv4s8nb"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+  <Schedules/>
+</CoveragePattern>

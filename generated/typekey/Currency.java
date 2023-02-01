@@ -5,6 +5,12 @@ package typekey;
 @gw.internal.gosu.parser.ExtendedType
 public class Currency implements gw.entity.TypeKey {
   /**
+   * ARS
+   * peso argentino
+   */
+  public static final typekey.Currency TC_ARS = new typekey.Currency("ars");
+  
+  /**
    * AUD
    * Australian Dollar
    */
@@ -33,6 +39,12 @@ public class Currency implements gw.entity.TypeKey {
    * Japanese Yen
    */
   public static final typekey.Currency TC_JPY = new typekey.Currency("jpy");
+  
+  /**
+   * PEN
+   * sol peruano
+   */
+  public static final typekey.Currency TC_PEN = new typekey.Currency("pen");
   
   /**
    * RUB

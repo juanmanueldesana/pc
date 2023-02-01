@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<import>
+  <CoverageLookup public-id="z41h2adch3jkdc8ccpr43vcfmhb">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>z9uhks0e2cd4ecokk0al91pqoh9</CoveragePatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>TRVLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CoverageLookup>
+  <CovTermLookup public-id="zi2h6b222pp5f3uvjgvh04dkb2a">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>zjaju3r8hko4j2d9ne4ebcs2poa</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>TRVLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+</import>

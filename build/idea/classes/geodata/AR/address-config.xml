@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AddressConfig xmlns="http://guidewire.com/address-config">
+  <AddressDef name="AR">
+    <Match>
+      <Field name="Country" value="AR"/>
+    </Match>
+    <Fields>
+      <Field name="PostalCode" zonecode="postalcode">
+        <ValidatorDef description="Validator.PostalCode.AR" input-mask="########" value="[a-zA-Z]{1}[0-9]{4}[a-zA-Z]{3}"/>
+      </Field>
+    </Fields>
+  </AddressDef>
+</AddressConfig>

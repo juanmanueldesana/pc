@@ -179,12 +179,6 @@ public class Country implements gw.entity.TypeKey {
   public static final typekey.Country TC_BO = new typekey.Country("BO");
   
   /**
-   * Brazil
-   * Brazil
-   */
-  public static final typekey.Country TC_BR = new typekey.Country("BR");
-  
-  /**
    * Bahamas
    * Bahamas
    */

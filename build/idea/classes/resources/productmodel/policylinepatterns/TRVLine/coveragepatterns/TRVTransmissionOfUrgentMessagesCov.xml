@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVTransmissionOfUrgentMessagesCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Required"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="2200"
+  public-id="zr2igqknckboe6575em02844ha9"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+  <Schedules/>
+</CoveragePattern>

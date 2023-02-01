@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVAccompanyingFamilyAccommodationUp5Days"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Suggested"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="1700"
+  public-id="zhvhelmrma0m0c3p6bjansnb1ta"
+  referenceDateByType="PolicyTerm">
+  <CovTerms>
+    <DirectCovTermPattern
+      codeIdentifier="AccompanyingFamilyAccommodationUpTo5Days"
+      coverageColumn="DirectTerm1"
+      lookupTableName="TRVCoverCovTerm"
+      priority="100"
+      public-id="z5mie8vektq5o2b7ae29l51vdc9"
+      required="false"
+      valueType="money">
+      <LimitsSet>
+        <CovTermLimits
+          codeIdentifier="z57gssjbongvq9p087do6r56u39"
+          currency="pen"
+          defaultValue="1000"
+          public-id="z57gssjbongvq9p087do6r56u39"/>
+      </LimitsSet>
+    </DirectCovTermPattern>
+  </CovTerms>
+  <Schedules/>
+</CoveragePattern>

@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVTravelAssistanceServiceCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Suggested"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="1300"
+  public-id="zjoj07et4kpjk4c5pv4ndtlbvq8"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+  <Schedules/>
+</CoveragePattern>

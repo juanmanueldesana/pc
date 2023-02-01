@@ -69,7 +69,22 @@ class AddressFormatter extends AddressFillableExtensionImpl {
   
   /**
    * Format an address as text using fields in AddressFormatter, which the caller should set before calling addressString().
-   * 
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
+   *
    * @param delimiter      The address components will be separated by the delimiter.  If the delimiter is a
    *                       comma without any other whitespace, then a space is added after the comma.
    * @param includeCountry If true, then include the country in the string.  If the delimiter is a
@@ -235,6 +250,11 @@ class AddressFormatter extends AddressFillableExtensionImpl {
           append(cszBuf, fieldId.POSTALCODE, " ", addr.PostalCode)
           // append county after country
           break
+
+         case TC_PE:
+           append(cszBuf, fieldId.POSTALCODE, delimiter, addr.PostalCode)
+           append(cszBuf, fieldId.CITY, " ", addr.City)
+        break
 
         default:
           append(cszBuf, fieldId.CITY, delimiter, addr.City)

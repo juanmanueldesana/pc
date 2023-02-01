@@ -1,6 +1,7 @@
 <?xml version="1.0"?>
 <typelistextension
   xmlns="http://guidewire.com/typelists"
+  desc="List of regions, or countries"
   name="Country">
   <typecode
     code="AF"
@@ -45,7 +46,11 @@
   <typecode
     code="AR"
     desc="Argentina"
-    name="Argentina"/>
+    name="Argentina">
+    <category
+            code="ARS"
+            typelist="Currency"/>
+  </typecode>
   <typecode
     code="AM"
     desc="Armenia"
@@ -134,10 +139,6 @@
     code="BV"
     desc="Bouvet Island (Bouvetoya)"
     name="Bouvet Island (Bouvetoya)"/>
-  <typecode
-    code="BR"
-    desc="Brazil"
-    name="Brazil"/>
   <typecode
     code="IO"
     desc="British Indian Ocean Territory (Chagos Archipelago)"
@@ -678,7 +679,11 @@
   <typecode
     code="NL"
     desc="Netherlands"
-    name="Netherlands"/>
+    name="Netherlands">
+	<category
+      code="eur"
+      typelist="Currency"/>
+	</typecode>
   <typecode
     code="AN"
     desc="Netherlands Antilles"
@@ -754,7 +759,11 @@
   <typecode
     code="PE"
     desc="Peru"
-    name="Peru"/>
+    name="Peru">
+    <category
+      code="pen"
+      typelist="Currency"/>
+  </typecode>
   <typecode
     code="PH"
     desc="Philippines"

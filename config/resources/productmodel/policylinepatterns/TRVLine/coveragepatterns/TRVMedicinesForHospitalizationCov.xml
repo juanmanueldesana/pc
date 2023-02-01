@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVMedicinesForHospitalizationCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Suggested"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="700"
+  public-id="zakja7ai8g9chfllroavt960r8b"
+  referenceDateByType="PolicyTerm">
+  <CovTerms>
+    <GenericCovTermPattern
+      codeIdentifier="MedicinesForHospitalizationGeneric"
+      coverageColumn="BooleanTerm1"
+      lookupTableName="TRVCoverCovTerm"
+      priority="100"
+      public-id="zkii8furuh5lm1dmq6tsps66ata"
+      required="false"/>
+  </CovTerms>
+  <Schedules/>
+</CoveragePattern>

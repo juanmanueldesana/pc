@@ -35,6 +35,18 @@ public class LocaleType implements gw.entity.TypeKey {
   public static final typekey.LocaleType TC_EN_US = new typekey.LocaleType("en_US");
   
   /**
+   * Argentina (Spanish)
+   * Argentina (Spanish)
+   */
+  public static final typekey.LocaleType TC_ES_AR = new typekey.LocaleType("es_AR");
+  
+  /**
+   * Peru (Spanish)
+   * Peru (Spanish)
+   */
+  public static final typekey.LocaleType TC_ES_PE = new typekey.LocaleType("es_PE");
+  
+  /**
    * Canada (French)
    * Canada (French)
    */

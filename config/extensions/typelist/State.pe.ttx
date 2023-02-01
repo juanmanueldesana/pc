@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typelistextension xmlns="http://guidewire.com/typelists" name="State">
+  <typecode code="PE_AM" desc="AMAZONAS" name="AMAZONAS"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_AN" desc="ANCASH" name="ANCASH"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_APU" desc="APURIMAC" name="APURIMAC"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_ARE" desc="AREQUIPA" name="AREQUIPA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_AYA" desc="AYACUCHO" name="AYACUCHO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_CAJ" desc="CAJAMARCA" name="CAJAMARCA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_CALL" desc="CALLAO" name="CALLAO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_CUS" desc="CUSCO" name="CUSCO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_HUANCA" desc="HUANCAVELICA" name="HUANCAVELICA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_HUANCO" desc="HUANUCO" name="HUANUCO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_ICA" desc="ICA" name="ICA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_JUN" desc="JUNIN" name="JUNIN"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_LIB" desc="LA LIBERTAD" name="LA LIBERTAD"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_LAMB" desc="LAMBAYEQUE" name="LAMBAYEQUE"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_LI" desc="LIMA" name="LIMA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_LO" desc="LORETO" name="LORETO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_MD" desc="MADRE DE DIOS" name="MADRE DE DIOS"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_MOQ" desc="MOQUEGUA" name="MOQUEGUA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_PAS" desc="PASCO" name="PASCO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_PIU" desc="PIURA" name="PIURA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_PUN" desc="PUNO" name="PUNO"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_SMAR" desc="SAN MARTIN" name="SAN MARTIN"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_TAC" desc="TACNA" name="TACNA"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_TUMB" desc="TUMBES" name="TUMBES"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+  <typecode code="PE_UCA" desc="UCAYALI" name="UCAYALI"> <category code="PE" typelist="Country"/>
+    <category
+      code="PE_00"
+      typelist="Jurisdiction"/>
+  </typecode>
+</typelistextension>

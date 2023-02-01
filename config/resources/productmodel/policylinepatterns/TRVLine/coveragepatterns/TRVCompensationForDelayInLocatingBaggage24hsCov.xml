@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVCompensationForDelayInLocatingBaggage24hsCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Suggested"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="1000"
+  public-id="z6qjghfm4qu79eur315shkhj8qb"
+  referenceDateByType="PolicyTerm">
+  <CovTerms>
+    <DirectCovTermPattern
+      codeIdentifier="CompensationForDelayInLocatingBaggage24hsLim"
+      coverageColumn="DirectTerm1"
+      lookupTableName="TRVCoverCovTerm"
+      priority="100"
+      public-id="znhji9p4bi0b0ftcf5o69tf6ig8"
+      required="false"
+      valueType="money">
+      <LimitsSet>
+        <CovTermLimits
+          codeIdentifier="z62hqmfb20q4b2fc714lsrvlkc9"
+          currency="pen"
+          defaultValue="100"
+          public-id="z62hqmfb20q4b2fc714lsrvlkc9"/>
+      </LimitsSet>
+    </DirectCovTermPattern>
+  </CovTerms>
+  <Schedules/>
+</CoveragePattern>

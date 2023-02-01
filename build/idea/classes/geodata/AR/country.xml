@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Country xmlns="http://guidewire.com/country"
+  visibleFields="AddressLine1,AddressLine2,AddressLine3,PostalCode,City,Country"
+  PCFMode="PostCodeBeforeCity"
+        postalCodeDisplayKey="Web.AddressBook.AddressInputSet.PostalCode"
+/>

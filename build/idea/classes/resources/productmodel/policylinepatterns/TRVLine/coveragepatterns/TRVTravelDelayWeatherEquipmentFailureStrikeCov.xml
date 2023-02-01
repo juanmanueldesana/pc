@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVTravelDelayWeatherEquipmentFailureStrikeCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Suggested"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="1800"
+  public-id="z8di8itm878g27b9t89vfolc8va"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+  <Schedules/>
+</CoveragePattern>

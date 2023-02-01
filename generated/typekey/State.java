@@ -671,6 +671,156 @@ public class State implements gw.entity.TypeKey {
   public static final typekey.State TC_PE = new typekey.State("PE");
   
   /**
+   * AMAZONAS
+   * AMAZONAS
+   */
+  public static final typekey.State TC_PE_AM = new typekey.State("PE_AM");
+  
+  /**
+   * ANCASH
+   * ANCASH
+   */
+  public static final typekey.State TC_PE_AN = new typekey.State("PE_AN");
+  
+  /**
+   * APURIMAC
+   * APURIMAC
+   */
+  public static final typekey.State TC_PE_APU = new typekey.State("PE_APU");
+  
+  /**
+   * AREQUIPA
+   * AREQUIPA
+   */
+  public static final typekey.State TC_PE_ARE = new typekey.State("PE_ARE");
+  
+  /**
+   * AYACUCHO
+   * AYACUCHO
+   */
+  public static final typekey.State TC_PE_AYA = new typekey.State("PE_AYA");
+  
+  /**
+   * CAJAMARCA
+   * CAJAMARCA
+   */
+  public static final typekey.State TC_PE_CAJ = new typekey.State("PE_CAJ");
+  
+  /**
+   * CALLAO
+   * CALLAO
+   */
+  public static final typekey.State TC_PE_CALL = new typekey.State("PE_CALL");
+  
+  /**
+   * CUSCO
+   * CUSCO
+   */
+  public static final typekey.State TC_PE_CUS = new typekey.State("PE_CUS");
+  
+  /**
+   * HUANCAVELICA
+   * HUANCAVELICA
+   */
+  public static final typekey.State TC_PE_HUANCA = new typekey.State("PE_HUANCA");
+  
+  /**
+   * HUANUCO
+   * HUANUCO
+   */
+  public static final typekey.State TC_PE_HUANCO = new typekey.State("PE_HUANCO");
+  
+  /**
+   * ICA
+   * ICA
+   */
+  public static final typekey.State TC_PE_ICA = new typekey.State("PE_ICA");
+  
+  /**
+   * JUNIN
+   * JUNIN
+   */
+  public static final typekey.State TC_PE_JUN = new typekey.State("PE_JUN");
+  
+  /**
+   * LAMBAYEQUE
+   * LAMBAYEQUE
+   */
+  public static final typekey.State TC_PE_LAMB = new typekey.State("PE_LAMB");
+  
+  /**
+   * LIMA
+   * LIMA
+   */
+  public static final typekey.State TC_PE_LI = new typekey.State("PE_LI");
+  
+  /**
+   * LA LIBERTAD
+   * LA LIBERTAD
+   */
+  public static final typekey.State TC_PE_LIB = new typekey.State("PE_LIB");
+  
+  /**
+   * LORETO
+   * LORETO
+   */
+  public static final typekey.State TC_PE_LO = new typekey.State("PE_LO");
+  
+  /**
+   * MADRE DE DIOS
+   * MADRE DE DIOS
+   */
+  public static final typekey.State TC_PE_MD = new typekey.State("PE_MD");
+  
+  /**
+   * MOQUEGUA
+   * MOQUEGUA
+   */
+  public static final typekey.State TC_PE_MOQ = new typekey.State("PE_MOQ");
+  
+  /**
+   * PASCO
+   * PASCO
+   */
+  public static final typekey.State TC_PE_PAS = new typekey.State("PE_PAS");
+  
+  /**
+   * PIURA
+   * PIURA
+   */
+  public static final typekey.State TC_PE_PIU = new typekey.State("PE_PIU");
+  
+  /**
+   * PUNO
+   * PUNO
+   */
+  public static final typekey.State TC_PE_PUN = new typekey.State("PE_PUN");
+  
+  /**
+   * SAN MARTIN
+   * SAN MARTIN
+   */
+  public static final typekey.State TC_PE_SMAR = new typekey.State("PE_SMAR");
+  
+  /**
+   * TACNA
+   * TACNA
+   */
+  public static final typekey.State TC_PE_TAC = new typekey.State("PE_TAC");
+  
+  /**
+   * TUMBES
+   * TUMBES
+   */
+  public static final typekey.State TC_PE_TUMB = new typekey.State("PE_TUMB");
+  
+  /**
+   * UCAYALI
+   * UCAYALI
+   */
+  public static final typekey.State TC_PE_UCA = new typekey.State("PE_UCA");
+  
+  /**
    * Puerto Rico
    * Puerto Rico
    */

@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVPhysicalRecoveryTherapyCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Suggested"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="1500"
+  public-id="z9uhks0e2cd4ecokk0al91pqoh9"
+  referenceDateByType="PolicyTerm">
+  <CovTerms>
+    <GenericCovTermPattern
+      codeIdentifier="PhysicalRecoveryTherapy"
+      coverageColumn="BooleanTerm1"
+      lookupTableName="TRVCoverCovTerm"
+      priority="100"
+      public-id="zjaju3r8hko4j2d9ne4ebcs2poa"
+      required="false"/>
+  </CovTerms>
+  <Schedules/>
+</CoveragePattern>

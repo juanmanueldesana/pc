@@ -91,7 +91,8 @@
         </ListViewPanel>
       </PanelRef>
       <PanelRef
-        def="NewContactTravelerDetailsCV(selectedItem, false)"></PanelRef>
+        def="NewContactTravelerDetailsCV(selectedItem, false)"
+        visible="selectedItem != null"></PanelRef>
     </ListDetailPanel>
   </PanelSet>
 </PCF>

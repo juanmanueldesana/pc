@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<CoveragePattern
+  codeIdentifier="TRVEmergencyMedicalAssistanceServicesCov"
+  coverageCategory="TRVCoverStndGrp"
+  coverageSubtype="TRVCoverCov"
+  coveredPartyType="FirstParty"
+  existence="Required"
+  lookupTableName="TRVCoverCov"
+  owningEntityType="TRVCover"
+  policyLinePattern="TRVLine"
+  priority="2400"
+  public-id="zn5g25h6e5d7p1e73ufb4l6hcr8"
+  referenceDateByType="PolicyTerm">
+  <CovTerms/>
+  <Schedules/>
+</CoveragePattern>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Country xmlns="http://guidewire.com/country"
+         visibleFields="Country,AddressLine1,AddressLine2,AddressLine3,City,State,PostalCode,County"
+         stateDisplayKey="Web.AddressBook.AddressInputSet.State"
+         postalCodeDisplayKey="Web.AddressBook.AddressInputSet.ZIP"
+         PCFMode="PE"
+/>

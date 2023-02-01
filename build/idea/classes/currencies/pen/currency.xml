@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Currency xmlns="http://guidewire.com/currency">
+  <CurrencyType code="pen" desc="Soles peruanos" storageScale="1">
+    <CurrencyFormat zeroValue="-"/>
+  </CurrencyType>
+</Currency>

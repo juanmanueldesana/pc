@@ -1901,4 +1901,8 @@
         code="insurance"
         typelist="JurisdictionType"/>
   </typecode>
+  <typecode
+    code="PE_00"
+    desc="Peru"
+    name="Peru"/>
 </typelistextension>

@@ -491,6 +491,12 @@ public class Jurisdiction implements gw.entity.TypeKey {
   public static final typekey.Jurisdiction TC_PE = new typekey.Jurisdiction("PE");
   
   /**
+   * Peru
+   * Peru
+   */
+  public static final typekey.Jurisdiction TC_PE_00 = new typekey.Jurisdiction("PE_00");
+  
+  /**
    * Puerto Rico
    * Puerto Rico
    */

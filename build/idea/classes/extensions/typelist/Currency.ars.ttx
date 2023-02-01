@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<typelistextension name="Currency" xmlns="http://guidewire.com/typelists">
+    <typecode code="ars" desc="peso argentino" name="ARS" priority="1"/>
+</typelistextension>

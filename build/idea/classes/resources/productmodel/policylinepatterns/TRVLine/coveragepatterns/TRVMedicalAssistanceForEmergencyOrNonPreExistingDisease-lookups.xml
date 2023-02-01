@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<import>
+  <CoverageLookup public-id="z52is3t0u8phg5d4vbjips7vsq9">
+    <Availability>Available</Availability>
+    <CoveragePatternCode>znagclati3pr6e00euajecc9dr8</CoveragePatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>TRVLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CoverageLookup>
+  <CovTermLookup public-id="zeth8tjgher7m74au58n5g7mabb">
+    <Availability>Available</Availability>
+    <CovTermPatternCode>z1hi6if666cfiac6khk5i1g4esa</CovTermPatternCode>
+    <EndEffectiveDate/>
+    <JobType/>
+    <PolicyLinePatternCode>TRVLine</PolicyLinePatternCode>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermLookup>
+  <CovTermOptLookup public-id="zdnjkejaq1a4i7dm2pris82dkj8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>z5hiehu767j7l4qpp49hlj3d6ka</CovTermOptCode>
+    <CovTermPatternCode>z1hi6if666cfiac6khk5i1g4esa</CovTermPatternCode>
+    <Currency>pen</Currency>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z74g236akjm9b6j5tf21cqdiq1b">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zk5g0sfp8oesu1pqeue74epguk9</CovTermOptCode>
+    <CovTermPatternCode>z1hi6if666cfiac6khk5i1g4esa</CovTermPatternCode>
+    <Currency>pen</Currency>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z2tg0itcuj7rr8qq9mfnbkdrqj8">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zrmguthn9p5gk5keap200pnnkk8</CovTermOptCode>
+    <CovTermPatternCode>z1hi6if666cfiac6khk5i1g4esa</CovTermPatternCode>
+    <Currency>pen</Currency>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="z67hci1olvf741bh4a1r79m4npa">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zlfhign5p4um695h45g2ac1rc8a</CovTermOptCode>
+    <CovTermPatternCode>z1hi6if666cfiac6khk5i1g4esa</CovTermPatternCode>
+    <Currency>pen</Currency>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+  <CovTermOptLookup public-id="zukggh6d3kaf5eg2i688ufferra">
+    <Availability>Available</Availability>
+    <CovTermOptCode>zq4i201v8k2ib4flcpdes7bdgb8</CovTermOptCode>
+    <CovTermPatternCode>z1hi6if666cfiac6khk5i1g4esa</CovTermPatternCode>
+    <Currency>pen</Currency>
+    <EndEffectiveDate/>
+    <JobType/>
+    <StartEffectiveDate>2001-01-01 00:00:00.000</StartEffectiveDate>
+    <State/>
+    <UWCompanyCode/>
+  </CovTermOptLookup>
+</import>
